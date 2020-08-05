@@ -50,7 +50,7 @@ const ProjectBanner = ({width,height,x,y,stickyTitle,stickyDesc,img,close,closeP
 
     }, []);
     return (
-        <motion.section exit={{opacity:0}} initial={{opacity:1}}>
+        <motion.section exit={{opacity:0}} initial={{opacity:1}} className="project--detail--wrap">
             <StickyProjectInfo stickyTitle={stickyTitle} stickyDesc={stickyDesc} sticky={sticky} close={close} closeProject={closeProject} timeline={timeline}/>
              
             <section className="banner-project"

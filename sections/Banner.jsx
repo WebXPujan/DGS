@@ -2,13 +2,14 @@ import {useContext, useState, useEffect, useRef} from 'react'
 import Button from '../Component/Button';
 import StickyProjectInfo from '../Component/StickyProjectInfo';
 import {GlobalContext} from '../context/GlobalContext'
-import {motion, useSpring, useTransform, useViewportScroll, AnimatePresence, useDragControls} from 'framer-motion'
+import {motion, useSpring, useTransform, useViewportScroll, AnimatePresence} from 'framer-motion'
 import useSmoothScroll from "use-smooth-scroll";
 import gsap from "gsap";
 import { useRouter } from 'next/router';
 import ProgressiveImage from 'react-progressive-graceful-image'
 import Link from 'next/link'
 import ProjectDetailsHorizontal from '../Component/ProjectDetailsHorizontal';
+import ProjectCard from '../Component/ProjectCard';
 const Banner = (props) => {
 
    const router = useRouter();
@@ -34,6 +35,7 @@ const Banner = (props) => {
     });
     const [projectDetails,setProjectDetails] = useState({});
     const [mobile,setMobile] = useState(0);
+    const [offset,setOffset] = useState(false);
     //const [timeLine,setTimeLine] = useState(null);
 
     const { scrollYProgress } = useViewportScroll();
@@ -45,6 +47,7 @@ const Banner = (props) => {
     const cta = useRef(null);
     const titleBig = useRef(null);
     const featureImage = useRef(null);
+    const detailBody = useRef(null);
 
     useEffect(() => {
         
@@ -65,10 +68,7 @@ const Banner = (props) => {
     }, [x]);
 
   
-    const dragControls = useDragControls();
-    function startDrag(event) {
-        dragControls.start(event, { snapToCursor: true })
-      }
+    
     const scrollTo = useSmoothScroll("x", slider);
     
     const actionOpen = elem => {
@@ -82,7 +82,7 @@ const Banner = (props) => {
 
     const viewProject = (e,details) => {
      
-    
+    props.setProjectOpen(true);
     setProjectDetails(details);
     var elem = e.currentTarget;
     var offset = jQuery(e.currentTarget).closest(".image").offset();
@@ -105,6 +105,7 @@ const Banner = (props) => {
 
     const handleCloseProject = event => {
         //timeLine.reverse();
+            props.setProjectOpen(false);
             document.querySelector('#navBar .wrapper').classList.add('slideUp') 
             projectClose(false);
             router.push("/");
@@ -119,7 +120,11 @@ const Banner = (props) => {
     let $e = e.deltaY;
     Math.abs($e) < 100 ? $e = e.deltaY*33.33 : $e = $e;
     let velocity = $e * 2 + slider.current.scrollLeft;
-
+    if(isProjectOpen && (velocity > (detailBody.current.getBoundingClientRect().width - window.innerWidth/3))){
+        setOffset(true);
+    } else{
+        setOffset(false);
+    }
 
     scrollTo(velocity);
    
@@ -134,6 +139,9 @@ const Banner = (props) => {
    const handleImgload = (elem) => {
        gsap.to(elem,0.6,{opacity:1,delay:.1});
    }
+   const handleProjectClick = e => {
+
+   }
     return(
         
         <>
@@ -143,8 +151,24 @@ const Banner = (props) => {
                 isDragged && (
                     isProjectOpen ? 
 
-                    <AnimatePresence exitBeforeEnter>
+                    <AnimatePresence>
                         <StickyProjectInfo stickyTitle={projectDetails.name} stickyDesc={projectDetails.desc} close={true} sticky={stickyy} closeProject={handleCloseProject} />
+                        {
+                            offset && (
+                            <motion.div className="next--project" key={1} exit={{opacity:0,x:'30%'}} transition={{duration: 1.5, ease: [0.43,0.13,0.23,0.96]}}>
+                                <Link href="/?project=hongshi-cement" as={`/project/hongshi-cement`}>
+                                    <motion.a className="dg-link" initial={{opacity:0,x:'30%'}} animate={{opacity:1,x:'0%'}} transition={{duration: 1.5, ease: [0.43,0.13,0.23,0.96]}}>
+                                        <ProjectCard details={{img_url:'https://unsplash.it/1361',name:"Hongshi Cement",tag:["Next project"]}} 
+                                        type="projects" 
+                                        setLoading={props.setLoading} 
+                                        loading={props.loading} 
+                                        handleProjectClick={handleProjectClick}/>
+                                    </motion.a>
+                                </Link>
+                            </motion.div>
+                            )
+                        }
+                        
                     </AnimatePresence>
 
                     :
@@ -196,7 +220,7 @@ const Banner = (props) => {
                     isProjectOpen ?
                     (
                         <AnimatePresence exitBeforeEnter>
-                            <ProjectDetailsHorizontal viewPort={viewPort} details={projectDetails} sticky={stickyy} setLoading={props.setLoading} loading={props.loading} />
+                            <ProjectDetailsHorizontal viewPort={viewPort} details={projectDetails} sticky={stickyy} setLoading={props.setLoading} loading={props.loading} bodyDetail={detailBody} />
                         </AnimatePresence>
                     )
                     :
@@ -210,7 +234,6 @@ const Banner = (props) => {
                         dragElastic={0.005}
                         style={{ x }}
                         transition={transition}
-                        dragControls={dragControls}
                         >
                         <motion.ul className={isDragged ? (isProjectOpen ? "showcase expanded viewport" : "showcase expanded") : "showcase"}
                         onMouseEnter={() => setCursor(`${isDragged ? '' : 'dragged'}`)}

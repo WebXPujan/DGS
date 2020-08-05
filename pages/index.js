@@ -11,7 +11,7 @@ import { useEffect } from "react";
  const Blog = dynamic(() => import('../sections/Blog'));
  const Testimonial = dynamic(() => import('../sections/Testimonial'));
 
-const Index = ({setImagePos,banner,setLoading,loading}) =>{
+const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen}) =>{
 
     useEffect(()=>{
       setLoading(!loading);
@@ -20,7 +20,7 @@ const Index = ({setImagePos,banner,setLoading,loading}) =>{
     return(
       <HomeProvider>
         
-            <Banner setImagePos={setImagePos} banner={banner} projects={projects} loading={loading} setLoading={setLoading}/>
+            <Banner setImagePos={setImagePos} banner={banner} projects={projects} loading={loading} setLoading={setLoading} setProjectOpen={setProjectOpen} />
             <Services />
             <Trustee />
             <WeAre />

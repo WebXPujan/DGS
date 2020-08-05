@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from './Footer';
 import Link from 'next/link';
 import ProjectCard from '../Component/ProjectCard'
 import Button from '../Component/Button'
+import {motion, useDragControls} from 'framer-motion'
 
-const ProjectBody = ({loading,setLoading,title,direction}) => {
+const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body,drag}) => {
+    const dragControls = useDragControls();
+    function startDrag(event) {
+        dragControls.start(event, { snapToCursor: true })
+      }
+    useEffect(()=>{
+       // startDrag();
+       //console.log(drag.current.getBoundingClientRect().width);
+    },[])
     return (
         <>
-        <section className={`project-body ${direction === "hor" ? "hor" : "ver"}`}>
+        <motion.section 
+        className={`project-body ${direction === "hor" ? "hor" : "ver"}`} 
+        ref={body}
+        // drag={"x"}
+        // dragConstraints={drag}
+        // dragElastic={0.005}
+        // dragControls={dragControls}
+        >
             <div className="project-meta">
                 <div className="columns">
                     <div className="column col-md-4">
@@ -76,11 +92,21 @@ const ProjectBody = ({loading,setLoading,title,direction}) => {
                     </div>
                     <div className="column col-md-6">
                         <ul>
-                        <Link href="/project/[project]" as={`/project/hongshi-cement`}>
-                            <a className="dg-link">
-                            <ProjectCard details={{img_url:'https://unsplash.it/1361',name:"Hongshi Cement",tag:["Next project"]}} type="projects" setLoading={setLoading} loading={loading} />
-                            </a>
-                        </Link>
+                            {
+                                direction === "hor" ? null : 
+                                (
+                                    <Link href="/project/[project]" as={`/project/hongshi-cement`}>
+                                        <a className="dg-link">
+                                        <ProjectCard details={{img_url:'https://unsplash.it/1361',name:"Hongshi Cement",tag:["Next project"]}} 
+                                        type="projects" 
+                                        setLoading={setLoading} 
+                                        loading={loading} 
+                                        handleProjectClick={handleProjectClick}/>
+                                        </a>
+                                    </Link>
+                                )
+                            }
+                       
                         </ul>
                     </div>
                     </div>
@@ -90,7 +116,7 @@ const ProjectBody = ({loading,setLoading,title,direction}) => {
                 direction === "hor" ? null : <Footer />
             }
             
-        </section>
+        </motion.section>
         
         </>
     );

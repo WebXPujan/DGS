@@ -584,6 +584,9 @@ ul,li{
 body{
     overscroll-behavior-y: none;
 }
+img{
+    pointer-events: none;
+}
 /* .App {
     position:fixed;
     top: 0;
@@ -594,6 +597,12 @@ body{
 } */
 .scroll#scroll-container{
     transform: translate3d(0,0,0);
+}
+.project--detail--wrap{
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    transform: translateY(-87vh);
 }
 /* Spectre Override*/
 .push{
@@ -910,9 +919,9 @@ section#banner .offset.fixed{
    
 }
 section#banner .offset.fixed.viewport{
- height: 100vh;
- top: -64px;
- width: 479vw;
+ height: calc(100vh - 64px);
+ top: 0px;
+ width: 450vw;
 }
 section#banner .offset.fixed.viewport .wrap{
     height: 100%;
@@ -1754,7 +1763,28 @@ section.project-body .project-gallery .hero-content{
     height: 80vh;
 }
 section.project-body.hor .project-gallery .hero-content{
-    width: 25vw;
+    width: 80vw;
+}
+.next--project{
+    position: fixed;
+    height: 100vh;
+    width: 30vw;
+    background-color: #fff;
+    z-index: 889;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+.next--project .thumb{
+    height: 60vh;
+    background-color: #e1e1e1;
+    width: 30vw;
+    overflow: hidden;
+}
+.next--project .thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /*project Details*/
 /*responsive*/
@@ -1773,7 +1803,7 @@ section.project-body.hor .project-gallery .hero-content{
     section.project-body.hor .project-gallery .thumb{
         height: 58vh;
     }
-    section.project-body.hor .project-gallery strong.number{
+    .next--project strong.number{
         font-size: 52px;
     }
     

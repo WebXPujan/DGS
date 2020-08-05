@@ -3,10 +3,9 @@ import {GlobalContext} from '../context/GlobalContext'
 import ProgressiveImage from 'react-progressive-graceful-image'
 import {gsap} from 'gsap'
 
-const ProjectCard = ({details,type}) => {
+const ProjectCard = ({details,type,handleProjectClick}) => {
 
     const [cursor,setCursor] = useContext(GlobalContext);
-    
 
     const handleImgload = (elem) => {
         gsap.to(elem,0.6,{opacity:1,delay:.1});
@@ -14,7 +13,8 @@ const ProjectCard = ({details,type}) => {
 
    
     return (
-        <li className="display-card">
+        <li className="display-card"
+        onClick={handleProjectClick}>
             <div 
             className="thumb clip"
             onMouseEnter={() => setCursor("hovered")}

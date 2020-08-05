@@ -15,6 +15,7 @@ export default function MyApp(props) {
   const { Component, pageProps } = props;
 
   const [toggleMenu,setToggleMenu] = React.useState(false);
+  const [isProjectOpen,setProjectOpen] = React.useState(false);
   const [imagePos,setImagePos] = React.useState({
     x:0,
     y:0,
@@ -55,7 +56,7 @@ export default function MyApp(props) {
     }
     
       
-    toggleMenu ? document.querySelector("body").style.overflow = "hidden" : document.querySelector("body").style.overflow = "visible";
+    toggleMenu ? document.querySelector("body").style.overflow = "hidden" : (isProjectOpen ? document.querySelector("body").style.overflow = "hidden" : document.querySelector("body").style.overflow = "visible");
     
     !toggleMenu ? tl.reverse() : null;
   }, [toggleMenu]);
@@ -134,7 +135,7 @@ export default function MyApp(props) {
       </nav>
       <div className="App" ref={app}>
         <div className="scroll" ref={scrollContainer} id="scroll-container">
-          <Component {...pageProps} imagePos={imagePos} setImagePos={setImagePos} setLoading={setLoading} loading={loading} />
+          <Component {...pageProps} imagePos={imagePos} setImagePos={setImagePos} setLoading={setLoading} loading={loading} setProjectOpen={setProjectOpen} />
         </div>
       </div>
       

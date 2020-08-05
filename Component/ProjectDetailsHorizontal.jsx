@@ -1,15 +1,17 @@
 
 import {TimelineLite,gsap} from 'gsap';
-import { useRef,useEffect } from 'react';
+import { useRef,useEffect, useState } from 'react';
 import ProjectBody from '../sections/ProjectBody';
 
 
-const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details}) => {
+const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details,bodyDetail}) => {
 
     const transition = {duration: 1, ease: [0.43,0.73,0.23,0.96]};
     const t1 = new TimelineLite;
     const banner = useRef(null);
     const body = useRef(null);
+    const dragConstraints = useRef(null);
+    const [projectOpen,setProjectOpen] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
@@ -18,9 +20,9 @@ const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details}) 
                 .6,{
                     css: {
                         width: window.innerWidth - sticky.current.clientWidth,
-                        height: window.innerHeight,
+                        height: window.innerHeight-64,
                         left: 0+sticky.current.clientWidth,
-                        top: -64
+                        top: 0
                      }
                 }
             ) 
@@ -44,10 +46,17 @@ const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details}) 
         },1000,elem);
         //console.log(details);
     }
+    const handleProjectClick = elem => {
+        //console.log(elem.currentTarget);
+        //setProjectOpen(!projectOpen);
+       
+    }
     
     return (
-        <section className="offset fixed viewport" style={{left:"24vw"}}>
-            <div className="wrap">
+        <section 
+        className="offset fixed viewport" 
+        style={{left:"24vw"}}>
+            <div className="wrap" ref={dragConstraints}>
             <div 
             className="thumb clip active" 
             style={{position:"fixed",left:viewPort.x,top:viewPort.y,width:viewPort.width,height:viewPort.height}}
@@ -55,8 +64,8 @@ const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details}) 
                 <img src={details.img} alt=""/>
             </div>
             <div className="body" style={{marginLeft:(window.innerWidth - sticky.current.clientWidth) - window.innerWidth/6}} ref={body}>
-                <p>Project Details</p>
-                <ProjectBody loading={loading} setLoading={setLoading} title={details.name} direction="hor" />
+                <ProjectBody loading={loading} setLoading={setLoading} title={details.name} direction="hor" handleProjectClick={handleProjectClick} body={bodyDetail} drag={dragConstraints}/>
+                
             </div>
             </div>
         </section>

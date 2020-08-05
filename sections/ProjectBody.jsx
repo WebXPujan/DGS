@@ -26,15 +26,15 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
         >
             <div className="project-meta">
                 <div className="columns">
-                    <div className="column col-md-4">
+                    <div className="column col-md-4 col-xs-12">
                         <p className="para">Client Name</p>
                         <h1 className="black title title__big big">Infocus</h1>
                     </div>
-                    <div className="column col-md-4">
+                    <div className="column col-md-4 col-xs-12">
                         <p className="para">Date</p>
                         <h1 className="black title title__big big">2018</h1>
                     </div>
-                    <div className="column col-md-4">
+                    <div className="column col-md-4 col-xs-12">
                         <p className="para">Services</p>
                         <ul className="services">
                             <li><p className="title title__small big">UI/UX</p></li>
@@ -48,12 +48,12 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
             <div className="project-gallery">
                 <div className="container">
                     <div className="columns dual">
-                    <div className="column col-md-6">
+                    <div className="column col-md-6 col-sm-12">
                         <div className="thumb">
                             <img src="https://unsplash.it/1363" alt=""/>
                         </div>
                     </div>
-                    <div className="column col-md-6">
+                    <div className="column col-md-6 col-sm-12">
                         <div className="thumb">
                             <img src="https://unsplash.it/1364" alt=""/>
                         </div>
@@ -69,7 +69,7 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
             <div className="project-desc">
                 <div className="container">
                     <div className="columns dual-text">
-                        <div className="column col-md-6">
+                        <div className="column col-md-6 col-sm-12">
                             <p className="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est cum rerum obcaecati, sapiente accusamus aperiam deleniti illo sint eaque doloribus aspernatur, vel veniam. Sed, architecto officia! Voluptatum repudiandae ab explicabo.</p>
                         </div>
                     </div>
@@ -83,14 +83,14 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
             <div className="project-gallery">
                 <div className="container">
                     <div className="columns dual">
-                    <div className="column col-md-6">
+                    <div className="column col-md-6 col-sm-12">
                         <div className="hero-content">
                             <h1 className="title title__big big">{`Want to create a web experience as `}<span className="green">{`${title}'s?`}</span></h1>
                             <p className="para">We have got an Idea</p>
                             <Button type="normal" title="Lets Get Started" link="/" />
                         </div>
                     </div>
-                    <div className="column col-md-6">
+                    <div className="column col-md-6 col-sm-12">
                         <ul>
                             {
                                 direction === "hor" ? null : 

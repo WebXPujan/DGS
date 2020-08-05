@@ -2099,10 +2099,16 @@ section.project-body.hor .project-gallery .hero-content{
     .scroll-down::after{
         background-color: #fff;
     }
+    section.project-body .project-desc .dual-text{
+        max-width: 90%;
+    }
 }
 @media(max-width: 560px){
     section#services .services-item ul li a h1{
         width: 120px;
+    }
+    .project--detail--wrap{
+        transform: translateY(-78vh);
     }
 }
 @media(max-width: 480px){

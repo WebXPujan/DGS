@@ -1,7 +1,7 @@
 export const projects = [
     {
         id:"hongshi-cement",
-        name: "Hongshi Cement",
+        name: "Hongshi",
         tag: ["website","app"],
         desc: "Hongshi Cement Blah Blah",
         img_url: "https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",

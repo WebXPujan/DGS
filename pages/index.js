@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic"
+import {useState} from "react"
 import Banner from '../sections/Banner';
 import Services from '../sections/Services';
 import {HomeProvider} from '../context/HomeContext';
@@ -8,18 +9,28 @@ import CTA from '../sections/CTA';
 import Footer from '../sections/Footer';
 import {projects} from '../API/projects'
 import { useEffect } from "react";
+import Loader from "../Component/Loader";
  const Blog = dynamic(() => import('../sections/Blog'));
  const Testimonial = dynamic(() => import('../sections/Testimonial'));
 
-const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen}) =>{
+const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen }) =>{
+
+  const [loaded,setLoaded] = useState(false);
 
     useEffect(()=>{
       setLoading(!loading);
+      // let timeoutId = setTimeout(() => {
+        
+      //   setLoaded(true)
+      // },2000);
+      //   return () => clearTimeout(timeoutId)
     },[])
+
+   // if(!loaded) return <Loader />;
   
     return(
+      
       <HomeProvider>
-        
             <Banner setImagePos={setImagePos} banner={banner} projects={projects} loading={loading} setLoading={setLoading} setProjectOpen={setProjectOpen} />
             <Services />
             <Trustee />

@@ -1,6 +1,7 @@
 import React,{useRef,useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import Router from 'next/router';
 import '../public/css/styles.css';
 import NavBar from '../sections/NavBar';
 import CustomCursor from '../Component/customCursor';
@@ -10,10 +11,13 @@ import Overlay from '../Component/Overlay';
 import gsap from "gsap";
 import { CursorProvider } from '../context/CursorContext';
 import useWindowSize from "../Hooks/useWindowSize";
+import {PageTransition} from "next-page-transitions"
+import Loader from "../Component/Loader";
+import {useRouter} from "next/router";
+import Loading from '../Hooks/pageLoader';
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
-
   const [toggleMenu,setToggleMenu] = React.useState(false);
   const [isProjectOpen,setProjectOpen] = React.useState(false);
   const [imagePos,setImagePos] = React.useState({
@@ -26,8 +30,11 @@ export default function MyApp(props) {
   const nav = useRef(null);
   const button = useRef(null);
 
+ const router = useRouter();
+  
+
   React.useEffect(() => {
-   // console.log(button);
+   // console.log(pageLoading);
     const tl = gsap.timeline();
     if(nav.current != null){
         gsap.to(nav.current,0,{css:{visibility: "visible" }});
@@ -71,22 +78,26 @@ export default function MyApp(props) {
   const [height,setHeight] = useState(0);
   const [loading,setLoading] = useState(true);
 
+ 
+ 
+
   const skewConfigs = {
     ease: .1,
     current: 0,
     previous: 0,
     rounded: 0
   }
-
+ 
 
   useEffect(() => {
+    
 
     // console.log(size);
-      setHeight(size.height);
+    //  setHeight(size.height);
       //document.querySelector('body').style.height = `${scrollContainer.current.getBoundingClientRect().height+64}px`
       
 
-  }, [loading,height]);
+  });
 
 
   // useEffect(() => {
@@ -111,8 +122,10 @@ export default function MyApp(props) {
   //   requestAnimationFrame(() => skewScrolling())
     
   // }
-
+  
+  
   return (
+    
     <GlobalProvider>
       <Head>
         <meta charSet="UTF-8"/>
@@ -127,15 +140,34 @@ export default function MyApp(props) {
       </Head>
       <CursorProvider>
       <CustomCursor />
+      { Loading() }
       <Overlay />
       <OffNav toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} nav={nav} button={button}/>  
       <div className={`push ${toggleMenu ? "pushed" : ""}`}>
       <nav>    
         <NavBar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
       </nav>
+        
       <div className="App" ref={app}>
         <div className="scroll" ref={scrollContainer} id="scroll-container">
-          <Component {...pageProps} imagePos={imagePos} setImagePos={setImagePos} setLoading={setLoading} loading={loading} setProjectOpen={setProjectOpen} />
+        
+            {/* <PageTransition
+            timeout={300}
+            classNames="page-transition"
+            loadingComponent={<Loader />}
+            loadingDelay={50000}
+            loadingTimeout={{
+              enter: 400,
+              exit: 0,
+            }}
+            loadingClassNames="loading-indicator"
+            loadingCallbackName="removeNav"
+            onEnter={onEnter}
+            onExit={onExit}
+          >
+           <Component {...pageProps} key={router.route} imagePos={imagePos} setImagePos={setImagePos} setLoading={setLoading} loading={loading} setProjectOpen={setProjectOpen} />
+          </PageTransition> */}
+        <Component {...pageProps} key={router.route} imagePos={imagePos} setImagePos={setImagePos} setLoading={setLoading} loading={loading} setProjectOpen={setProjectOpen} />
         </div>
       </div>
       

@@ -587,6 +587,9 @@ body{
 img{
     pointer-events: none;
 }
+.dg-link img{
+    pointer-events: initial;
+}
 /* .App {
     position:fixed;
     top: 0;
@@ -596,6 +599,7 @@ img{
     overflow: hidden;
 } */
 .scroll#scroll-container{
+    
     transform: translate3d(0,0,0);
 }
 .project--detail--wrap{
@@ -1787,6 +1791,56 @@ section.project-body.hor .project-gallery .hero-content{
     object-fit: cover;
 }
 /*project Details*/
+/*pageloader*/
+.loader{
+    position: fixed;
+    overflow: auto;
+    top:auto;
+    right:0;
+    bottom:0;
+    left:0;
+    height: 100vh;
+    z-index: 999;
+    background-color: #fff;
+}
+.loader .green-overlay{
+    background-color: #27e027;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.loader .blue-overlay{
+    background-color: #00a8ff;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+/* .page-transition-enter {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  .page-transition-enter-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: var(--transition), transform 300ms;
+  }
+  .page-transition-exit {
+    opacity: 1;
+  }
+  .page-transition-exit-active {
+    opacity: 0;
+    transition: var(--transition);
+  }
+  .loading-indicator-appear,
+  .loading-indicator-enter {
+    opacity: 0;
+  }
+  .loading-indicator-appear-active,
+  .loading-indicator-enter-active {
+    opacity: 1;
+    transition: var(--transition);
+  } */
+/*pageloader*/
 /*responsive*/
 @media(max-width: 1440px){
     /* section#who-we-are .hero-content .arrow{

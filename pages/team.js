@@ -3,10 +3,10 @@ import Footer from '../sections/Footer';
 import DisplayGrid from '../sections/DisplayGrid';
 
 const Team = ({loading,setLoading}) => {
+    
     useEffect(() => {
         setLoading(!loading); 
     }, []);
-    
     return (
      <>   
         <section id="cta" className="sections" style={{marginTop: 64}}>

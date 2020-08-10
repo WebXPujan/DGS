@@ -35,7 +35,7 @@ const Banner = (props) => {
     });
     const [projectDetails,setProjectDetails] = useState({});
     const [mobile,setMobile] = useState(0);
-    const [offset,setOffset] = useState(false);
+   // const [offset,setOffset] = useState(false);
     //const [timeLine,setTimeLine] = useState(null);
 
     const { scrollYProgress } = useViewportScroll();
@@ -81,7 +81,7 @@ const Banner = (props) => {
     } 
 
     const viewProject = (e,details) => {
-     
+    //e.preventDefault(); 
     props.setProjectOpen(true);
     setProjectDetails(details);
     var elem = e.currentTarget;
@@ -120,11 +120,11 @@ const Banner = (props) => {
     let $e = e.deltaY;
     Math.abs($e) < 100 ? $e = e.deltaY*33.33 : $e = $e;
     let velocity = $e * 2 + slider.current.scrollLeft;
-    if(isProjectOpen && (velocity > (detailBody.current.getBoundingClientRect().width - window.innerWidth/3))){
-        setOffset(true);
-    } else{
-        setOffset(false);
-    }
+    // if(isProjectOpen && (velocity > (detailBody.current.getBoundingClientRect().width - window.innerWidth/3))){
+    //     setOffset(true);
+    // } else{
+    //     setOffset(false);
+    // }
 
     scrollTo(velocity);
    
@@ -153,7 +153,7 @@ const Banner = (props) => {
 
                     <AnimatePresence>
                         <StickyProjectInfo stickyTitle={projectDetails.name} stickyDesc={projectDetails.desc} close={true} sticky={stickyy} closeProject={handleCloseProject} />
-                        {
+                        {/* {
                             offset && (
                             <motion.div className="next--project" key={1} exit={{opacity:0,x:'30%'}} transition={{duration: 1.5, ease: [0.43,0.13,0.23,0.96]}}>
                                 <Link href="/?project=hongshi-cement" as={`/project/hongshi-cement`}>
@@ -167,7 +167,7 @@ const Banner = (props) => {
                                 </Link>
                             </motion.div>
                             )
-                        }
+                        } */}
                         
                     </AnimatePresence>
 
@@ -194,7 +194,7 @@ const Banner = (props) => {
                         animate={{
                             opacity: 1,
                             y: 0,
-                            transition: {delay:.3,duration:1,ease:transition.ease}
+                            transition: {delay:1.2,duration:1,ease:transition.ease}
                         }} 
                         className="title title__big" ref={titleBig}>
                             Transform Your Brand with <br/>
@@ -203,11 +203,11 @@ const Banner = (props) => {
                         <motion.p className="para"
                         className="para"
                         initial={{opacity:0,y:30}}
-                        animate={{opacity:1,y:0,transition:{delay:.2,...transition}}}
+                        animate={{opacity:1,y:0,transition:{delay:1,...transition}}}
                         >
                             Asperiores, architecto qui facere ipsam saepe temporibus consequatur accusamus laborum? Alias rem velit quisquam. Voluptas, consectetur quisquam.
                         </motion.p>
-                        <motion.p initial={{opacity:0,x:-20}} animate={{opacity:1,x:0,transition:{delay:.4,...transition}}}>
+                        <motion.p initial={{opacity:0,x:-20}} animate={{opacity:1,x:0,transition:{delay:1.4,...transition}}}>
                             <Button type="normal" title="Start Project" link="/demo" />
                         </motion.p>
                     </motion.div>

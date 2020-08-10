@@ -92,20 +92,15 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                     </div>
                     <div className="column col-md-6 col-sm-12">
                         <ul>
-                            {
-                                direction === "hor" ? null : 
-                                (
-                                    <Link href="/project/[project]" as={`/project/hongshi-cement`}>
-                                        <a className="dg-link">
-                                        <ProjectCard details={{img_url:'https://unsplash.it/1361',name:"Hongshi Cement",tag:["Next project"]}} 
-                                        type="projects" 
-                                        setLoading={setLoading} 
-                                        loading={loading} 
-                                        handleProjectClick={handleProjectClick}/>
-                                        </a>
-                                    </Link>
-                                )
-                            }
+                        <Link href="/project/[project]" as={`/project/hongshi-cement`}>
+                            <a className="dg-link">
+                            <ProjectCard details={{img_url:'https://unsplash.it/1361',name:"Hongshi Cement",tag:["Next project"]}} 
+                            type="projects" 
+                            setLoading={setLoading} 
+                            loading={loading} 
+                            handleProjectClick={handleProjectClick}/>
+                            </a>
+                         </Link>
                        
                         </ul>
                     </div>

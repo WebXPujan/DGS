@@ -41,13 +41,13 @@ const Banner = (props) => {
     const { scrollYProgress } = useViewportScroll();
     const showcaseSlide = useTransform(scrollYProgress,[0,1],[1,1.2]);
    
-    const slider = useRef(null);
-    const stickyy = useRef(null);
-    const sliderWrapper = useRef(null);
-    const cta = useRef(null);
-    const titleBig = useRef(null);
-    const featureImage = useRef(null);
-    const detailBody = useRef(null);
+    let slider = useRef(null);
+    let stickyy = useRef(null);
+    let sliderWrapper = useRef(null);
+    let cta = useRef(null);
+    let titleBig = useRef(null);
+    let featureImage = useRef(null);
+    let detailBody = useRef(null);
 
     useEffect(() => {
         
@@ -63,7 +63,27 @@ const Banner = (props) => {
         });
         setMobile(window.innerWidth);
    
-       return () => x.set(0)
+       return () => {
+           x.set(0);
+           props.setProjectOpen(false);
+           document.querySelector("body").style.overflow = "visible";
+           projectClose(false);
+            slider = false;
+            stickyy = false;
+            sliderWrapper = false;
+            cta = false;
+            titleBig = false;
+            featureImage = false;
+            detailBody = false;
+            setProjectDetails({});
+            setViewPort({
+                x:0,
+                y:0,
+                width:0,
+                height:0
+            });
+            setIsDragged(false);
+        }
         
     }, [x]);
 

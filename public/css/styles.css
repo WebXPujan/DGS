@@ -620,12 +620,15 @@ img{
     transform: translateY(72vh); 
     opacity: 1;
 }
+.sections#display-grid{
+    padding-top: 0;
+}
 .sections#display-grid .wrap{
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
 }
 .sections#display-grid .wrap .col{
     flex: 50%;
@@ -1841,7 +1844,36 @@ section.project-body.hor .project-gallery .hero-content{
     transition: var(--transition);
   } */
 /*pageloader*/
+section#story {
+    padding-top: 0;
+    border-bottom: none;
+}
+section#story .thumb{
+    height: 75vh;
+}
+section#story .thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section#story .intro-wrap{
+    max-width: 70%;
+    margin: 0 auto;
+}
+section#story p.para{
+    column-count: 2;
+    column-gap: 60px;
+    margin-top: 60px;
+}
+section#story h1.intro{
+    margin-top: 60px;
+}
 /*responsive*/
+@media(max-width: 1520px){
+    section#story .intro-wrap{
+        max-width: 90%;
+    }
+}
 @media(max-width: 1440px){
     /* section#who-we-are .hero-content .arrow{
         right: -95px;
@@ -1849,6 +1881,7 @@ section.project-body.hor .project-gallery .hero-content{
     section#banner .offset.fixed{
         left: 40%;
     }
+    
 }
 @media(max-width: 1400px) {
     section#trustee .info{
@@ -1893,6 +1926,7 @@ section.project-body.hor .project-gallery .hero-content{
     .sticky-info .content .number{
         font-size: 42px;
     }
+    
 }
 @media(max-width:1024px){
     .container{
@@ -2156,6 +2190,10 @@ section.project-body.hor .project-gallery .hero-content{
     section.project-body .project-desc .dual-text{
         max-width: 90%;
     }
+    section#story .intro-wrap .number{
+        font-size: 37px;
+    }
+    
 }
 @media(max-width: 560px){
     section#services .services-item ul li a h1{
@@ -2163,6 +2201,13 @@ section.project-body.hor .project-gallery .hero-content{
     }
     .project--detail--wrap{
         transform: translateY(-78vh);
+    }
+    section#story .intro-wrap p.para{
+        column-count: unset;
+        text-align: center;
+    }
+    section#story .thumb{
+        height: 50vh;
     }
 }
 @media(max-width: 480px){

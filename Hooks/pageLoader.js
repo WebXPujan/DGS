@@ -14,7 +14,7 @@ export const Loading= () => {
         let timeId;
         const handleStart = (url) => {
             setLoading(true);
-            console.log(router);
+           // console.log(router);
            // document.querySelector("body").style.overflow = "hidden";
             //tl.from(wrap.current,1,{opacity:0})
             //console.log(wrap.current);
@@ -27,7 +27,7 @@ export const Loading= () => {
                // document.querySelector("body").style.overflow = "visible";
             },600);
             
-            console.log(router);
+            //console.log(router);
             
         }
 

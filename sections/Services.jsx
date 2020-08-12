@@ -165,7 +165,13 @@ const Services = () => {
                             animate="animate"
                             variants={slideUp}
                             >
-                                <Button type="normal" title="Get Details"/>
+                                <Button 
+                                type="normal" 
+                                title="Get Details"
+                                link={`/services/[service]`}
+                                viewas={`/services/${data[0].services[activeIndex].id}`}
+                                hasSlug={true} 
+                                />
                             </motion.p>
                         </div>
                         <div className="slider">

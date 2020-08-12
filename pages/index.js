@@ -2,7 +2,6 @@ import dynamic from "next/dynamic"
 import {useState} from "react"
 import Banner from '../sections/Banner';
 import Services from '../sections/Services';
-import {HomeProvider} from '../context/HomeContext';
 import Trustee from '../sections/Trustee';
 import WeAre from '../sections/WeAre';
 import CTA from '../sections/CTA';
@@ -30,7 +29,7 @@ const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen }) =>{
   
     return(
       
-      <HomeProvider>
+      <>
             <Banner setImagePos={setImagePos} banner={banner} projects={projects} loading={loading} setLoading={setLoading} setProjectOpen={setProjectOpen} />
             <Services />
             <Trustee />
@@ -40,7 +39,7 @@ const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen }) =>{
             <CTA />
             <Footer />
 
-      </HomeProvider>
+      </>
     );
 
   

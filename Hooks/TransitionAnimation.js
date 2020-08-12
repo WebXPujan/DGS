@@ -5,7 +5,7 @@ export function TransitionAnimation(){
    
     const transition = {duration: 2, ease: [0.43,0.13,0.23,0.96]};
 
-    const fadeInUp = () => {
+    const fadeInUp = (delay) => {
 
             const parent = {
                     initial: {
@@ -15,7 +15,7 @@ export function TransitionAnimation(){
                     animate: {
                     opacity: 1,
                     y: 0,
-                    transition: {duration:1,ease:transition.ease}
+                    transition: {duration:1,ease:transition.ease,delay: delay ? delay : 0}
                     }
                 
             }

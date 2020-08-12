@@ -15,6 +15,7 @@ import {PageTransition} from "next-page-transitions"
 import Loader from "../Component/Loader";
 import {useRouter} from "next/router";
 import Loading from '../Hooks/pageLoader';
+import { HomeProvider } from '../context/HomeContext';
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -167,7 +168,9 @@ export default function MyApp(props) {
           >
            <Component {...pageProps} key={router.route} imagePos={imagePos} setImagePos={setImagePos} setLoading={setLoading} loading={loading} setProjectOpen={setProjectOpen} />
           </PageTransition> */}
-        <Component {...pageProps} key={router.route} imagePos={imagePos} setImagePos={setImagePos} setLoading={setLoading} loading={loading} setProjectOpen={setProjectOpen} />
+          <HomeProvider>
+            <Component {...pageProps} key={router.route} imagePos={imagePos} setImagePos={setImagePos} setLoading={setLoading} loading={loading} setProjectOpen={setProjectOpen} />
+          </HomeProvider>
         </div>
       </div>
       

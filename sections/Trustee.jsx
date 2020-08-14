@@ -3,7 +3,7 @@ import {GlobalContext} from '../context/GlobalContext'
 import {useContext,useEffect, useRef} from 'react'
 import {TweenMax} from 'gsap';
 import { HomeContext } from '../context/HomeContext';
-const Trustee = () => {
+const Trustee = ({title1,title2,from}) => {
 
     const [mousePos,setMousePos] = useContext(CursorContext);
     const [cursor,setCursor] = useContext(GlobalContext);
@@ -52,6 +52,45 @@ const Trustee = () => {
             });
             //setCursor("");
     }
+    const output = [
+        {
+            title:"Total Video Ad Impressions",
+            number:"1.02M"
+        },
+        {
+            title:"Total Facebook Video Ad views",
+            number:"4.1M"
+        },
+        {
+            title:"Total Display Ad Impressions",
+            number:"32.5M"
+        },
+        {
+            title:"Total Facebook Ad Impression",
+            number:"13.7M"
+        },
+        {
+            title:"Total Impression",
+            number:"46.2M"
+        },
+        {
+            title:"Total Entries",
+            number:"3,607"
+        },
+        {
+            title:"Total Likes",
+            number:"67,935"
+        },
+        {
+            title:"Total Comments ",
+            number:"783"
+        },
+        {
+            title:"Total Shares",
+            number:"2,631"
+        }
+        
+    ]
   
     return(
          
@@ -66,7 +105,7 @@ const Trustee = () => {
                     onMouseEnter={()=>setCursor("hovered")}
                     ref={border}>
                         <div className="wrap">
-                            <h1 className="black title title__big title__border big" ref={title}>Trusted by the world's<br/>leading companies</h1>
+                            <h1 className="black title title__big title__border big" ref={title}>{title1}<br/>{title2}</h1>
                             <p className="para" ref={para}>
                                 Asperiores, architecto qui facere ipsam saepe temporibus consequatur accusamus laborum? Alias rem velit quisquam. Voluptas, consectetur quisquam.
                             </p>
@@ -81,21 +120,43 @@ const Trustee = () => {
                 </div>
               </div>
               <div className="column col-md-12">
-                <div className="trustee">
-                    <ul>
-                        {
-                            data[1].trustee.map((trust,i) => (
-                                <li className="list-items" key={i}>
-                                <div className="thumb">
-                                    <img src={`/images/clients/${trust.logo}`} alt={trust.client_name}/>
-                                </div>
-                                </li>
-                            ))
-                        }
-                        
-                        
-                    </ul>
-                </div>   
+                {
+                    from === "home" ? 
+                    (
+                        <div className="trustee">
+                            <ul>
+                                {
+                                    data[1].trustee.map((trust,i) => (
+                                        <li className="list-items" key={i}>
+                                        <div className="thumb">
+                                            <img src={`/images/clients/${trust.logo}`} alt={trust.client_name}/>
+                                        </div>
+                                        </li>
+                                    ))
+                                }
+                                
+                                
+                            </ul>
+                        </div> 
+                    )
+                    : 
+                    (
+                        <div className="trustee output">
+                            <ul>
+                                {
+                                    output.map((o,i)=>(
+                                        <li className="list-items" key={i}>
+                                            <div className="thumb">
+                                                <h1 className="title title__big"><strong className="number green">{o.number}</strong></h1>
+                                                <p className="para">{o.title}</p>
+                                            </div>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        </div> 
+                    )
+                }  
               </div>
             </div>
         </div>

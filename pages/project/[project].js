@@ -1,9 +1,6 @@
-import {useEffect} from 'react';
-import gsap from "gsap";
 import ProjectBanner from '../../sections/ProjectBanner';
 import {useRouter} from 'next/router' 
 import useSWR from 'swr'
-import { AnimatePresence } from 'framer-motion';
 import ProjectBody from '../../sections/ProjectBody';
 
 
@@ -36,7 +33,7 @@ const ProjectDetails = ({imagePos,loading,setLoading}) => {
         
         
                 <>
-                <ProjectBanner width={imagePos.width} height={imagePos.height} x={imagePos.x} y={imagePos.y} stickyTitle={data.name} stickyDesc={data.desc} img={data.img_url} />
+                <ProjectBanner page="inner" width={imagePos.width} height={imagePos.height} x={imagePos.x} y="64" stickyTitle={data.name} stickyDesc={data.desc} img={data.img_url} />
                 <ProjectBody loading={loading} setLoading={setLoading} title={data.name} />
                 </>
         

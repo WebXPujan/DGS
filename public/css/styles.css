@@ -1363,6 +1363,19 @@ section#trustee .trustee .list-items .thumb:hover img{
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
 }
+section#trustee .trustee.output .list-items{
+    text-align: center;
+    margin-bottom: 20px;
+    height: 150px;
+}
+section#trustee .trustee.output .list-items .thumb{
+    
+    display: flex;
+    flex-direction: column-reverse;
+}
+section#trustee .trustee.output .list-items strong{
+    font-size: 2rem;
+}
 /*trustee*/
 /*who we are*/
 section#who-we-are{
@@ -1722,8 +1735,27 @@ section.project-body.hor{
 }
 section.project-body .project-meta{
     padding-bottom: 30px;
-    padding-left: 24vw;
     
+}
+section.project-body .project-intro{
+    padding: 60px 0;
+}
+section.project-body .project-intro .column{
+    padding: 2rem;
+}
+section.project-body .project-intro ul li{
+    position: relative;
+    padding-left: 1rem;
+}
+section.project-body .project-intro ul li::before{
+    content: '';
+    position: absolute;
+    width:5px;
+    height: 5px;
+    background-color: #27e027;
+    border-radius: 50%;
+    top: 5px;
+    left: -5px;
 }
 section.project-body.hor .project-meta{
     padding-left: 30px;
@@ -1736,7 +1768,7 @@ section.project-body.hor .project-meta .columns{
     align-content: space-evenly;
 }
 section.project-body .project-gallery{
-    padding: 30px 0;
+    padding: 0;
 }
 section.project-body .project-gallery .thumb img{
     width: 100%;
@@ -1754,23 +1786,56 @@ section.project-body .project-gallery.full .thumb{
     background-color: #e1e1e1;
 }
 section.project-body .project-desc{
-    padding: 100px 0;
+    padding: 0;
 }
 section.project-body.hor .project-desc{
     width: 50vw;
 }
 section.project-body .project-desc .dual-text{
-    max-width: 60%;
+    max-width: 90%;
     margin: auto auto;
+    padding-bottom: 60px;
 }
 section.project-body .project-desc .dual-text p.para{
-    column-count: 2;
+    column-count: 3;
+}
+section.project-body .project-desc .dual-text .intro-wrap{
+    max-width: 100%;
 }
 section.project-body .project-gallery .hero-content{
     height: 80vh;
 }
 section.project-body.hor .project-gallery .hero-content{
     width: 80vw;
+}
+section.project-body .project-strategy{
+    padding: 60px 0;
+    background: rgb(39,224,39);
+    background: linear-gradient(71deg, rgba(39,224,39,1) 0%, rgba(152,210,77,1) 100%);
+    margin-bottom: 100px;
+}
+section.project-body .project-strategy.project__outcome{
+    background: #fff;
+}
+section.project-body .strategy-wrap{
+    padding: 0;
+
+}
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-box li{
+    flex: 33.33%;
+    padding: 2rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+.flex-box li h1{
+    margin-bottom: 40px;
+}
+.flex-box li .small{
+    font-weight: 300;
 }
 .next--project{
     position: fixed;
@@ -1856,21 +1921,21 @@ section#story .thumb img{
     height: 100%;
     object-fit: cover;
 }
-section#story .intro-wrap{
+.intro-wrap{
     max-width: 70%;
     margin: 0 auto;
 }
-section#story p.para{
+.intro-wrap p.para{
     column-count: 2;
     column-gap: 60px;
     margin-top: 60px;
 }
-section#story h1.intro{
+.intro-wrap h1.intro{
     margin-top: 60px;
 }
 /*responsive*/
 @media(max-width: 1520px){
-    section#story .intro-wrap{
+   .intro-wrap{
         max-width: 90%;
     }
 }
@@ -1932,6 +1997,9 @@ section#story h1.intro{
     .container{
         max-width: 95%;
     }
+    .flex-box li{
+        flex: 50%;
+    }
     section.sections{
         padding: 60px 0;
     }
@@ -1989,6 +2057,10 @@ section#story h1.intro{
    
     .sticky-info .content{
         padding: 2%;
+    }
+    section.project-body .project-desc .dual-text p.para{
+        column-count: 1;
+        text-align: justify;
     }
 
 }
@@ -2190,8 +2262,11 @@ section#story h1.intro{
     section.project-body .project-desc .dual-text{
         max-width: 90%;
     }
-    section#story .intro-wrap .number{
+    .intro-wrap .number{
         font-size: 37px;
+    }
+    .flex-box li{
+        flex: 100%;
     }
     
 }
@@ -2202,7 +2277,7 @@ section#story h1.intro{
     .project--detail--wrap{
         transform: translateY(-78vh);
     }
-    section#story .intro-wrap p.para{
+    .intro-wrap p.para{
         column-count: unset;
         text-align: center;
     }

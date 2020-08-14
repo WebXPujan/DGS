@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 
 
 
-const ProjectBanner = ({width,height,x,y,stickyTitle,stickyDesc,img,close,closeProject}) => {
+const ProjectBanner = ({width,height,x,y,stickyTitle,stickyDesc,img,close,closeProject,page}) => {
 
     const [timeline,setTimeline] = useState(null);
     const [styles,setStyles] = useState({});
@@ -39,7 +39,7 @@ const ProjectBanner = ({width,height,x,y,stickyTitle,stickyDesc,img,close,closeP
                     width: window.innerWidth - sticky.current.clientWidth,
                     height: window.innerHeight - window.innerHeight/6,
                     left: 0+sticky.current.clientWidth,
-                    top: 0
+                    top: page === "inner" ? 64 : 0
                  }
             }
         )

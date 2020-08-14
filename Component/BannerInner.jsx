@@ -3,8 +3,9 @@ import ProgressiveImage from "react-progressive-graceful-image";
 import gsap from 'gsap';
 import {motion} from 'framer-motion';
 import {TransitionAnimation} from '../Hooks/TransitionAnimation';
+import IntroTextWrap from './IntroTextWrap';
 
-const BannerInner = ({title,intro1,intro2,highlight}) => {
+const BannerInner = ({title,intro1,intro2,highlight,para}) => {
     const anim = TransitionAnimation();
     const thumb = useRef(null);
     const handleImgload = (elem) => {
@@ -42,15 +43,11 @@ const BannerInner = ({title,intro1,intro2,highlight}) => {
                                 }
                             </ProgressiveImage>
                         </div>
-                        <div className="intro-wrap">
-                            <h1 className="title title__big big text-center intro">
-                                <strong className="number">{intro1}</strong><br/>
-                            <strong className="number">{intro2}<span className="green">{highlight}</span></strong>
-                            </h1>
-                            <p className="para">
-                            The story that started with a chair is now a council of fifteen. We are the passionate Gurkhas- hungry for growth, and never afraid to challenge the status quo. We explore, we experiment, and we work relentlessly towards achieving our one common goal – to make a dent in the universe. Our data-driven & creative campaigns have flourished businesses, built brands, and achieved real-time results.
-                            </p>
-                        </div>
+                        <IntroTextWrap 
+                        intro1={intro1}
+                        intro2={intro2}
+                        highlight={highlight}
+                        para={para}/>
                     </div>
             </div>
         </section>

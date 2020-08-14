@@ -19,6 +19,7 @@ const Team = ({loading,setLoading}) => {
         intro1="We Are Not Just An Agency,"
         intro2="We Are Your "
         highlight="Digital Partner."
+        para="The story that started with a chair is now a council of fifteen. We are the passionate Gurkhas- hungry for growth, and never afraid to challenge the status quo. We explore, we experiment, and we work relentlessly towards achieving our one common goal – to make a dent in the universe. Our data-driven & creative campaigns have flourished businesses, built brands, and achieved real-time results."
         />
         <DisplayGrid col={2} type="team" loading={loading} setLoading={setLoading}/>
         <Footer />

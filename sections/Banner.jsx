@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 import ProgressiveImage from 'react-progressive-graceful-image'
 import Link from 'next/link'
 import ProjectDetailsHorizontal from '../Component/ProjectDetailsHorizontal';
-import ProjectCard from '../Component/ProjectCard';
 const Banner = (props) => {
 
    const router = useRouter();

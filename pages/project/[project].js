@@ -1,7 +1,8 @@
 import ProjectBanner from '../../sections/ProjectBanner';
 import {useRouter} from 'next/router' 
-import useSWR from 'swr'
+import React from 'react'
 import ProjectBody from '../../sections/ProjectBody';
+import {projects} from '../../API/projects';
 
 
 const fetcher = async (url) => {
@@ -19,22 +20,30 @@ const ProjectDetails = ({imagePos,loading,setLoading}) => {
     //remove flashing
     //gsap.from(document.querySelector('body'),{opacity:0}).to(document.querySelector('body'),{opacity:1});
     const { query } = router
-    const { data, error } = useSWR(
-      () => query.project && `/api/projects/${query.project}`,
-      fetcher
-    )
+    // const { data, error } = useSWR(
+    //   () => query.project && `/api/projects/${query.project}`,
+    //   fetcher
+    // )
   
-     if (error) return <div>{error.message}</div>
-     if (!data) return <div>Loading...</div>
-
-
+    //  if (error) return <div>{error.message}</div>
+    //  if (!data) return <div>Loading...</div>
+    let project = projects.filter((p) => p.id === query.project);
+  
    
     return (
         
         
                 <>
-                <ProjectBanner page="inner" width={imagePos.width} height={imagePos.height} x={imagePos.x} y="64" stickyTitle={data.name} stickyDesc={data.desc} img={data.img_url} />
-                <ProjectBody loading={loading} setLoading={setLoading} title={data.name} />
+                
+                {
+                  project.map((p,i) => (
+                    <React.Fragment key={i}>
+                    <ProjectBanner page="inner" width={imagePos.width} height={imagePos.height} x={imagePos.x} y="64" stickyTitle={p.name} stickyDesc={p.desc} img={p.img_url} />
+                    <ProjectBody loading={loading} setLoading={setLoading} title={p.name} details={p} />
+                    </React.Fragment>
+                    ))
+                }
+
                 </>
         
     );

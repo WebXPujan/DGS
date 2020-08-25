@@ -8,7 +8,6 @@ import CTA from '../sections/CTA';
 import Footer from '../sections/Footer';
 import {projects} from '../API/projects'
 import { useEffect } from "react";
-import Loader from "../Component/Loader";
  const Blog = dynamic(() => import('../sections/Blog'));
  const Testimonial = dynamic(() => import('../sections/Testimonial'));
 

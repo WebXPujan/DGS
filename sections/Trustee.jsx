@@ -3,7 +3,7 @@ import {GlobalContext} from '../context/GlobalContext'
 import {useContext,useEffect, useRef} from 'react'
 import {TweenMax} from 'gsap';
 import { HomeContext } from '../context/HomeContext';
-const Trustee = ({title1,title2,from}) => {
+const Trustee = ({title1,title2,from,output}) => {
 
     const [mousePos,setMousePos] = useContext(CursorContext);
     const [cursor,setCursor] = useContext(GlobalContext);
@@ -52,45 +52,7 @@ const Trustee = ({title1,title2,from}) => {
             });
             //setCursor("");
     }
-    const output = [
-        {
-            title:"Total Video Ad Impressions",
-            number:"1.02M"
-        },
-        {
-            title:"Total Facebook Video Ad views",
-            number:"4.1M"
-        },
-        {
-            title:"Total Display Ad Impressions",
-            number:"32.5M"
-        },
-        {
-            title:"Total Facebook Ad Impression",
-            number:"13.7M"
-        },
-        {
-            title:"Total Impression",
-            number:"46.2M"
-        },
-        {
-            title:"Total Entries",
-            number:"3,607"
-        },
-        {
-            title:"Total Likes",
-            number:"67,935"
-        },
-        {
-            title:"Total Comments ",
-            number:"783"
-        },
-        {
-            title:"Total Shares",
-            number:"2,631"
-        }
-        
-    ]
+    
   
     return(
          
@@ -148,7 +110,7 @@ const Trustee = ({title1,title2,from}) => {
                                         <li className="list-items" key={i}>
                                             <div className="thumb">
                                                 <h1 className="title title__big"><strong className="number green">{o.number}</strong></h1>
-                                                <p className="para">{o.title}</p>
+                                                <p className="para">{o.name}</p>
                                             </div>
                                         </li>
                                     ))

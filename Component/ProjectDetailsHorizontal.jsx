@@ -2,17 +2,24 @@
 import {TimelineLite,gsap} from 'gsap';
 import { useRef,useEffect, useState } from 'react';
 import ProjectBody from '../sections/ProjectBody';
+import {projects} from '../API/projects';
 
 
-const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details,bodyDetail}) => {
+const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details,bodyDetail,projectBody}) => {
 
     
+    const [projectDetails,setProjectDetails] = useState({});
     const t1 = new TimelineLite;
     const banner = useRef(null);
     const body = useRef(null);
     const dragConstraints = useRef(null);
 
+    let project = projects.filter((p) => p.id === projectBody);
     useEffect(() => {
+
+        
+        setProjectDetails(project[0]);
+        //console.log(project[0]);
         if(banner.current != undefined){
             setTimeout(() => {
                 t1.to(
@@ -37,7 +44,10 @@ const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details,bo
                 ease: "Power3.easeOut"
             })
         }
-        //return () => t1.destroy()
+        return () => {
+           // t1.destroy();
+            setProjectDetails({});
+        }
     }, []);
 
     const myFunction = elem => {
@@ -65,7 +75,8 @@ const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details,bo
                 <img src={details.img} alt=""/>
             </div>
             <div className="body" style={{marginLeft:(window.innerWidth - sticky.current.clientWidth) - window.innerWidth/6}} ref={body}>
-                <ProjectBody loading={loading} setLoading={setLoading} title={details.name} direction="hor" handleProjectClick={handleProjectClick} body={bodyDetail} drag={dragConstraints}/>
+               
+                <ProjectBody loading={loading} setLoading={setLoading} title={details.name} direction="hor" handleProjectClick={handleProjectClick} body={bodyDetail} details={project[0]} drag={dragConstraints}/>
                 
             </div>
             </div>

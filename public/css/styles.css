@@ -812,7 +812,7 @@ section#navBar .ham svg{
     height:62px;
     position: absolute;
     z-index: 889;
-    top: -50%;
+    top: -20%;
     text-align: center;
     line-height: 62px;
 }
@@ -928,7 +928,7 @@ section#banner .offset.fixed{
 section#banner .offset.fixed.viewport{
  height: calc(100vh - 64px);
  top: 0px;
- width: 450vw;
+ width: 800vw;
 }
 section#banner .offset.fixed.viewport .wrap{
     height: 100%;
@@ -1732,6 +1732,7 @@ section.project-body.hor{
     display: flex;
     height: 100%;
     align-items: center;
+    padding-top: 0;
 }
 section.project-body .project-meta{
     padding-bottom: 30px;
@@ -1823,6 +1824,31 @@ section.project-body .project-strategy.project__outcome{
 section.project-body .strategy-wrap{
     padding: 0;
 
+}
+section.project-body.hor .w50{
+    width: 50vw;
+}
+section.project-body.hor .w100{
+    width: 100vw;
+}
+section.project-body.hor .column{
+    width: 100%;
+}
+section.project-body.hor section#trustee{
+    border-bottom: 0;
+}
+section.project-body.hor section#trustee .info{
+    max-width: 100%;
+    padding: 0;
+}
+section.project-body.hor .project-meta .container{
+    height: 100%;
+}
+section.project-body.hor .project-gallery.full{
+    height: 100%;
+}
+section.project-body.hor .project-gallery.full .thumb{
+    height: 100%;
 }
 .flex-box{
     display: flex;

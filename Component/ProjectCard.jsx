@@ -25,7 +25,7 @@ const ProjectCard = ({details,type,handleProjectClick}) => {
                 placeholder=""
                 rootMargin="0% 0% 0%"
                 threshold={[1]}
-                delay={1000}>
+                delay={100}>
                     {src => {
 
                         return <img src={src} alt={details.name} onLoad={(ref) => handleImgload(ref.target)} style={{opacity:0}} />

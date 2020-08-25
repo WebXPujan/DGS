@@ -21,6 +21,9 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
             img: "https://unsplash.it/1361"
         }
     }
+
+    
+    
     
     return (
         <>
@@ -32,7 +35,7 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
         // dragElastic={0.005}
         // dragControls={dragControls}
         >
-            <div className="project-meta">
+            <div className="project-meta w50">
                 <div className="container">
                 <div className="columns">
                     <div className="column col-md-4 col-xs-12">
@@ -57,7 +60,7 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                 </div>
                 </div>
             </div>
-            <div className="project-gallery">
+            <div className="project-gallery w100">
                 <div className="container">
                     <div className="columns dual">
                     <div className="column col-md-6 col-sm-12">
@@ -73,7 +76,7 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                     </div>
                 </div>
             </div>
-            <div className="project-intro">
+            <div className="project-intro w50">
                 <div className="container">
                     <div className="columns">
                         <div className="column col-md-4 col-xs-12">
@@ -97,12 +100,12 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                     </div>
                 </div>
             </div>
-            <div className="project-gallery full">
+            <div className="project-gallery full w100">
                 <div className="thumb">
                     <img src="https://unsplash.it/1365" alt=""/>
                 </div>
             </div>
-            <div className="project-desc">
+            <div className="project-desc w50">
                 <div className="container">
                     <div className="columns dual-text">
                         <div className="column col-md-12 col-sm-12">
@@ -115,12 +118,12 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                     </div>
                 </div>
             </div>
-            <div className="project-gallery full">
+            <div className="project-gallery full w100">
                 <div className="thumb">
                     <img src="https://unsplash.it/1366" alt=""/>
                 </div>
             </div>
-            <div className="project-strategy">
+            <div className="project-strategy w100">
                 <div className="container">
                     <div className="columns">
                         <div className="column col-12">
@@ -146,7 +149,7 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                     </div>
                 </div>
             </div>
-            <div className="project-gallery">
+            <div className="project-gallery w100">
                 <div className="container">
                     <div className="columns dual">
                     <div className="column col-md-6 col-sm-12">
@@ -204,12 +207,12 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                     </div>
                 </div>
             </div> */}
-            <div className="project-gallery full">
+            <div className="project-gallery full w100">
                 <div className="thumb">
                     <img src="https://unsplash.it/1368" alt=""/>
                 </div>
             </div>
-            <div className="project-gallery next-section" style={{borderBottom:"1px solid #ececec"}}>
+            <div className="project-gallery next-section w100" style={{borderBottom:"1px solid #ececec"}}>
                 <div className="container">
                     <div className="columns dual">
                     <div className="column col-md-6 col-sm-12">

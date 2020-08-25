@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import ProgressiveImage from 'react-progressive-graceful-image'
 import Link from 'next/link'
 import ProjectDetailsHorizontal from '../Component/ProjectDetailsHorizontal';
+import ProjectBody from './ProjectBody';
 const Banner = (props) => {
 
    const router = useRouter();
@@ -33,6 +34,7 @@ const Banner = (props) => {
         height:0
     });
     const [projectDetails,setProjectDetails] = useState({});
+    const [projectBody,setProjectBody] = useState("");
     const [mobile,setMobile] = useState(0);
    // const [offset,setOffset] = useState(false);
     //const [timeLine,setTimeLine] = useState(null);
@@ -82,6 +84,7 @@ const Banner = (props) => {
                 height:0
             });
             setIsDragged(false);
+            setProjectBody("");
         }
         
     }, [x]);
@@ -102,6 +105,8 @@ const Banner = (props) => {
     const viewProject = (e,details) => {
     //e.preventDefault(); 
     props.setProjectOpen(true);
+    //console.log(details);
+    setProjectBody(details.slug);
     setProjectDetails(details);
     var elem = e.currentTarget;
     var offset = jQuery(e.currentTarget).closest(".image").offset();
@@ -239,7 +244,7 @@ const Banner = (props) => {
                     isProjectOpen ?
                     (
                         <AnimatePresence exitBeforeEnter>
-                            <ProjectDetailsHorizontal viewPort={viewPort} details={projectDetails} sticky={stickyy} setLoading={props.setLoading} loading={props.loading} bodyDetail={detailBody} />
+                            <ProjectDetailsHorizontal viewPort={viewPort} details={projectDetails} sticky={stickyy} setLoading={props.setLoading} loading={props.loading} bodyDetail={detailBody} projectBody={projectBody} />
                         </AnimatePresence>
                     )
                     :

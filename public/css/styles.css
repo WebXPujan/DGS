@@ -1962,6 +1962,64 @@ section#story .thumb img{
 .intro-wrap h1.intro{
     margin-top: 60px;
 }
+/*blog details page*/
+.blog-banner .intro-wrap strong{
+    text-transform: capitalize;
+}
+.blog-banner .thumb{
+    max-width: 50%;
+    height: 70vh;
+    margin: auto;
+    background-color: #e1e1e1;
+}
+.blog-banner .thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section#blog-wrapper{
+    border-bottom: 1px solid #e1e1e1;
+}
+.blog-content{
+    max-width: 50%;
+    margin: 5% auto;
+}
+.blog-content p,
+.blog-content ul li{
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 24px;
+}
+.blog-content p strong,
+.blog-content h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin: 50px 0;
+    display: block;
+}
+.blog-content figure,
+.blog-content img{
+    width: 100%;
+    margin: 5% 0;
+}
+.blog-content figure img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.blog-content a,
+.blog-content a:visited,
+.blog-content a:hover,
+.blog-content a:active{
+    text-decoration: none;
+    outline: 0;
+    color: #27e027;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    border: none;
+    box-shadow: none;
+}
+
+/*blog details page*/
 /*responsive*/
 @media(max-width: 1520px){
    .intro-wrap{
@@ -2020,6 +2078,11 @@ section#story .thumb img{
     .sticky-info .content .number{
         font-size: 42px;
     }
+    .blog-banner .thumb,
+    .blog-content{
+        max-width: 60%;
+    }
+    
     
 }
 @media(max-width:1024px){
@@ -2296,6 +2359,13 @@ section#story .thumb img{
     }
     .flex-box li{
         flex: 100%;
+    }
+    .blog-banner .thumb,
+    .blog-content{
+        max-width: 80%;
+    }
+    .blog-banner .thumb{
+        height: 40vh;
     }
     
 }

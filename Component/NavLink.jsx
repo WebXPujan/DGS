@@ -30,7 +30,7 @@ const Navlink = ({setToggleMenu,toggleMenu}) => {
                 </Link>
             </li>
             <li>
-            <Link href="/">
+            <Link href="/blog">
                     <a onClick={toggleMenu ? handleClick : undefined}>Blog</a>
                 </Link>
             </li>

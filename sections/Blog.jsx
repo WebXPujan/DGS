@@ -43,6 +43,7 @@ const Blog = ({setLoading,loading}) => {
                             desc={post.excerpt.rendered}
                             img={post.featured_media}
                             slug={post.slug}
+                            id={post.id}
                             />
                         ))
                     }

@@ -15,7 +15,7 @@ const fetcher = async (url) => {
     return data
   }
 
-const BlogCard = ({title,desc,img,slug}) => {
+const BlogCard = ({title,desc,img,slug,id}) => {
 
     
 
@@ -73,7 +73,10 @@ const BlogCard = ({title,desc,img,slug}) => {
                 onMouseEnter={() => setCursor("hovered")}
                 onMouseLeave={() => setCursor("")}
                 >
-                        <a href={`https://digitalgurkha.com/blog/${slug}`} target="_blank">{title}</a>
+                        {/* <a href={`https://digitalgurkha.com/blog/${slug}`} target="_blank">{title}</a> */}
+                        <Link href={`/blog/[blog]?id=${id}`} as={`/blog/${slug}`}>
+                            <a>{title}</a>
+                        </Link>
                     
                 </h1>
                 {/* <div dangerouslySetInnerHTML={{__html: desc}} /> */}

@@ -1975,7 +1975,7 @@ section#story .thumb img{
 .blog-banner .thumb img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 section#blog-wrapper{
     border-bottom: 1px solid #e1e1e1;
@@ -1990,7 +1990,8 @@ section#blog-wrapper{
     font-size: 24px;
 }
 .blog-content p strong,
-.blog-content h2{
+.blog-content h2,
+.blog-content h1{
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     margin: 50px 0;
@@ -2017,6 +2018,33 @@ section#blog-wrapper{
     font-size: 24px;
     border: none;
     box-shadow: none;
+}
+.blog-banner .intro-wrap{
+    max-width: 50%;
+}
+.blog-banner .intro-wrap h1{
+    text-align: left;
+}
+.blog-banner .title-meta{
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.blog-banner .title-meta ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.blog-banner .title-meta ul li .share-button{
+    transition: var(--transition);
+}
+.blog-banner .title-meta ul li .share-button,
+.blog-banner .title-meta ul li .share-button:focus,
+.blog-banner .title-meta ul li .share-button:visited,
+.blog-banner .title-meta ul li .share-button:hover,
+.blog-banner .title-meta ul li .share-button:active{
+    outline: 0;
+    cursor: none;
 }
 
 /*blog details page*/
@@ -2079,7 +2107,8 @@ section#blog-wrapper{
         font-size: 42px;
     }
     .blog-banner .thumb,
-    .blog-content{
+    .blog-content,
+    .blog-banner .title-meta{
         max-width: 60%;
     }
     
@@ -2361,7 +2390,9 @@ section#blog-wrapper{
         flex: 100%;
     }
     .blog-banner .thumb,
-    .blog-content{
+    .blog-content,
+    .blog-banner .intro-wrap,
+    .blog-banner .title-meta{
         max-width: 80%;
     }
     .blog-banner .thumb{

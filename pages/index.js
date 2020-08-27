@@ -37,7 +37,7 @@ const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen }) =>{
             from="home"/>
             <WeAre />
             <Testimonial />
-            <Blog setLoading={setLoading} loading={loading} /> 
+            <Blog setLoading={setLoading} loading={loading} from="home" /> 
             <CTA />
             <Footer />
 

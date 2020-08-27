@@ -123,6 +123,31 @@
     box-shadow: none;
     transition: var(--transition);
 }
+
+.gradient{
+    background: linear-gradient(-45deg, #e1e1e1, #ececec, #f3f3f3, #fff);
+	background-size: 400% 400%;
+	animation: gradient 1s ease infinite;
+}
+
+.article__card.dummy .title__article{
+    border-bottom: none;
+}
+.article__card.dummy .excerpt{
+    width: 100%;
+}
+.article__card.dummy .excerpt .para{
+    height: 10px;
+    overflow: visible;
+}
+.article__card.dummy .excerpt .para::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    margin-top: 20px;
+}
+
 .title__article a:hover{
     color: #27e027;
 }
@@ -1985,7 +2010,8 @@ section#blog-wrapper{
     margin: 5% auto;
 }
 .blog-content p,
-.blog-content ul li{
+.blog-content ul li,
+.blog-content ol li{
     font-family: "Josefin Sans",sans-serif;
     font-size: 24px;
 }
@@ -2037,6 +2063,18 @@ section#blog-wrapper{
 }
 .blog-banner .title-meta ul li .share-button{
     transition: var(--transition);
+}
+.blog-banner .title-meta ul li.has-avtr{
+    position: relative;
+    padding-left: 60px;
+}
+.blog-banner .title-meta ul li.has-avtr span{
+    position: absolute;
+    left: 0;
+    top: -3px;
+    display: block;
+    width: 48px;
+    height: 48px;
 }
 .blog-banner .title-meta ul li .share-button,
 .blog-banner .title-meta ul li .share-button:focus,
@@ -2258,6 +2296,9 @@ section#blog-wrapper{
         height: 200px;
         margin-bottom: 10px;
     }
+    .article__card.dummy .excerpt{
+        padding: 10% 5%;
+    }
 
     section#footer .offset{
         margin-top: 0;
@@ -2458,6 +2499,28 @@ section#blog-wrapper{
     }
     section#services .services-item ul li a{
         width: 68vw;
+    }
+    .blog-banner .title-meta ul{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .blog-banner .thumb,
+    .blog-content,
+    .blog-banner .intro-wrap,
+    .blog-banner .title-meta{
+        max-width: 90%;
+    }
+    .blog-banner .thumb{
+        height: 30vh;
+    }
+    .blog-content p, .blog-content ul li{
+        font-size: 22px;
+    }
+    .blog-content p strong, 
+    .blog-content h2, 
+    .blog-content h1{
+        font-size: 26px;
+        line-height: 43px;
     }
 }
 /*responsive*/

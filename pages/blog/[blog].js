@@ -4,20 +4,11 @@ import ProgressiveImage from 'react-progressive-graceful-image';
 import gsap from 'gsap';
 import Footer from '../../sections/Footer';
 import {useRouter} from 'next/router';
-import useSWR from 'swr';
 import BlogTitleMeta from '../../Component/BlogTitleMeta';
 import Head from 'next/head';
 
 
-const fetcher = async (url) => {
-    const res = await fetch(url)
-    const data = await res.json()
-  
-    if (res.status !== 200) {
-      throw new Error(data.message)
-    }
-    return data
-  }
+
 
 
 const BlogDetails = ({data}) => {
@@ -29,14 +20,7 @@ const BlogDetails = ({data}) => {
     //gsap.from(document.querySelector('body'),{opacity:0}).to(document.querySelector('body'),{opacity:1});
     const { query } = router
    
-    // const getBlogDetails = (url) => {
-    //     const {data, error} = useSWR(url,fetcher)
-    
-    //     if (error) setImage("")
-    //     if (!data) setImage("")// setLoaded(true);
-        
-    //     return data;
-    // }
+  
     
     useEffect(() => {
         // let fImage = await fetch('https://digitalgurkha.com/blog/wp-json/wp/v2/media/'+data[0].featured_media);
@@ -103,6 +87,7 @@ const BlogDetails = ({data}) => {
             title={title}
             shareUrl={shareUrl}
             date={data[0].date}
+            author={data[0].author}
             />
             <div className="thumb">
                 <ProgressiveImage 
@@ -126,6 +111,7 @@ const BlogDetails = ({data}) => {
             title={title}
             shareUrl={shareUrl}
             date={data[0].date}
+            author={data[0].author}
             />
         </div>
         </section>

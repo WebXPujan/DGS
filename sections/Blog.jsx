@@ -15,14 +15,15 @@ const fetcher = async (url) => {
   }
 
 
-const Blog = ({setLoading,loading}) => {
+const Blog = ({setLoading,loading,from}) => {
     const [isLoaded,loaded] = useState(false)
     
        // const { data, error } = useSWR(`https://newsapi.org/v2/top-headlines?country=us&apiKey=e6c514c259024fbfa5f9e2de2684fefd`,fetcher)
-        const {data, error} = useSWR('https://digitalgurkha.com/blog/wp-json/wp/v2/posts?per_page=4',fetcher)
+       let url = from === "home" ? "https://digitalgurkha.com/blog/wp-json/wp/v2/posts?per_page=4" : "https://digitalgurkha.com/blog/wp-json/wp/v2/posts";
+        const {data, error} = useSWR(url,fetcher)
     
        if (error) return <div>{error.message}</div>
-       if (!data) return <div>loading...</div>
+       if (!data) return ""
       
     
   
@@ -49,7 +50,10 @@ const Blog = ({setLoading,loading}) => {
                     }
                 </div>
                 <div className="col-12 cta">
-                    <Button type="normal" title="Explore More"/>
+                    {
+                        from === "home" ? <Button type="normal" link="/blog" as="/blog" title="Explore More"/> : null
+                    }
+                    
                 </div>
             </div>
             

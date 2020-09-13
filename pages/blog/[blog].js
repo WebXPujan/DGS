@@ -27,19 +27,23 @@ const BlogDetails = ({data}) => {
         // let resp = await fImage.json();
         // if(resp) setImage(resp);
         // return () => setImage("")
+        if(data[0].featured_media != 0) {
         fetch('https://digitalgurkha.com/blog/wp-json/wp/v2/media/'+data[0].featured_media)
         .then(res => res.json())
         .then(json => {
-            setImage(json.media_details.sizes.theseo_portfolio.source_url)
-            setBannerImage(json.media_details.sizes.theseo_large.source_url)
+                setImage(json.media_details.sizes.theseo_portfolio.source_url)
+                setBannerImage(json.media_details.sizes.theseo_large.source_url)
+            
+            
         });
+    }
 
     },[])
     
    
-    let shareUrl = `https://digitalgurkha.com/blog/${query.blog}`;
-    let title = data[0].title.rendered;
-    let exerpt = data[0].excerpt.rendered;
+    let shareUrl = `https://digitalgurkha.com/blog/${query.blog}` || "";
+    let title = data[0].title.rendered || "";
+    let exerpt = data[0].excerpt.rendered || "";
 
     const handleImgload = (elem) => {
         gsap.to(elem,0.6,{opacity:1,delay:.1});

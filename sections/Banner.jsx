@@ -163,8 +163,12 @@ const Banner = (props) => {
    const handleImgload = (elem) => {
        gsap.to(elem,0.6,{opacity:1,delay:.1});
    }
-   const handleProjectClick = e => {
-
+   const dragReverse = () => {
+        x.set(0);
+        props.setProjectOpen(false);
+        document.querySelector("body").style.overflow = "visible";
+        projectClose(false);
+       
    }
     return(
         
@@ -198,7 +202,7 @@ const Banner = (props) => {
                     :
 
                     <AnimatePresence exitBeforeEnter>
-                        <StickyProjectInfo stickyTitle={sticky.title} stickyDesc={sticky.desc} close={false} sticky={stickyy} />
+                        <StickyProjectInfo stickyTitle={sticky.title} stickyDesc={sticky.desc} close={true} sticky={stickyy} closeProject={dragReverse} />
                     </AnimatePresence>
                 )
             }

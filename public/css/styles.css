@@ -77,6 +77,10 @@
     min-height: 220px;
     position: relative;
 }
+.article__card .thumb a{
+    display: block;
+    height: 100%;
+}
 .article__card .thumb img{
     object-fit: cover;
     width: 100%;

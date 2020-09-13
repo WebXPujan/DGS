@@ -4,7 +4,7 @@ export const projects = [
         name: "Hongshi",
         tag: ["website","app"],
         desc: "Hongshi Shivam cement, a joint venture of Shivam Group and China’s Hongshi Cement, is the largest producer of cement in Nepal producing 6000 metric tons daily with its first smoke and dust free factory in Nepal",
-        img_url: "https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        img_url: "/images/thumbnails/hongshi-cement.jpg",
         meta: [
             {
                 client_name: "Hongshi Shivam Cement",
@@ -16,7 +16,7 @@ export const projects = [
                 ]
             },
             {
-                top_image: "https://unsplash.it/1367"
+                top_image: "/images/thumbnails/hongshi-cement.jpg"
             },{
                 next: "hard-rock"
             }
@@ -88,7 +88,7 @@ export const projects = [
         name: "Hard Rock",
         tag: ["website"],
         desc: "With venues in 75 countries spanning 259 locations that include owned/licensed or managed HOtels, Casinos, Rock Shops and Cafes - Hard Rock International is one of the most globally recognized companies.",
-        img_url: "https://img.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg?size=626&ext=jpg&ga=GA1.2.1875280542.1596326400",
+        img_url: "/images/thumbnails/hard-rock.jpg",
         meta: [
             {
                 client_name: "Hard Rock Cafe, Nepal",
@@ -148,7 +148,7 @@ export const projects = [
         name: "Folliderm",
         tag: ["website"],
         desc: "Folliderm is an international standard hair transplant and skin clinic in Nepal that provides the most advanced Direct Hair Transplant in Nepal along with other hair and skin care services facilitated by certified medical experts.",
-        img_url: "https://www.setaswall.com/wp-content/uploads/2017/07/Bench-Background-48-1600x1000.jpg",
+        img_url: "/images/thumbnails/folliderm.jpg",
         meta: [
             {
                 client_name: "Folliderm",
@@ -247,7 +247,7 @@ export const projects = [
         name: "IIMS College",
         tag: ["website"],
         desc: "Established in 2010, by enthusiasts & educationists, the ‘IIMS Education Foundation Pvt. Ltd.’ has long established its roots in Nepalese educational sector by promoting a wide variety of quality educational services.",
-        img_url: "https://www.popsci.com/resizer/QgEMm6gNVXFYEFCmonq-Tp9_D7g=/760x506/cloudfront-us-east-1.images.arcpublishing.com/bonnier/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg",
+        img_url: "/images/thumbnails/iims.jpg",
         meta: [
             {
                 client_name: "IIMS College",

@@ -3,6 +3,7 @@ export const projects = [
         id:"hongshi-cement",
         name: "Hongshi",
         tag: ["website","app"],
+        type: "marketing",
         desc: "Hongshi Shivam cement, a joint venture of Shivam Group and China’s Hongshi Cement, is the largest producer of cement in Nepal producing 6000 metric tons daily with its first smoke and dust free factory in Nepal",
         img_url: "/images/thumbnails/hongshi-cement.jpg",
         meta: [
@@ -18,7 +19,7 @@ export const projects = [
             {
                 top_image: "/images/thumbnails/hongshi-cement.jpg"
             },{
-                next: "hard-rock"
+                next: "xpertspool"
             }
         ],
         challenge: [
@@ -84,9 +85,137 @@ export const projects = [
         ]
     },
     {
+        id:"xpertspool",
+        name: "XpertsPool",
+        tag: ["website"],
+        type: "web",
+        desc: "Xpertspool is a growing platform providing reliable and affordable tech Experts across the globe with more than 300+ Experts from Nepal, India, and Bangladesh.",
+        img_url: "https://unsplash.it/1368",
+        meta: [
+            {
+                client_name: "XpertsPool LLC",
+                project_year: "2018",
+                services: [
+                    "Website Development",
+                    "IMS Design",
+                    "UI/UX Design"
+                ]
+            },
+            {
+                top_image: "https://unsplash.it/1368"
+            },{
+                next: "hard-rock"
+            }
+        ],
+        challenge: [
+            "To create a web portal to connect experts with the clients",
+            "Simple and clear UI",
+            "Opportunity to build functional teams",
+            "Suitable administration board"
+        ],
+        summary: {
+            desc: "",
+            lists: [
+                {
+                    title: "Technology Used",
+                    desc: "Laravel, HTML5, CSS3, Javascript, jQuery",
+                    lists: []
+                },
+                {
+                    title: "Integration",
+                    desc: "Stripe, Mailgun",
+                    lists: []
+                },
+                {
+                    title: "Outcome",
+                    desc: "",
+                    lists: [
+                        "Simple & Clean Design",
+                        "Xpert and Dedicated Manager Assigned",
+                        "Kanban Board",
+                        "Hire Xperts in easy steps"
+                    ]
+                }
+            ]
+        },
+        strategy: [
+            {
+                title: "Hire Experts",
+                desc: "",
+                items: [
+                    {
+                        title: "Selecting Right Expert for the Project",
+                        desc: "The process of selection of the right candidate is a 3 step process:",
+                        lists: [
+                            "Selection of the domain of work",
+                            "Selection of required programming languages",
+                            "Selection of the right candidate from the pool of experts"
+                        ]
+                    },
+                    {
+                        title: "Getting further information from the client:",
+                        desc: "Understanding the requirement of the client in detail is paramount to completion of any project. Hence, the client is then prompted to answer a series of questions that makes it easier for the expert to understand the project.                        ",
+                        lists: []
+                    },
+                    {
+                        title: "Payment",
+                        desc: "The client is then prompted to the payment section where the payment is secured for the expert and the pricing plan is decided.",
+                        lists: []
+                    },
+                    {
+                        title: "Client Board",
+                        desc: "The client can then manage the expert, the projects and the managers in the ame board using Kanban framework ",
+                        lists: []
+                    }
+                ]
+            },
+            {
+                title: "Project Collaboration (Kanban Board)",
+                desc: "Understanding the importance of effective project management techniques, Xpertspool encompasses the Kanban Board. Kanban Board can be used to collaborate with multiple experts or multiple projects concurrently. Various features such as assigning a task, providing feedback, file attachment, instant notification is included so as to create a seamless experience to both clients and experts. ",
+                items: []
+
+            },
+            {
+                title: "Account Section",
+                desc: "The payment procedure is made easier for the client via the Account Section. A few easy clicks will enable clients to add multiple cards, download invoice, transaction and refund history."
+            },
+            {
+                title: "Invite and Earn",
+                desc: "Xperts pool is integrated with a tracking system that facilitates and validates referral processes. If a client's link is used for signing up on the platform, the client receives 10% of the sign up amount."
+            }
+        ],
+        outcome: [
+            {
+                name: "Total Video Ad Impressions",
+                number: "1M"
+            },
+            {
+                name: "Total Facebook Video Ad views",
+                number: "4M"
+            },
+            {
+                name: "Total Display Ad Impressions",
+                number: "32M"
+            },
+            {
+                name: "Total Facebook Ad Impression",
+                number: "13M"
+            },
+            {
+                name: "Total Impression",
+                number: "46M"
+            },
+            {
+                name: "Total Page Likes",
+                number: "67,935"
+            }
+        ]
+    },
+    {
         id:"hard-rock",
         name: "Hard Rock",
         tag: ["website"],
+        type: "marketing",
         desc: "With venues in 75 countries spanning 259 locations that include owned/licensed or managed HOtels, Casinos, Rock Shops and Cafes - Hard Rock International is one of the most globally recognized companies.",
         img_url: "/images/thumbnails/hard-rock.jpg",
         meta: [
@@ -147,6 +276,7 @@ export const projects = [
         id:"folliderm",
         name: "Folliderm",
         tag: ["website"],
+        type: "marketing",
         desc: "Folliderm is an international standard hair transplant and skin clinic in Nepal that provides the most advanced Direct Hair Transplant in Nepal along with other hair and skin care services facilitated by certified medical experts.",
         img_url: "/images/thumbnails/folliderm.jpg",
         meta: [
@@ -246,6 +376,7 @@ export const projects = [
         id:"iims-college",
         name: "IIMS College",
         tag: ["website"],
+        type: "marketing",
         desc: "Established in 2010, by enthusiasts & educationists, the ‘IIMS Education Foundation Pvt. Ltd.’ has long established its roots in Nepalese educational sector by promoting a wide variety of quality educational services.",
         img_url: "/images/thumbnails/iims.jpg",
         meta: [
@@ -324,6 +455,7 @@ export const projects = [
         id:"vianet",
         name: "Vianet",
         tag: ["website"],
+        type: "marketing",
         desc: "Vianet is a leading Internet Service Provider of Nepal bringing for the first time FibertotheHome, thus redefining the market scenario with increased bandwidth and facilities",
         img_url: "https://www.popsci.com/resizer/QgEMm6gNVXFYEFCmonq-Tp9_D7g=/760x506/cloudfront-us-east-1.images.arcpublishing.com/bonnier/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg",
         meta: [

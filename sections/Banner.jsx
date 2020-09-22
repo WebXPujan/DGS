@@ -2,7 +2,7 @@ import {useContext, useState, useEffect, useRef} from 'react'
 import Button from '../Component/Button';
 import StickyProjectInfo from '../Component/StickyProjectInfo';
 import {GlobalContext} from '../context/GlobalContext'
-import {motion, useSpring, useTransform, useViewportScroll, AnimatePresence} from 'framer-motion'
+import {motion, useSpring, useTransform, useViewportScroll, AnimatePresence, useDragControls} from 'framer-motion'
 import useSmoothScroll from "use-smooth-scroll";
 import gsap from "gsap";
 import { useRouter } from 'next/router';
@@ -41,6 +41,7 @@ const Banner = (props) => {
 
     const { scrollYProgress } = useViewportScroll();
     const showcaseSlide = useTransform(scrollYProgress,[0,1],[1,1.2]);
+    const dragControls = useDragControls();
    
     let slider = useRef(null);
     let stickyy = useRef(null);
@@ -123,6 +124,11 @@ const Banner = (props) => {
            });
     setTimeout(actionOpen,1000,elem);
        
+    }
+
+    function startDrag(event) {
+        //console.log(event);
+        dragControls.start(event, { snapToCursor: true })
     }
 
     
@@ -209,7 +215,13 @@ const Banner = (props) => {
 
             </>
        
-            <motion.section exit={{opacity:0}} className={isDragged ? (isProjectOpen ? "sections has-offset visible viewport" : "sections has-offset visible") : "sections has-offset hidden"} id="banner" ref={slider} onWheel={isDragged ? handleWheel : undefined}>
+            <motion.section 
+            exit={{opacity:0}} 
+            className={isDragged ? (isProjectOpen ? "sections has-offset visible viewport" : "sections has-offset visible") : "sections has-offset hidden"} 
+            id="banner" 
+            ref={slider} 
+            onWheel={isDragged ? handleWheel : undefined}
+            >
             
             
           
@@ -262,6 +274,7 @@ const Banner = (props) => {
                         dragElastic={0.005}
                         style={{ x }}
                         transition={transition}
+                        dragControls={dragControls}
                         >
                         <motion.ul className={isDragged ? (isProjectOpen ? "showcase expanded viewport" : "showcase expanded") : "showcase"}
                         onMouseEnter={() => setCursor(`${isDragged ? '' : 'dragged'}`)}
@@ -269,6 +282,7 @@ const Banner = (props) => {
                         style={{ showcaseSlide, fadeOut }}
                         transition={transition}
                         ref={sliderWrapper}
+                        onClick={isDragged ? undefined : startDrag}
                         >
                             
                             {

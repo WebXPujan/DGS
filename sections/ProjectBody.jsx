@@ -114,10 +114,42 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                             intro2="Summary"
                             highlight=""
                             para=""/>
+                            
                         </div>
+                        
                     </div>
                 </div>
             </div>
+            {
+                details.type === "web" 
+                ? 
+                (
+                    <div className="project-intro w50">
+                    <div className="container">
+                         <div className="columns">
+                            
+                            {
+                                details.summary.lists.map((sm,i) => (
+                                    <div className="column col-md-4 col-xs-12" key={i}>
+                                        <h1 className="black title title__big big title__border">{sm.title}</h1>
+                                        <p className="para">{sm.desc}</p>
+                                        <ul>
+                                        {
+                                            sm.lists.map((c,i) => (
+                                                <li key={i}><p className="para">{c}</p></li>
+                                            ))
+                                        }
+                                        </ul>
+                                    </div>
+                                ))
+                            }
+                            
+                        </div>   
+                    </div>
+                    </div>
+                ):
+                null
+            }
             <div className="project-gallery full w100">
                 <div className="thumb">
                     <img src="https://unsplash.it/1366" alt=""/>
@@ -134,14 +166,14 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                     <div className="column col-md-12">
                         <div className="strategy-wrap">
                             <ul className="flex-box">
-                                {
+                                {/* {
                                     details.strategy.lists.map((s,i) => (
                                         <li key={i}>
                                             <h1 className="black title title__big inverted">{s.title}</h1>
                                             <p className="para inverted small">{s.desc}</p>
                                         </li>
                                     ))
-                                }
+                                } */}
                             </ul>
                         </div>
                     </div>

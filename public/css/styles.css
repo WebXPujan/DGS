@@ -1341,16 +1341,16 @@ section#trustee .meet::after {
   }
 
   section#trustee .meet.draw::before {
-    border-top-color: #27e027; 
-    border-right-color: #27e027;
+    border-top-color: #27e02752; 
+    border-right-color: #27e02752;
     transition:
       width 0.25s ease-out,
       height 0.25s ease-out 0.25s
   }
 
   section#trustee .meet.draw::after {
-    border-bottom-color: #27e027; 
-    border-left-color: #27e027;
+    border-bottom-color: #27e02752; 
+    border-left-color: #27e02752;
     transition:
       border-color 0s ease-out 0.5s, 
       width 0.25s ease-out 0.5s, 

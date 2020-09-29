@@ -9,11 +9,12 @@ const Services = () => {
     const data = useContext(HomeContext);
 
     const [isClicked,setClick] = useState(false);
-    const [activeIndex, setActiveIndex] = useState(9);
+    const [activeIndex, setActiveIndex] = useState(0);
     const [mobile,setMobile] = useState(0);
     useEffect(()=>{
         setMobile(window.innerWidth);
         setActiveIndex(0);
+        setClick(true); //rmove this when video added
         if(window.innerWidth <= 840) setClick(true);
     },[])
 
@@ -60,7 +61,7 @@ const Services = () => {
             <div className="columns">
               <div className="column col-md-12">
                 <div className="hero-content">
-                    <h1 className="black title title__big title__border big">So what do we do exactly?</h1>
+                    <h1 className="black title title__big title__border big">So, how do we build and Scale ?</h1>
                    
                     <div className="services-item">
                         {
@@ -143,11 +144,11 @@ const Services = () => {
                 </div>
               </div>
               <div className="column col-md-12">
-                  {
+                  {/* {
                       !isClicked && mobile >= 841 && (
                         <div className="video" style={{width: "100%",height: "500px",background:"#e1e1e1"}}></div>
                       )
-                  }
+                  } */}
                     
               </div>
             </div>
@@ -203,13 +204,13 @@ const Services = () => {
             }
             
         </section>
-        {
+        {/* {
             mobile <= 840 && (
                 <div className="container mob-vid" style={{padding: 4}}>
                 <div className="video" style={{width: "100%",height: "500px",background:"#e1e1e1",marginTop:240}}></div>
                 </div>
             )
-        }
+        } */}
         
     </section>
     );

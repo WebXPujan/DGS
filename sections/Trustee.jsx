@@ -69,7 +69,7 @@ const Trustee = ({title1,title2,from,output}) => {
                         <div className="wrap">
                             <h1 className="black title title__big title__border big" ref={title}>{title1}<br/>{title2}</h1>
                             <p className="para" ref={para}>
-                                Asperiores, architecto qui facere ipsam saepe temporibus consequatur accusamus laborum? Alias rem velit quisquam. Voluptas, consectetur quisquam.
+                            We have worked with Startups, small businesses and Multimillion dollar businesses, and proud to say they all love us. 
                             </p>
                         </div>
                         {/* <span className="line top"></span>

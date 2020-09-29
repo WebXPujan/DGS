@@ -237,15 +237,15 @@ const Banner = (props) => {
                             transition: {delay:1.2,duration:1,ease:transition.ease}
                         }} 
                         className="title title__big" ref={titleBig}>
-                            Transform Your Brand with <br/>
-                            <span className="green big">Revolutionary Digital Experiences</span>
+                            Build and Scale with <br/>
+                            <span className="green big">Customer Driven Service</span>
                         </motion.h1>
                         <motion.p className="para"
                         className="para"
                         initial={{opacity:0,y:30}}
                         animate={{opacity:1,y:0,transition:{delay:1,...transition}}}
                         >
-                            Asperiores, architecto qui facere ipsam saepe temporibus consequatur accusamus laborum? Alias rem velit quisquam. Voluptas, consectetur quisquam.
+                           We build tech with Customer Experience, and help you scale using the latest technology.
                         </motion.p>
                         <motion.p initial={{opacity:0,x:-20}} animate={{opacity:1,x:0,transition:{delay:1.4,...transition}}}>
                             <Button type="normal" title="Start Project" link="/demo" />

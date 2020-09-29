@@ -24,11 +24,11 @@ const Navlink = ({setToggleMenu,toggleMenu}) => {
                     <a onClick={toggleMenu ? handleClick : undefined}>Case Studies</a>
                 </Link>
             </li>
-            <li>
+            {/* <li>
                 <Link href="/">
                     <a onClick={toggleMenu ? handleClick : undefined}>Podcast</a>
                 </Link>
-            </li>
+            </li> */}
             <li>
             <Link href="/blog">
                     <a onClick={toggleMenu ? handleClick : undefined}>Blog</a>

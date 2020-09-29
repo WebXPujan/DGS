@@ -7,7 +7,7 @@ export const HomeProvider = props => {
             {
                 id: "website-development",
                 name: "Website Development",
-                desc: "A well built website for any business is not only a means to represent the brand online, but a medium through which the brand can connect to the audience, interact and  generate sales. We specialise in building applications that are tailored to your needs and provide ease of use to your user base.",
+                desc: "Website is the core of any business that wants to leverage the Digital Space. We help you build websites with great User Experience, Inbuilt SEO, Content services, and integrate tools and technologies which will help you scale your marketing.",
                 images:[
                     {
                         url:"https://unsplash.it/1362",
@@ -68,8 +68,8 @@ export const HomeProvider = props => {
             },
             {
                 id: "app-development",
-                name: "Application Development",
-                desc: "Developing an application for your brand helps create enhanced user experience, streamline operations or even get a competitive edge over competitors. We use robust technology architecture and immaculate code that is engineered to deliver a seamless experience.",
+                name: "App Development Services",
+                desc: "We build Application using Hybrid App Development so that you save time and money while making sure that the journey of the customer is prioritized for Customer Engagement and Brand Loyalty while increasing revenue and sales.",
                 images:[
                     {
                         url:"https://unsplash.it/1362",
@@ -125,9 +125,9 @@ export const HomeProvider = props => {
                 ]
             },
             {
-                id: "google-adwords",
-                name: "Google Adwords",
-                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                id: "content-strategy",
+                name: "Content Strategy",
+                desc: "Do your customers read Blogs, or are they on social, or are on youtube? Wherever they are, we find them, build a strategy for Inbound Marketing so they will love what you do and never buy from your competitors.",
                 images:[
                     {
                         url:"https://unsplash.it/1362",
@@ -154,7 +154,7 @@ export const HomeProvider = props => {
             },
             {
                 id: "build-saas",
-                name: "Build SaaS",
+                name: "SAAS Products",
                 desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
                 images:[
                     {
@@ -183,7 +183,7 @@ export const HomeProvider = props => {
             {
                 id: "search-engine-optimization",
                 name: "Search Engine Optimization",
-                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                desc: "If you are on the top of the search Engines, you are almost of the top of your Marketing game. Help us bring you on top with Technical SEO, On Page SEO with Content Marketing services, build backlinks that drive traffic to your website.",
                 images:[
                     {
                         url:"https://unsplash.it/1367",
@@ -209,9 +209,9 @@ export const HomeProvider = props => {
                 icon: "seo.svg"
             },
             {
-                id: "social-media-strategy",
-                name: "Social Media Strategy",
-                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                id: "social-media-advertisement",
+                name: "Social Media Advertisement",
+                desc: "You might be in industry but one thing is for sure, your customers are in Social media. We help you reach the right prospects by helping you create offers, testing Target Audiences, A/B testing Adverts, and building content that converts.",
                 images:[    
                     {
                         url:"/images/sms/hongshi.jpg",
@@ -293,8 +293,8 @@ export const HomeProvider = props => {
             logo: "hongshi.jpg"
         },
         {
-            client_name: "reanda",
-            logo: "reanda.jpg"
+            client_name: "hard rock",
+            logo: "hardrock.jpg"
         },
         {
             client_name: "vianet",

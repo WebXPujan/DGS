@@ -55,7 +55,7 @@ const Testimonial = () => {
         <div className="container">
             <div className="columns">
                 <div className="column col-7 col-md-12">
-                    <h1 className="black title title__big title__border big">Thoughts of our clients</h1>
+                    <h1 className="black title title__big title__border big">What our clients say?</h1>
                     <ul className="testi-slider">
                         
                             

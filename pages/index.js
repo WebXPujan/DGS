@@ -32,8 +32,8 @@ const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen }) =>{
             <Banner setImagePos={setImagePos} banner={banner} projects={projects} loading={loading} setLoading={setLoading} setProjectOpen={setProjectOpen} />
             <Services />
             <Trustee 
-            title1="Trusted by the world's"
-            title2="leading companies"
+            title1="Trusted by Small business"
+            title2="and Corporated Alike"
             from="home"/>
             <WeAre />
             <Testimonial />

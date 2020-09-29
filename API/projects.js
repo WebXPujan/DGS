@@ -4,6 +4,7 @@ export const projects = [
         name: "Hongshi",
         tag: ["website","app"],
         type: "marketing",
+        featured: true,
         desc: "Hongshi Shivam cement, a joint venture of Shivam Group and China’s Hongshi Cement, is the largest producer of cement in Nepal producing 6000 metric tons daily with its first smoke and dust free factory in Nepal",
         img_url: "/images/thumbnails/hongshi-cement.jpg",
         meta: [
@@ -89,6 +90,7 @@ export const projects = [
         name: "XpertsPool",
         tag: ["website"],
         type: "web",
+        featured: true,
         desc: "Xpertspool is a growing platform providing reliable and affordable tech Experts across the globe with more than 300+ Experts from Nepal, India, and Bangladesh.",
         img_url: "https://unsplash.it/1368",
         meta: [
@@ -216,6 +218,7 @@ export const projects = [
         name: "Hard Rock",
         tag: ["website"],
         type: "marketing",
+        featured: true,
         desc: "With venues in 75 countries spanning 259 locations that include owned/licensed or managed HOtels, Casinos, Rock Shops and Cafes - Hard Rock International is one of the most globally recognized companies.",
         img_url: "/images/thumbnails/hard-rock.jpg",
         meta: [
@@ -553,26 +556,26 @@ export const projects = [
 export const team = [
     {
         id: 1,
-        name: "John Doe",
+        name: "Ultha Niraula",
         title: "CEO",
-        image_url: "a-a-ron.jpg.webp"
+        image_url: "ultha.jpg"
     },
     {
         id: 2,
-        name: "John Doe",
+        name: "Ullekh Niraula",
         title: "CEO",
-        image_url: "chris-1.jpg.webp"
+        image_url: "ullekh.jpg"
     },
     {
         id: 3,
-        name: "John Doe",
+        name: "Pujan Adhikary",
         title: "CEO",
-        image_url: "cj-1.jpg.webp"
+        image_url: "pujan.jpg"
     },
     {
         id: 4,
-        name: "John Doe",
+        name: "Suman Jung",
         title: "CEO",
-        image_url: "amie-1.jpg.webp"
+        image_url: "suman.jpg"
     }
 ]

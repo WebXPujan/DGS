@@ -286,7 +286,7 @@ const Banner = (props) => {
                         >
                             
                             {
-                                props.projects.map( (project,i) => (
+                                props.projects.map( (project,i) => project.featured && (
                                     <li 
                                     className={isDragged ? "expanded" : ""}
                                     key={project.id}
@@ -364,7 +364,7 @@ const Banner = (props) => {
                             dragElastic={0.005}
                             >
                                 {
-                                     props.projects.map( (project,i) => (
+                                     props.projects.map( (project,i) => project.featured && (
                                         <li key={project.name+i}>
                                         
                                                 <div className="info" >

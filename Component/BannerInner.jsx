@@ -4,15 +4,16 @@ import gsap from 'gsap';
 import {motion} from 'framer-motion';
 import {TransitionAnimation} from '../Hooks/TransitionAnimation';
 import IntroTextWrap from './IntroTextWrap';
+import Button from './Button';
 
-const BannerInner = ({title,intro1,intro2,highlight,para}) => {
+const BannerInner = ({title,intro1,intro2,highlight,para,page,url}) => {
     const anim = TransitionAnimation();
     const thumb = useRef(null);
     const handleImgload = (elem) => {
         gsap.to(elem,0.6,{opacity:1,delay:.1});
         gsap.from(
             thumb.current,
-            1,
+            2,
             {
                 y:"30%",
                 opacity:0,
@@ -26,15 +27,24 @@ const BannerInner = ({title,intro1,intro2,highlight,para}) => {
             <div className="container">
                     <div className="column col-md-12 col-sm-12">
                         <motion.h1 initial="initial" animate="animate" variants={anim.fadeInUp(1)} className="title title__big big text-center title__border centered">
-                            <strong className="number">{title}</strong>
+                            <strong className="number intro-title">{title}</strong>
                         </motion.h1>
+                        {
+                            page === "service" || page === "team" ? (
+                                <>
+                                <motion.p initial="initial" animate="animate" variants={anim.fadeInUp(1)} className="para intro-text text-center">{para}</motion.p>
+                                <motion.div initial="initial" animate="animate" variants={anim.fadeInUp(1)} className="col-12 text-center" style={{marginTop:60,marginBottom:60}}>
+                                    <Button type="normal" title="Start Project" link="/demo" />
+                                </motion.div>
+                                </>
+                            ) : null
+                        }
+                        
+                        
                         <div className="thumb" ref={thumb}>
                             <ProgressiveImage 
-                            src="https://unsplash.it/1367" 
-                            placeholder=""
-                            rootMargin="0% 0% 0%"
-                            threshold={[1]}
-                            delay={1000}>
+                            src={url} 
+                            placeholder="">
                                 {src => {
 
                                     return <img src={src} alt="" onLoad={(ref) => handleImgload(ref.target)} style={{opacity:0}} />
@@ -43,12 +53,18 @@ const BannerInner = ({title,intro1,intro2,highlight,para}) => {
                                 }
                             </ProgressiveImage>
                         </div>
-                        <IntroTextWrap 
-                        intro1={intro1}
-                        intro2={intro2}
-                        highlight={highlight}
-                        para={para}/>
+                        {
+                            page === "team" ? (
+                                <IntroTextWrap 
+                                intro1={intro1}
+                                intro2={intro2}
+                                highlight={highlight}/> 
+                            ) : 
+                            null
+                        }
+                        
                     </div>
+                    
             </div>
         </section>
     );

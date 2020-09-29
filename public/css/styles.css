@@ -1991,6 +1991,10 @@ section#story .thumb img{
 .intro-wrap h1.intro{
     margin-top: 60px;
 }
+section#story p.para.intro-text{
+    max-width: 60%;
+    margin: auto;
+}
 /*blog details page*/
 .blog-banner .intro-wrap strong{
     text-transform: capitalize;
@@ -2090,6 +2094,59 @@ section#blog-wrapper{
 }
 
 /*blog details page*/
+/*service detail page*/
+.testimonial-inside-service{
+    display: flex;
+    justify-content: center;
+}
+.testimonial-inside-service .thumb{
+    width: 100px;
+    height: 100px;
+    background-color: #27e027;
+    margin-top: -50px;
+}
+.testimonial-inside-service .desc{
+    margin-left: 20px;
+    max-width: 50%;
+}
+.testimonial-inside-service span.icons.icons-quote{
+    width: 100%;
+    display: block;
+}
+.testimonial-inside-service span.icons.icons-quote svg{
+    width: 100%;
+}
+
+.sections-inside-service .sliders ul{
+  display: flex;
+  margin: 60px 0;
+}
+.sections-inside-service .sliders ul li{
+   width: calc(20% - 10px);
+   margin: 5px;
+   height: 0;
+   padding-bottom: 20%;
+}
+.sections-inside-service .sliders ul li .thumb{
+    width: 100%;
+}
+.sections-inside-service .sliders ul li .thumb img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.process{
+    max-width: 60%;
+    margin: auto;
+}
+.process .number{
+    color: #e1e1e1;
+}
+.process h2{
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+/*service detail page*/
 /*responsive*/
 @media(max-width: 1520px){
    .intro-wrap{
@@ -2443,6 +2500,9 @@ section#blog-wrapper{
     .blog-banner .thumb{
         height: 40vh;
     }
+    section#story p.para.intro-text{
+        max-width: 90%;
+    }
     
 }
 @media(max-width: 560px){
@@ -2458,6 +2518,30 @@ section#blog-wrapper{
     }
     section#story .thumb{
         height: 50vh;
+    }
+    section#story .title .number.intro-title{
+        font-size: 50px;
+    }
+    .testimonial-inside-service{
+        flex-direction: column;
+    }
+    .testimonial-inside-service .thumb{
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .testimonial-inside-service .desc{
+        max-width: 90%;
+    }
+    .sections-inside-service .sliders ul{
+        flex-wrap: wrap;
+    }
+    .sections-inside-service .sliders ul li{
+        width: calc(33.33% - 10px);
+        padding-bottom: calc(33.33% - 10px);
+    }
+    .process{
+        max-width: 90%;
     }
 }
 @media(max-width: 480px){

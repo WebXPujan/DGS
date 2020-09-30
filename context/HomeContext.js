@@ -413,8 +413,8 @@ export const HomeProvider = props => {
             logo: "vianet.jpg"
         },
         {
-            client_name: "remax",
-            logo: "remax.jpg"
+            client_name: "xpertspool",
+            logo: "xpertspool.jpg"
         },
         {
             client_name: "iims",

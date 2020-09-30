@@ -630,5 +630,26 @@ export const clientele = [
     {
         client_name: "iims",
         logo: "iims.jpg"
+    },
+    {
+        client_name: "xpertspool",
+        logo: "xpertspool.jpg"
+    }
+]
+
+export const contact = [
+    {
+        id: 1,
+        name: "Nepal",
+        title: "2nd Floor - Pashupati Vision Complex, Kathmandu, Nepal",
+        phone: "",
+        img_url: "/images/nepal.jpg"
+    },
+    {
+        id: 2,
+        name: "USA",
+        title: "655 Promenade parkway, Irving, Texas, 75039, USA",
+        phone: "+1 4103366654",
+        img_url: "/images/usa.jpg"
     }
 ]

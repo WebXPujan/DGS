@@ -2053,6 +2053,10 @@ section#story .thumb img{
     column-gap: 60px;
     margin-top: 60px;
 }
+.intro-wrap.contact p.para{
+    column-count: auto;
+    margin-bottom: 60px;
+}
 .intro-wrap h1.intro{
     margin-top: 60px;
 }
@@ -2212,6 +2216,11 @@ section#blog-wrapper{
     margin-bottom: 40px;
 }
 /*service detail page*/
+/*contact page*/
+.contact-location{
+    padding-top: 100px;
+}
+/*contact page*/
 /*responsive*/
 @media(max-width: 1520px){
    .intro-wrap{
@@ -2354,6 +2363,9 @@ section#blog-wrapper{
 }
 
 @media(max-width: 840px){
+    .clientele{
+        max-width: 90%;
+    }
     .cursor{
         display: none;
     }
@@ -2619,6 +2631,10 @@ section#blog-wrapper{
     section.project-body .strategy-wrap .tech-strategy{
         max-width: 100%;
         padding: 0;
+    }
+    .clientele ul li{
+        flex: calc(50% - 10px);
+        flex-grow: 0;
     }
 }
 @media(max-width: 480px){

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import ProjectCard from '../Component/ProjectCard'
-import {team,projects} from '../API/projects'
+import {team,projects,contact} from '../API/projects'
 import Link from 'next/link'
 
 
@@ -51,6 +51,15 @@ const DisplayGrid = ({col,type,loading,setLoading,setImagePos}) => {
                             </ul>
                         )
                         }
+                        {
+                        type === "contact" && ( <ul>
+                                {contact.map((t) => (
+                                    t.id % 2 == 0 ? <ProjectCard details={t} type="contact" key={t.id} setLoading={setLoading} loading={loading} /> : null
+                                ))}
+                                
+                            </ul>
+                        )
+                        }
 
 
                         {
@@ -82,6 +91,15 @@ const DisplayGrid = ({col,type,loading,setLoading,setImagePos}) => {
                             </ul>
                         )
                         
+                        }
+                        {
+                        type === "contact" && ( <ul>
+                                {contact.map((t) => (
+                                    t.id % 2 != 0 ? <ProjectCard details={t} type="contact" key={t.id} setLoading={setLoading} loading={loading} /> : null
+                                ))}
+                                
+                            </ul>
+                        )
                         }
 
 

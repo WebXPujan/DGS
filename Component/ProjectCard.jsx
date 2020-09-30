@@ -40,7 +40,7 @@ const ProjectCard = ({details,type,handleProjectClick}) => {
     <h3 className="black title title__big"><strong className="number">{details.name}</strong></h3>
     <p className="para">
         {
-            type === "team" ?
+            type === "team" || type === "contact" ?
             details.title
             :
             details.tag.map(x => x+' ')

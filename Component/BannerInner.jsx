@@ -34,7 +34,7 @@ const BannerInner = ({title,intro1,intro2,highlight,para,page,url}) => {
                                 <>
                                 <motion.p initial="initial" animate="animate" variants={anim.fadeInUp(1)} className="para intro-text text-center">{para}</motion.p>
                                 <motion.div initial="initial" animate="animate" variants={anim.fadeInUp(1)} className="col-12 text-center" style={{marginTop:60,marginBottom:60}}>
-                                    <Button type="normal" title="Start Project" link="/demo" />
+                                    <Button type="normal" title="Start Project" link={`/contact`} hasSlug={false} />
                                 </motion.div>
                                 </>
                             ) : null

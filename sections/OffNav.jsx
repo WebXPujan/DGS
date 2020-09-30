@@ -35,7 +35,7 @@ const OffNav = ({toggleMenu,setToggleMenu,nav,button}) => {
                             </div>
                             <Navlink setToggleMenu={setToggleMenu} toggleMenu={toggleMenu} />
                             <p>
-                            <Button type="inverted border-green" title="Start Project" button={button}/>
+                            <Button type="inverted border-green" title="Start Project" button={button} link="/contact" hasSlug={false} />
                             </p>
                         </div>
                     </div>

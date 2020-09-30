@@ -248,7 +248,7 @@ const Banner = (props) => {
                            We build tech with Customer Experience, and help you scale using the latest technology.
                         </motion.p>
                         <motion.p initial={{opacity:0,x:-20}} animate={{opacity:1,x:0,transition:{delay:1.4,...transition}}}>
-                            <Button type="normal" title="Start Project" link="/demo" />
+                            <Button type="normal" title="Start Project" link={`/contact`} hasSlug={false} />
                         </motion.p>
                     </motion.div>
                 </div>

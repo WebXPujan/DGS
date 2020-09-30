@@ -5,7 +5,9 @@ import {useRouter} from 'next/router';
 import {HomeContext} from "../../context/HomeContext";
 import IntroTextWrap from "../../Component/IntroTextWrap";
 import {GlobalContext} from "../../context/GlobalContext";
-
+import ProgressiveImage from 'react-progressive-graceful-image'
+import gsap from "gsap"
+import Error from 'next/error'
 
 const ServicePage = () => {
 
@@ -18,10 +20,15 @@ const ServicePage = () => {
     const { query } = router
    // useEffect(()=>{console.log(query.service);})
    const data = useContext(HomeContext);
-  
+   const handleImgload = (elem) => {
+    gsap.to(elem,0.6,{opacity:1,delay:.1});
+}
    
    const makeBanner = () => {
        let service = data[0].services.filter((service )=> service.id.includes(query.service));
+       if(service.length == 0){
+        return <Error statusCode="404" />
+       }
        return (
            <>
            {
@@ -31,8 +38,9 @@ const ServicePage = () => {
                 intro1="Code Breaking"
                 highlight="Code"
                 title={s.name}
-                para={s.desc}
-                key={s.id} />
+                para={s.brief}
+                key={s.id}
+                url={s.banner} />
                ))
             }
             {
@@ -88,10 +96,19 @@ const ServicePage = () => {
                             <ul>
                                 
                               {
-                              s.images.map((i) => (
-                                <li>
+                              s.images.map((i,cnt) => (
+                                <li key={cnt}>
                                     <div className="thumb">
-                                        <img src={i.url} />
+                                        <ProgressiveImage 
+                                        src={i.url} 
+                                        placeholder="">
+                                            {src => {
+
+                                                return <img src={src} alt={i.alt} style={{opacity:0}} onLoad={(ref) => handleImgload(ref.target)}/>
+                                            }
+
+                                            }
+                                        </ProgressiveImage>
                                     </div>
                                 </li>
                               ))     
@@ -128,6 +145,18 @@ const ServicePage = () => {
                    </section>
                ))
            }
+           <section id="cta" className="sections">
+           {
+               service.map((s)=>(
+                    <BannerInner 
+                    page="projects"
+                    title={`Want to create a ${s.nickname}?`}
+                    para="Lets talk, tell us what you want to achieve, and we will tell you how to do so."
+                    key={s.id}
+                    /> 
+               ))
+           }
+           </section>
            
             
             </>

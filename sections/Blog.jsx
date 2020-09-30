@@ -33,7 +33,7 @@ const fetcher = async (url) => {
 
   const getKey = (pageIndex, previousPageData) => {
     if (previousPageData && previousPageData.length < 6) return null // reached the end
-    return `https://digitalgurkha.com/blog/wp-json/wp/v2/posts?page=${pageIndex+1}&per_page=6`                    // SWR key
+    return `https://agency.digitalgurkha.academy/wp-json/wp/v2/posts?page=${pageIndex+1}&per_page=6`                    // SWR key
   }
 const Blog = ({setLoading,loading,from}) => {
     
@@ -99,9 +99,9 @@ const Blog = ({setLoading,loading,from}) => {
                         ))
                     }
                 </div>
-                <div className="col-12 text-center">
+                {/* <div className="col-12 text-center">
                     <Button onClick={handleConcat} type="normal" title="Load More"/>
-                </div>
+                </div> */}
                 <div className="col-12 cta">
                     {
                         from === "home" ? <Button type="normal" link="/blog" as="/blog" title="Explore More"/> : null

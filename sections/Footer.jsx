@@ -94,7 +94,7 @@ const Footer = () => {
                     <p>
                         <span className="icons">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                                viewBox="0 0 512.006 512.006" style={{enableBackground:"new 0 0 512.006 512.006;"}}>
+                                                viewBox="0 0 512.006 512.006" style={{enableBackground:"new 0 0 512.006 512.006"}}>
                             <g>
                                 <g>
                                     <g>
@@ -190,7 +190,7 @@ const Footer = () => {
                     <p style={{marginTop: -5}}>
                         <span className="icons" style={{paddingTop:6}}>     
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                                viewBox="0 0 512.006 512.006" style={{enableBackground:"new 0 0 512.006 512.006;"}}>
+                                                viewBox="0 0 512.006 512.006" style={{enableBackground:"new 0 0 512.006 512.006"}}>
                             <g>
                                 <g>
                                     <path d="M501.613,491.782c12.381,0,23.109-4.088,32.229-12.16L377.793,323.567c-3.744,2.681-7.373,5.288-10.801,7.767

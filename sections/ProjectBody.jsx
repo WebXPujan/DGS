@@ -7,6 +7,7 @@ import {motion, useDragControls} from 'framer-motion'
 import IntroTextWrap from '../Component/IntroTextWrap';
 import Trustee from '../sections/Trustee';
 import {projects} from '../API/projects';
+//import {CanvasJSChart} from 'canvasjs-react-charts';
 
 const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body,details}) => {
     const dragControls = useDragControls();
@@ -18,9 +19,41 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
         return {
             name: project[0].meta[0].client_name,
             id: project[0].id,
-            img: "https://unsplash.it/1361"
+            img: project[0].meta[2].next_img
         }
     }
+    // var dataPoint;
+    // var total;
+    // const options = {
+    //     animationEnabled: true,
+    //     title:{
+    //         text: ""
+    //     },
+    //     data: [{
+    //         type: "funnel",
+    //         toolTipContent: "<b>{label}</b>: {y} <b>({percentage}%)</b>",
+    //         indexLabelPlacement: "inside",
+    //         indexLabel: "{label} ({percentage}%)",
+    //         dataPoints: [
+    //             { y: 1400, label: "Brand Awareness" },
+    //             { y: 1212, label: "Engagement Campaigns" },
+    //             { y: 1080, label: "Web Traffic Increment" },
+    //             { y: 665,  label: "Lead Generation Campaign for data collection" },
+    //             { y: 578, label: "Data Optimization and Retargeting" },
+    //             { y: 200,  label: "Conversion" }
+    //         ]
+    //     }]
+    // }
+    // //calculate percentage
+    // dataPoint = options.data[0].dataPoints;
+    // total = dataPoint[0].y;
+    // for(var i = 0; i < dataPoint.length; i++) {
+    //     if(i == 0) {
+    //         options.data[0].dataPoints[i].percentage = 100;
+    //     } else {
+    //         options.data[0].dataPoints[i].percentage = ((dataPoint[i].y / total) * 100).toFixed(2);
+    //     }
+    // }
 
     
     
@@ -174,6 +207,47 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                                         </li>
                                     ))
                                 } */}
+                                {
+                                    details.type === "marketing" 
+                                    ? 
+                                    (
+                                        details.strategy.lists.map((s,i) => (
+                                            <li key={i}>
+                                                <h1 className="black title title__big inverted">{s.title}</h1>
+                                                <p className="para inverted small">{s.desc}</p>
+                                            </li>
+                                        ))  
+                                    )
+                                    :
+                                    (
+                                        details.strategy.map((s,i) => (
+                                            <li key={i} className="tech-strategy">
+                                                <strong className="number">0{i+1}</strong>
+                                                <h1 className="black title title__big inverted">{s.title}</h1>
+                                                <p className="para inverted small">{s.desc}</p>
+                                                <ul className="mini-list">
+                                                    {
+                                                        s.items.map((m,j) => (
+                                                            <li key={j} className="list-item project-intro">
+                                                                <h3 className="title title__small inverted">{m.title}</h3>
+                                                                <p className="para">{m.desc}</p>
+                                                                <ul className="minor-list">
+                                                                    {
+                                                                        m.lists.map((mi,k) => (
+                                                                            <li key={k}>
+                                                                                <p className="para inverted small">{mi}</p>
+                                                                            </li>
+                                                                        ))
+                                                                    }
+                                                                </ul>
+                                                            </li>
+                                                            ))
+                                                    }
+                                                </ul>
+                                            </li>
+                                        ))
+                                    )
+                                }
                             </ul>
                         </div>
                     </div>
@@ -186,12 +260,12 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                     <div className="columns dual">
                     <div className="column col-md-6 col-sm-12">
                         <div className="thumb">
-                            <img src="https://unsplash.it/1363" alt=""/>
+                            <img src="/images/projects/vianet/avenues.jpg" alt=""/>
                         </div>
                     </div>
                     <div className="column col-md-6 col-sm-12">
                         <div className="thumb">
-                            <img src="https://unsplash.it/1364" alt=""/>
+                            <img src="/images/projects/vianet/funnel.jpg" alt=""/>
                         </div>
                     </div>
                     </div>
@@ -240,9 +314,16 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                 </div>
             </div> */}
             <div className="project-gallery full w100">
-                <div className="thumb">
-                    <img src="https://unsplash.it/1368" alt=""/>
-                </div>
+                {
+                    details.type === "marketing" ? (
+                        // <CanvasJSChart options ={options} />
+                        <p>ds</p>
+                    ) : (
+                        <div className="thumb">
+                            <img src="https://unsplash.it/1368" alt=""/>
+                        </div>
+                    )
+                }
             </div>
             <div className="project-gallery next-section w100" style={{borderBottom:"1px solid #ececec"}}>
                 <div className="container">
@@ -258,7 +339,7 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                         <ul>
                         <Link href="/project/[project]" as={`/project/${getProject(details.meta[2].next).id}`}>
                             <a className="dg-link">
-                            <ProjectCard details={{img_url:getProject(details.meta[2].next).img,name:getProject(details.meta[2].next).name,tag:["Next Case Study"]}} 
+                            <ProjectCard details={{img_url:details.meta[2].next_img,name:getProject(details.meta[2].next).name,tag:["Next Case Study"]}} 
                             type="projects" 
                             setLoading={setLoading} 
                             loading={loading} 

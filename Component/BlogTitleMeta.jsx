@@ -16,7 +16,7 @@ const BlogTitleMeta = ({title,shareUrl,date,author}) => {
 
     const [cursor, setCursor] = useContext(GlobalContext);
 
-    const {data, error} = useSWR('https://digitalgurkha.com/blog/wp-json/wp/v2/users/'+author,fetcher)
+    const {data, error} = useSWR('https://agency.digitalgurkha.academy/wp-json/wp/v2/users/'+author,fetcher)
     
     if (error) return ""
     if (!data) return "-"

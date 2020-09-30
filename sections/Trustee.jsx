@@ -68,9 +68,17 @@ const Trustee = ({title1,title2,from,output}) => {
                     ref={border}>
                         <div className="wrap">
                             <h1 className="black title title__big title__border big" ref={title}>{title1}<br/>{title2}</h1>
+                            {
+                                from == "home" ?
                             <p className="para" ref={para}>
                             We have worked with Startups, small businesses and Multimillion dollar businesses, and proud to say they all love us. 
                             </p>
+                            :
+                            <p className="para" ref={para}>
+                                Let us show you what we have achieved. And, let us assure you that we will help you Build and Scale to the maximum of your potential.
+                            </p>
+                            
+                            }
                         </div>
                         {/* <span className="line top"></span>
                         <span className="line right"></span>

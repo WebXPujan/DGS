@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import Footer from '../sections/Footer';
 import DisplayGrid from '../sections/DisplayGrid';
 import BannerInner from '../Component/BannerInner';
+import CTA from '../sections/CTA';
 
 const Team = ({loading,setLoading}) => {
     
@@ -24,6 +25,7 @@ const Team = ({loading,setLoading}) => {
         url="/images/team/team.jpg"
         />
         <DisplayGrid col={2} type="team" loading={loading} setLoading={setLoading}/>
+        <CTA />
         <Footer />
     </>
     );

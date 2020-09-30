@@ -72,14 +72,16 @@ const Testimonial = () => {
                                         <p className="black subtitle subtitle__small big text-capitalize sec-font"><i className="fas fa-info-circle"></i>{data[2].testimonials[activeIndex].client_post}, {data[2].testimonials[activeIndex].client_company}</p>
                                     </div>
                                     <div className="cta">
-                                        <Button 
-                                        type="normal" 
-                                        title="View Case Study" 
-                                        link={`/project/[id]`} 
-                                        viewas={data[2].testimonials[activeIndex].case_study}
-                                        hasSlug={true}
-
-                                        />
+                                        {
+                                            data[2].testimonials[activeIndex].case_study != "" && <Button 
+                                            type="normal" 
+                                            title="View Case Study" 
+                                            link={`/project/[id]`} 
+                                            viewas={data[2].testimonials[activeIndex].case_study}
+                                            hasSlug={true}
+    
+                                            />
+                                        }
                                     </div>
                                 </div>
                             </li>
@@ -109,8 +111,11 @@ const Testimonial = () => {
                         <div className="client-image" 
                         onMouseMove={null}
                         onMouseOut={null}>
-                            <img className={isClicked ? "active fadeIn" : `active`} src="/images/client.png" alt={data[2].testimonials[activeIndex].client_name} ref={img}/>
-                            <span className={isClicked ? "rect active slideLeftFadeIn" : "rect"} ref={rect}></span>
+                            {/* <img className={isClicked ? "active fadeIn" : `active`} src={data[2].testimonials[activeIndex].client_img} alt={data[2].testimonials[activeIndex].client_name} ref={img}/> */}
+                            <span 
+                            className={isClicked ? "rect active slideLeftFadeIn" : "rect"} 
+                            ref={rect}
+                            style={{background: `url(${data[2].testimonials[activeIndex].client_img}) no-repeat center center`}}></span>
                         </div>
                    
                 </li>

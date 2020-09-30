@@ -3,7 +3,7 @@ import {useRouter} from 'next/router'
 import React from 'react'
 import ProjectBody from '../../sections/ProjectBody';
 import {projects} from '../../API/projects';
-
+import Error from 'next/error';
 
 const fetcher = async (url) => {
     const res = await fetch(url)
@@ -29,7 +29,9 @@ const ProjectDetails = ({imagePos,loading,setLoading}) => {
     //  if (!data) return <div>Loading...</div>
     let project = projects.filter((p) => p.id === query.project);
   
-   
+    if(project.length == 0){
+      return <Error statusCode="404" />
+    }
     return (
         
         
@@ -38,7 +40,7 @@ const ProjectDetails = ({imagePos,loading,setLoading}) => {
                 {
                   project.map((p,i) => (
                     <React.Fragment key={i}>
-                    <ProjectBanner page="inner" width={imagePos.width} height={imagePos.height} x={imagePos.x} y="64" stickyTitle={p.name} stickyDesc={p.desc} img={p.img_url} />
+                    <ProjectBanner page="inner" width={imagePos.width} height={imagePos.height} x={imagePos.x} y="64" stickyTitle={p.name} stickyDesc={`Every organization has distinct needs and goals. Scroll down to see the case study of ${p.name}.`} img={p.img_url} />
                     <ProjectBody loading={loading} setLoading={setLoading} title={p.name} details={p} />
                     </React.Fragment>
                     ))

@@ -651,6 +651,7 @@ img{
 }
 .sections#display-grid{
     padding-top: 0;
+    border-bottom: none;
 }
 .sections#display-grid .wrap{
     margin: 0;
@@ -1091,6 +1092,9 @@ section#banner .showcase li.expanded .thumbnail .image a{
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+}
+section#banner .showcase li.expanded .thumbnail .image.show-more a{
+    opacity: 1;
 }
 section#banner .showcase li.expanded .thumbnail .image:hover a{
     opacity: 1;
@@ -1567,11 +1571,15 @@ section#testimonials section.offset ul li .client-image span.rect{
     opacity: 1;
 }
 section#testimonials section.offset ul li .client-image img{
-    display: block;
+    /* display: block;
     margin-left: 20%;
     height: 100%;
     transform: translateX(0%);
-    object-fit: cover;
+    object-fit: cover; */
+    position: absolute;
+    left: calc(50% - 14%);
+    height: 30%;
+    top: 120px;
 }
 section#testimonials section.offset ul li .client-image img.active,
 section#testimonials section.offset ul li .client-image span.rect.active{
@@ -1626,7 +1634,8 @@ section#blog .news-wrap .article__card{
 /*article news and blog*/
 /*cta*/
 section#cta{
-    background-color: #1e1e1e;
+    padding: 50px 0;
+    padding-bottom: 30px;
 }
 section#cta .info{
     max-width: 70%;
@@ -1854,6 +1863,40 @@ section.project-body .strategy-wrap{
     padding: 0;
 
 }
+section.project-body .strategy-wrap .tech-strategy{
+    flex: 100%;
+    max-width: 70%;
+    margin: auto;
+}
+section.project-body .strategy-wrap .tech-strategy h1{
+    margin-top: -20px;
+}
+section.project-body .strategy-wrap .tech-strategy .mini-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+section.project-body .strategy-wrap .tech-strategy .mini-list .list-item{
+    flex: 50%;
+    padding: 0;
+    padding: 20px;
+}
+section.project-body .strategy-wrap .tech-strategy .mini-list .list-item h3{
+    margin-bottom: 20px;
+}
+section.project-body .strategy-wrap .tech-strategy .minor-list{
+    padding: 0;
+    margin: 0;
+}
+section.project-body .strategy-wrap .tech-strategy .minor-list li{
+    padding: 0;
+    padding-left: 1rem;
+}
+section.project-body .strategy-wrap .tech-strategy .minor-list li::before{
+    background-color: #fff;
+}
+
 section.project-body.hor .w50{
     width: 50vw;
 }
@@ -1915,6 +1958,28 @@ section.project-body.hor .project-gallery.full .thumb{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.clientele{
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 60px;
+}
+.clientele ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.clientele ul li {
+    flex: calc(25% - 10px);
+    flex-grow: 0;
+    height: 100px;
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    margin: 5px;
+}
+.clientele ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 /*project Details*/
 /*pageloader*/
@@ -2210,6 +2275,9 @@ section#blog-wrapper{
     .blog-banner .title-meta{
         max-width: 60%;
     }
+    section.project-body .strategy-wrap .tech-strategy{
+        max-width: 90%;
+    }
     
     
 }
@@ -2307,6 +2375,7 @@ section#blog-wrapper{
     
     section#services section.offset{
         margin-top: 0;
+        height: 100vh;
     }
     
     
@@ -2394,7 +2463,7 @@ section#blog-wrapper{
         overflow: hidden;
     }
     section#services .services-item ul{
-        max-width: 330vw;
+        max-width: 350vw;
         display: flex;
     }
     section#services .services-item ul li a{
@@ -2507,7 +2576,7 @@ section#blog-wrapper{
 }
 @media(max-width: 560px){
     section#services .services-item ul li a h1{
-        width: 120px;
+        width: 121px;
     }
     .project--detail--wrap{
         transform: translateY(-78vh);
@@ -2529,6 +2598,7 @@ section#blog-wrapper{
         margin-left: 20px;
         margin-top: 20px;
         margin-bottom: 40px;
+    
     }
     .testimonial-inside-service .desc{
         max-width: 90%;
@@ -2542,6 +2612,13 @@ section#blog-wrapper{
     }
     .process{
         max-width: 90%;
+    }
+    section.project-body .strategy-wrap .tech-strategy .mini-list .list-item{
+        flex: 100%;
+    }
+    section.project-body .strategy-wrap .tech-strategy{
+        max-width: 100%;
+        padding: 0;
     }
 }
 @media(max-width: 480px){

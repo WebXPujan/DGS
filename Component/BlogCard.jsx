@@ -38,8 +38,8 @@ const BlogDesign = ({title,desc,slug,id,data,handleImgload,setCursor,dummy}) => 
                             <Link href={`/blog/[blog]?id=${id}`} as={`/blog/${slug}`}>
                                 <a>
                                     <ProgressiveImage 
-                                    src={data ? (data.media_details.sizes && data.media_details.sizes.hasOwnProperty('theseo_large') ? data.media_details.sizes.theseo_large.source_url : null ): null} 
-                                    placeholder={data ? (data.media_details.sizes && data.media_details.sizes.hasOwnProperty('theseo_last41') ? data.media_details.sizes.theseo_last41.source_url : null ): null}
+                                    src={data ? (data.media_details.sizes && data.media_details.sizes.hasOwnProperty('full') ? data.media_details.sizes.full.source_url : null ): null} 
+                                    placeholder={data ? (data.media_details.sizes && data.media_details.sizes.hasOwnProperty('medium') ? data.media_details.sizes.medium.source_url : null ): null}
                                     threshold={[1]}
                                     delay={1000}>
                                         {src => {
@@ -78,7 +78,7 @@ const BlogCard = ({title,desc,img,slug,id}) => {
     const [cursor, setCursor] = useContext(GlobalContext)
     const [error,setError] = useState(false);
 
-    const {data, err} = useSWR(`https://digitalgurkha.com/blog/wp-json/wp/v2/media/${img}`,fetcher)
+    const {data, err} = useSWR(`https://agency.digitalgurkha.academy/wp-json/wp/v2/media/${img}`,fetcher)
     
        if (err) return <div>{err.message}</div>
        if (!data && img != 0) return <BlogDesign dummy={true}/>

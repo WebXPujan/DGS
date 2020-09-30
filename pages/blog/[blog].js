@@ -7,7 +7,7 @@ import {useRouter} from 'next/router';
 import BlogTitleMeta from '../../Component/BlogTitleMeta';
 import Head from 'next/head';
 
-
+import Error from 'next/error';
 
 
 
@@ -20,19 +20,23 @@ const BlogDetails = ({data}) => {
     //gsap.from(document.querySelector('body'),{opacity:0}).to(document.querySelector('body'),{opacity:1});
     const { query } = router
    
-  
+   if(data.length == 0){
+       return <Error statusCode="404" />
+   }
     
     useEffect(() => {
         // let fImage = await fetch('https://digitalgurkha.com/blog/wp-json/wp/v2/media/'+data[0].featured_media);
         // let resp = await fImage.json();
         // if(resp) setImage(resp);
         // return () => setImage("")
+        console.log(data);
         if(data[0].featured_media != 0) {
-        fetch('https://digitalgurkha.com/blog/wp-json/wp/v2/media/'+data[0].featured_media)
+        fetch('https://agency.digitalgurkha.academy/wp-json/wp/v2/media/'+data[0].featured_media)
         .then(res => res.json())
         .then(json => {
-                setImage(json.media_details.sizes.theseo_portfolio.source_url)
-                setBannerImage(json.media_details.sizes.theseo_large.source_url)
+            console.log(json);
+                setImage(json.media_details.sizes.thumbnail.source_url)
+                setBannerImage(json.media_details.sizes.large.source_url)
             
             
         });
@@ -41,7 +45,7 @@ const BlogDetails = ({data}) => {
     },[])
     
    
-    let shareUrl = `https://digitalgurkha.com/blog/${query.blog}` || "";
+    let shareUrl = `https://agency.digitalgurkha.academy/${query.blog}` || "";
     let title = data[0].title.rendered || "";
     let exerpt = data[0].excerpt.rendered || "";
 
@@ -124,9 +128,14 @@ const BlogDetails = ({data}) => {
     );
 }
 BlogDetails.getInitialProps = async ({query}) => {
-    const res = await fetch('https://digitalgurkha.com/blog/wp-json/wp/v2/posts?slug='+query.blog);
+    const res = await fetch('https://agency.digitalgurkha.academy/wp-json/wp/v2/posts?slug='+query.blog);
+    const errCode = res.ok ? false : res.statusCode ;
     const json = await res.json();
-    return {data: json}
+    if(!errCode){
+        
+        return {data: json}
+    }
+    return {data: {}}
 }
 
 export default BlogDetails;

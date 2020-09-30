@@ -102,7 +102,7 @@ const Services = () => {
                                 <motion.ul
                                 drag={"x"}
                                 dragConstraints={{
-                                    left: -(mobile * 2 ) - (mobile * .36),
+                                    left: -(mobile * 2.75 ) - (mobile * .45),
                                     right: 0,
                                 }}
                                 dragElastic={0.005}

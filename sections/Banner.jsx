@@ -15,7 +15,7 @@ const Banner = (props) => {
    const router = useRouter();
     const sticky = {
         title: "Our Projects",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        desc: "Every organization has distinct needs and goals.We communicate with your team to understand your goals, determine KPIs, set timelines, and make sure that your return on investment is high."
     }
 
     
@@ -344,6 +344,44 @@ const Banner = (props) => {
 
                                 )
                             }
+                            <li 
+                            className={isDragged ? "expanded" : ""}
+                            >
+                                
+                                    
+                                <div className="list-items">
+                                    <div className={isDragged ? (isProjectOpen ? "thumbnail fadeOut" : "thumbnail") : "thumbnail"} 
+                                    onMouseLeave={()=>setCursor(`${isDragged ? "" : "dragged"}`)}
+                            
+                                    > 
+                                        
+                                        <div 
+                                        className={isDragged ? (isProjectOpen ? "image" : "image clip show-more") : "image"} 
+                                        ref={featureImage}
+                                        style={{background:"none"}}
+                                        >
+                                            
+                                            
+
+                                            {
+                                                isDragged && (
+                                                <Button type="normal" 
+                                                title="View more Case Studies" 
+                                                button={cta} 
+                                                link={`/projects`}
+                                                viewas={`/project/`}
+                                                hasSlug={false}
+                                                /> )
+                                            }
+                                        
+                                        </div> 
+                                    </div>
+                                </div>
+                            
+                                    
+                                    
+                                
+                            </li>
                                 
                             
                         </motion.ul>

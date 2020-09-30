@@ -30,7 +30,7 @@ const BannerInner = ({title,intro1,intro2,highlight,para,page,url}) => {
                             <strong className="number intro-title">{title}</strong>
                         </motion.h1>
                         {
-                            page === "service" || page === "team" ? (
+                            page === "service" || page === "team" || page === "projects" ? (
                                 <>
                                 <motion.p initial="initial" animate="animate" variants={anim.fadeInUp(1)} className="para intro-text text-center">{para}</motion.p>
                                 <motion.div initial="initial" animate="animate" variants={anim.fadeInUp(1)} className="col-12 text-center" style={{marginTop:60,marginBottom:60}}>
@@ -41,18 +41,22 @@ const BannerInner = ({title,intro1,intro2,highlight,para,page,url}) => {
                         }
                         
                         
-                        <div className="thumb" ref={thumb}>
-                            <ProgressiveImage 
-                            src={url} 
-                            placeholder="">
-                                {src => {
+                        {
+                            page === "projects" ? null : (
+                                <div className="thumb" ref={thumb}>
+                                    <ProgressiveImage 
+                                    src={url} 
+                                    placeholder="">
+                                        {src => {
 
-                                    return <img src={src} alt="" onLoad={(ref) => handleImgload(ref.target)} style={{opacity:0}} />
-                                }
+                                            return <img src={src} alt="" onLoad={(ref) => handleImgload(ref.target)} style={{opacity:0}} />
+                                        }
 
-                                }
-                            </ProgressiveImage>
-                        </div>
+                                        }
+                                    </ProgressiveImage>
+                                </div>
+                            )
+                        }
                         {
                             page === "team" ? (
                                 <IntroTextWrap 

@@ -1,7 +1,10 @@
-import React, {useEffect} from 'react';
+import React, {useEffect,useContext} from 'react';
 import Footer from '../sections/Footer';
 import DisplayGrid from '../sections/DisplayGrid';
 import {motion} from 'framer-motion';
+import BannerInner from "../Component/BannerInner";
+import {clientele} from "../API/projects";
+import CTA from '../sections/CTA';
 
 const Projects = ({loading,setLoading,setImagePos}) => {
     useEffect(() => {
@@ -9,16 +12,37 @@ const Projects = ({loading,setLoading,setImagePos}) => {
     }, []);
     
     return (
-     <motion.div exit={{opacity:0}}>   
-        <section id="cta" className="sections" style={{marginTop: 64}}>
+     <motion.div exit={{opacity:0}}> 
+      <BannerInner 
+        page="projects"
+        title="Our Projects"
+        para="Every organization has distinct needs and goals.We communicate with your team to understand your goals, determine KPIs, set timelines, and make sure that your return on investment is high."
+        
+        />  
+        
+        <DisplayGrid col={2} type="projects" loading={loading} setLoading={setLoading} setImagePos={setImagePos}/>
+        <section className="">
             <div className="container">
-                <div className="info">
-                    <h1 className="green title md-title big text-center">Don't be shy, we don't bite!</h1>
-                    <p className="title title__small big inverted text-center">Tell us about your new project, Your future dream job or if you simply want to talk over coffee!</p>
+                <div className="column col-12">
+                    <h1 className="title title__big big text-center title__border centered">
+                        Trusted By
+                    </h1>
+                    <div className="clientele">
+                        <ul>
+                            {
+                                clientele.map((c)=>(
+                                    <li key={c.logo}>
+                                        <img src={`/images/clients/${c.logo}`} alt={c.client_name} />
+                                    </li>
+                                ))
+                            }
+                            
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
-        <DisplayGrid col={2} type="projects" loading={loading} setLoading={setLoading} setImagePos={setImagePos}/>
+        <CTA />
         <Footer />
     </motion.div>
     );

@@ -19,7 +19,12 @@ const WeAre = () => {
                                 The Growth Hackers!
                             </p>
                             <p>
-                                <Button type="inverted" title="Get Details" href="/team" />
+                                <Button 
+                                type="inverted" 
+                                title="Get Details"
+                                link={`/team`}
+                                viewas={`/team/`}
+                                hasSlug={false}  />
                             </p>
                         </div>
                         

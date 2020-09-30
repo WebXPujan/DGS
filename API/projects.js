@@ -20,7 +20,8 @@ export const projects = [
             {
                 top_image: "/images/thumbnails/hongshi-cement.jpg"
             },{
-                next: "xpertspool"
+                next: "xpertspool",
+                next_img: "/images/thumbnails/xpertspool.jpg"
             }
         ],
         challenge: [
@@ -89,10 +90,10 @@ export const projects = [
         id:"xpertspool",
         name: "XpertsPool",
         tag: ["website"],
-        type: "web",
+        type: "tech",
         featured: true,
         desc: "Xpertspool is a growing platform providing reliable and affordable tech Experts across the globe with more than 300+ Experts from Nepal, India, and Bangladesh.",
-        img_url: "https://unsplash.it/1368",
+        img_url: "/images/thumbnails/xpertspool.jpg",
         meta: [
             {
                 client_name: "XpertsPool LLC",
@@ -105,8 +106,10 @@ export const projects = [
             },
             {
                 top_image: "https://unsplash.it/1368"
-            },{
-                next: "hard-rock"
+            },
+            {
+                next: "hard-rock",
+                next_img: "/images/thumbnails/hard-rock.jpg"
             }
         ],
         challenge: [
@@ -179,37 +182,39 @@ export const projects = [
             },
             {
                 title: "Account Section",
-                desc: "The payment procedure is made easier for the client via the Account Section. A few easy clicks will enable clients to add multiple cards, download invoice, transaction and refund history."
+                desc: "The payment procedure is made easier for the client via the Account Section. A few easy clicks will enable clients to add multiple cards, download invoice, transaction and refund history.",
+                items: []
             },
             {
                 title: "Invite and Earn",
-                desc: "Xperts pool is integrated with a tracking system that facilitates and validates referral processes. If a client's link is used for signing up on the platform, the client receives 10% of the sign up amount."
+                desc: "Xperts pool is integrated with a tracking system that facilitates and validates referral processes. If a client's link is used for signing up on the platform, the client receives 10% of the sign up amount.",
+                items: []
             }
         ],
         outcome: [
             {
-                name: "Total Video Ad Impressions",
-                number: "1M"
+                name: "Simple & Clean Design",
+                number: ""
             },
             {
-                name: "Total Facebook Video Ad views",
-                number: "4M"
+                name: "Xpert & Dedicated Manager Assigned",
+                number: ""
             },
             {
-                name: "Total Display Ad Impressions",
-                number: "32M"
+                name: "Kanban Board",
+                number: ""
             },
             {
-                name: "Total Facebook Ad Impression",
-                number: "13M"
+                name: "Hire Xperts in easy steps",
+                number: ""
             },
             {
-                name: "Total Impression",
-                number: "46M"
+                name: "",
+                number: ""
             },
             {
-                name: "Total Page Likes",
-                number: "67,935"
+                name: "",
+                number: ""
             }
         ]
     },
@@ -220,7 +225,7 @@ export const projects = [
         type: "marketing",
         featured: true,
         desc: "With venues in 75 countries spanning 259 locations that include owned/licensed or managed HOtels, Casinos, Rock Shops and Cafes - Hard Rock International is one of the most globally recognized companies.",
-        img_url: "/images/thumbnails/hard-rock.jpg",
+        img_url: "/images/thumbnails/hard-rock-1.jpg",
         meta: [
             {
                 client_name: "Hard Rock Cafe, Nepal",
@@ -235,7 +240,8 @@ export const projects = [
                 top_image: "https://unsplash.it/1368"
             },
             {
-                next: "folliderm"
+                next: "folliderm",
+                next_img: "/images/thumbnails/folliderm.jpg"
             }
         ],
         challenge: [
@@ -296,7 +302,8 @@ export const projects = [
                 top_image: "https://unsplash.it/1369"
             },
             {
-                next: "iims-college"
+                next: "iims-college",
+                next_img: "/images/thumbnails/iims.jpg"
             }
         ],
         challenge: [
@@ -396,7 +403,8 @@ export const projects = [
                 top_image: "https://unsplash.it/1361"
             },
             {
-                next: "vianet"
+                next: "vianet",
+                next_img: "/images/thumbnails/vianet.jpg"
             }
         ],
         challenge: [
@@ -460,7 +468,7 @@ export const projects = [
         tag: ["website"],
         type: "marketing",
         desc: "Vianet is a leading Internet Service Provider of Nepal bringing for the first time FibertotheHome, thus redefining the market scenario with increased bandwidth and facilities",
-        img_url: "https://www.popsci.com/resizer/QgEMm6gNVXFYEFCmonq-Tp9_D7g=/760x506/cloudfront-us-east-1.images.arcpublishing.com/bonnier/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg",
+        img_url: "/images/thumbnails/vianet.jpg",
         meta: [
             {
                 client_name: "Vianet",
@@ -475,7 +483,8 @@ export const projects = [
                 top_image: "https://unsplash.it/1361"
             },
             {
-                next: "hongshi-cement"
+                next: "hongshi-cement",
+                next_img: "/images/thumbnails/hongshi-cement.jpg"
             }
         ],
         challenge: [
@@ -573,9 +582,53 @@ export const team = [
         image_url: "pujan.jpg"
     },
     {
+        id: 6,
+        name: "Binod Aryal",
+        title: "CEO",
+        image_url: "binod.jpg"
+    },
+    {
         id: 4,
         name: "Suman Jung",
         title: "CEO",
         image_url: "suman.jpg"
+    }
+]
+export const clientele = [
+    {
+        client_name: "prazada",
+        logo: "prazada.jpg"
+    },
+    {
+      client_name: "folliderm",
+      logo: "folliderm.jpg"
+    },
+    {
+        client_name: "genese",
+        logo: "genese.jpg"
+    },
+    {
+        client_name: "infocus",
+        logo: "infocus.jpg"
+    },
+    {
+        client_name: "hongshi",
+        logo: "hongshi.jpg"
+    },
+    {
+        client_name: "hard rock",
+        logo: "hardrock.jpg"
+    },
+    {
+        client_name: "vianet",
+        logo: "vianet.jpg"
+    },
+    {
+        client_name: "remax",
+        logo: "remax.jpg"
+    },
+    {
+        client_name: "iims",
+        logo: "iims.jpg"
     }
 ]

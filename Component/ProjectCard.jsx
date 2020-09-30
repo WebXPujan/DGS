@@ -11,8 +11,10 @@ const ProjectCard = ({details,type,handleProjectClick}) => {
         gsap.to(elem,0.6,{opacity:1,delay:.1});
     }
 
+
    
     return (
+        
         <li className="display-card"
         onClick={handleProjectClick}>
             <div 

@@ -247,7 +247,7 @@ const Banner = (props) => {
                         >
                            We build tech with Customer Experience, and help you scale using the latest technology.
                         </motion.p>
-                        <motion.p initial={{opacity:0,x:-20}} animate={{opacity:1,x:0,transition:{delay:1.4,...transition}}}>
+                        <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0,transition:{delay:1.4,...transition}}}>
                             <Button type="normal" title="Start Project" link={`/contact`} hasSlug={false} />
                         </motion.p>
                     </motion.div>
@@ -302,7 +302,7 @@ const Banner = (props) => {
                                                 <div className={isDragged ? (isProjectOpen ? "info hide" : "info") : "info"} >
                                                     <strong className="number gray">{`0${i+1}`}</strong>
                                                     <h1 className="black title title__small text-capitalize">{project.name}</h1>
-                                                    <p className="green subtitle subtitle__small big text-capitalize sec-font"><i className="fas fa-info-circle"></i>website, Mobile Apps</p>
+                                                    <p className="green subtitle subtitle__small big text-capitalize sec-font"><i className="fas fa-info-circle"></i>{project.tag[0]}</p>
                                                 
                                                 </div> 
                                                 <div 
@@ -408,7 +408,7 @@ const Banner = (props) => {
                                                 <div className="info" >
                                                     <strong className="number gray">{`0${i+1}`}</strong>
                                                     <h1 className="black title title__small text-capitalize">{project.name}</h1>
-                                                    <p className="green subtitle subtitle__small big text-capitalize sec-font"><i className="fas fa-info-circle"></i>website, Mobile Apps</p>
+                                     <p className="green subtitle subtitle__small big text-capitalize sec-font"><i className="fas fa-info-circle"></i>{project.tag[0]}</p>
                                                 </div> 
                                                 <Link href="/project/[project]" as={`/project/${project.id}`}>
                                                 <a>

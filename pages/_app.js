@@ -184,3 +184,15 @@ MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
 };
+MyApp.getInitialProps = async ({ Component, router, ctx}) => {
+  let pageProps = {}
+
+
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx)
+  }
+
+  /* your own logic */
+
+  return { pageProps }
+}

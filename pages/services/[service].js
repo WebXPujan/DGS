@@ -8,8 +8,9 @@ import {GlobalContext} from "../../context/GlobalContext";
 import ProgressiveImage from 'react-progressive-graceful-image'
 import gsap from "gsap"
 import Error from 'next/error'
+import {services} from "../../API/projects";
 
-const ServicePage = () => {
+const ServicePage = ({service}) => {
 
     const [cursor,setCursor] = useContext(GlobalContext);
    
@@ -19,19 +20,30 @@ const ServicePage = () => {
     //gsap.from(document.querySelector('body'),{opacity:0}).to(document.querySelector('body'),{opacity:1});
     const { query } = router
    // useEffect(()=>{console.log(query.service);})
-   const data = useContext(HomeContext);
+//    const data = useContext(HomeContext);
    const handleImgload = (elem) => {
     gsap.to(elem,0.6,{opacity:1,delay:.1});
 }
+//let service = data[0].services.filter((service )=> service.id.includes(query.service));
    
-   const makeBanner = () => {
-       let service = data[0].services.filter((service )=> service.id.includes(query.service));
+//    const makeBanner = () => {
+//        let service = data[0].services.filter((service )=> service.id.includes(query.service));
        if(service.length == 0){
         return <Error statusCode="404" />
        }
-       return (
-           <>
-           {
+//        return (
+//            <>
+           
+           
+            
+//             </>
+//        );
+//    }
+    
+   
+    return (
+        <>
+        {
                service.map((s)=>(
                 <BannerInner 
                 page="service"
@@ -157,27 +169,17 @@ const ServicePage = () => {
                ))
            }
            </section>
-           
-            
-            </>
-       );
-   }
-    
-   
-    return (
-        <>
-        { makeBanner() }
         <Footer />
         </>
     );
 }
-// ServicePage.getInitialProps = async (ctx) => {
-//     const { query } = ctx;
-    
-
-//     return{
-//         service: service
-//     }
-// }
+ServicePage.getInitialProps = (ctx) => {
+    const { query } = ctx;
+   // const data = useContext(HomeContext);
+    //let service = service.filter((service )=> service.id.includes(query.service));
+    return{
+        service: services.filter((service )=> service.id === query.service)
+    }
+}
 
 export default ServicePage;

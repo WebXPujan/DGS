@@ -45,7 +45,7 @@ const StickyProjectInfo = ({stickyTitle,stickyDesc,sticky,close,closeProject,tim
                     animate={{opacity:1,y:0,transition:{delay:.2,...transition}}}
                     > {stickyDesc}
                     </motion.p>  
-                    <motion.strong className="scroll-down" initial={{opacity:0,x:-20}} animate={{opacity:1,x:0,transition:{delay:.4,...transition}}}>Scroll down</motion.strong>
+                    <motion.strong className="scroll-down" initial={{opacity:0,y:20}} animate={{opacity:1,y:0,transition:{delay:.4,...transition}}}>Scroll down</motion.strong>
                 </div>
         </motion.div>
     );

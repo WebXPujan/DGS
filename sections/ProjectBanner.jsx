@@ -37,7 +37,7 @@ const ProjectBanner = ({width,height,x,y,stickyTitle,stickyDesc,img,close,closeP
             .6,{
                 css: {
                     width: window.innerWidth - sticky.current.clientWidth,
-                    height: window.innerHeight - window.innerHeight/6,
+                    height: window.innerHeight,
                     left: 0+sticky.current.clientWidth,
                     top: page === "inner" ? 64 : 0
                  }
@@ -55,7 +55,7 @@ const ProjectBanner = ({width,height,x,y,stickyTitle,stickyDesc,img,close,closeP
              
             <section className="banner-project"
             ref={banner}
-            style={{position:"fixed",width:width,height:height,background: `#ececec url('${img}') no-repeat`,left:x,top:y-64}}>
+            style={{position:"fixed",width:width,height:height,background: `#ececec url('${img}') no-repeat`,left:x,top:y-77}}>
                 <img src={img} alt=""/>
             </section>
         </motion.section>

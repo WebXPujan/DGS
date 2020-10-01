@@ -4,7 +4,7 @@ import Button from '../Component/Button';
 import { AnimatePresence,motion } from 'framer-motion';
 import ProgressiveImage from 'react-progressive-graceful-image'
 import gsap from "gsap"
-const Services = () => {
+const Services = ({services}) => {
 
     const data = useContext(HomeContext);
 
@@ -68,7 +68,7 @@ const Services = () => {
                             mobile >= 841 ? (
                                 <ul>
                                     {
-                                        data[0].services.map((service,i)=>(
+                                        services.map((service,i)=>(
                                             <li key={i} className={i === activeIndex ? "active" : ""}>
                                         <a href="" className="dg-link" onClick={(e)=>handleClick(e,i)}>
                                         <span className="icons left" style={{background:`url('/images/${service.icon}') no-repeat center center`}}></span>
@@ -108,7 +108,7 @@ const Services = () => {
                                 dragElastic={0.005}
                              >
                                     {
-                                        data[0].services.map((service,i)=>(
+                                        services.map((service,i)=>(
                                             <li key={i} className={i === activeIndex ? "active" : ""}>
                                         <a href="" className="dg-link" onClick={(e)=>handleClick(e,i)}>
                                         <span className="icons left" style={{background:`url('/images/${service.icon}') no-repeat center center`}}></span>
@@ -157,10 +157,10 @@ const Services = () => {
             {
                 isClicked && (
                     <AnimatePresence exitBeforeEnter>
-                    <motion.div exit={{opacity:0,y:"0%"}} enter={{opacity:1}} className="wrap" key={data[0].services[activeIndex].id}>
+                    <motion.div exit={{opacity:0,y:"0%"}} enter={{opacity:1}} className="wrap" key={services[activeIndex].id}>
                         <div className="info">
-                <motion.h1 initial="initial" animate="animate" variants={slideUp} className="black title title__big big">{data[0].services[activeIndex].name}</motion.h1>
-                <motion.p initial="initial" animate="animate" variants={slideUp} className="para">{data[0].services[activeIndex].desc}</motion.p>
+                <motion.h1 initial="initial" animate="animate" variants={slideUp} className="black title title__big big">{services[activeIndex].name}</motion.h1>
+                <motion.p initial="initial" animate="animate" variants={slideUp} className="para">{services[activeIndex].desc}</motion.p>
                             <motion.p 
                             initial="initial"
                             animate="animate"
@@ -170,32 +170,67 @@ const Services = () => {
                                 type="normal" 
                                 title="Get Details"
                                 link={`/services/[service]`}
-                                viewas={`/services/${data[0].services[activeIndex].id}`}
+                                viewas={`/services/${services[activeIndex].id}`}
                                 hasSlug={true} 
                                 />
                             </motion.p>
                         </div>
                         <div className="slider">
-                            <ul>
+                            {
+                                mobile <= 840 ?
+                                (
+                                    <motion.ul
+                                    drag={"x"}
+                                    dragConstraints={{
+                                        left: -(mobile * 2.22 ) - (mobile * .45),
+                                        right: 0,
+                                    }}
+                                    dragElastic={0.005}>
                                 {
-                                    data[0].services[activeIndex].images.map((image,i) => (
-                                        <motion.li variants={img} animate="fadeInUp" custom={i} initial="initial" className="list-items" key={i}>
-                                            <div className="thumb clip">
-                                            <ProgressiveImage src={image.url} placeholder="" delay={100}>
-                                                {src => {
+                                            services[activeIndex].images.map((image,i) => (
+                                                <motion.li variants={img} animate="fadeInUp" custom={i} initial="initial" className="list-items" key={i}>
+                                                    <div className="thumb clip">
+                                                    <ProgressiveImage src={image.url} placeholder="" delay={100}>
+                                                        {src => {
 
-                                                    return <img src={src} alt={image.alt} style={{opacity:0}} onLoad={(ref) => handleImgload(ref.target)}/>
-                                                }
+                                                            return <img src={src} alt={image.alt} style={{opacity:0}} onLoad={(ref) => handleImgload(ref.target)}/>
+                                                        }
 
-                                                }
-                                            </ProgressiveImage>
-                                            </div>
-                                        </motion.li>
-                                    ))
-                                }
-                                
-                                
-                            </ul>
+                                                        }
+                                                    </ProgressiveImage>
+                                                    </div>
+                                                </motion.li>
+                                            ))
+                                        }
+                                        
+                                        
+                                    </motion.ul>
+                                )
+                                :
+                                (
+                                    <ul>
+                                        {
+                                            services[activeIndex].images.map((image,i) => (
+                                                <motion.li variants={img} animate="fadeInUp" custom={i} initial="initial" className="list-items" key={i}>
+                                                    <div className="thumb clip">
+                                                    <ProgressiveImage src={image.url} placeholder="" delay={100}>
+                                                        {src => {
+
+                                                            return <img src={src} alt={image.alt} style={{opacity:0}} onLoad={(ref) => handleImgload(ref.target)}/>
+                                                        }
+
+                                                        }
+                                                    </ProgressiveImage>
+                                                    </div>
+                                                </motion.li>
+                                            ))
+                                        }
+                                        
+                                        
+                                    </ul>
+                                )
+                            }
+                            
                         </div>
                     </motion.div>
                     </AnimatePresence>
@@ -215,4 +250,10 @@ const Services = () => {
     </section>
     );
 }
+// Services.getInitialProps = (ctx) => {
+//     const {query} = ctx;
+//     return {
+//         service: services
+//     }
+// }
 export default Services;

@@ -8,10 +8,11 @@ import CTA from '../sections/CTA';
 import Footer from '../sections/Footer';
 import {projects} from '../API/projects'
 import { useEffect } from "react";
+import {services} from "../API/projects";
  const Blog = dynamic(() => import('../sections/Blog'));
  const Testimonial = dynamic(() => import('../sections/Testimonial'));
 
-const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen }) =>{
+const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen,service }) =>{
 
   const [loaded,setLoaded] = useState(false);
 
@@ -30,7 +31,7 @@ const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen }) =>{
       
       <>
             <Banner setImagePos={setImagePos} banner={banner} projects={projects} loading={loading} setLoading={setLoading} setProjectOpen={setProjectOpen} />
-            <Services />
+            <Services services={service} />
             <Trustee 
             title1="Trusted by Small business"
             title2="and Corporated Alike"
@@ -48,13 +49,14 @@ const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen }) =>{
 
 }
 
-// Index.getInitialProps = async (ctx) => {
+Index.getInitialProps = (ctx) => {
 //   const res = await fetch(
 //     "http://localhost:3000/api/project"
 // ).then((res) => res.json());
  
-//   return { projects: res }
-// }
+  //const {query} = ctx;
+  return { service: services }
+}
 
 
 export default Index;

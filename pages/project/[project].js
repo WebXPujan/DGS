@@ -15,7 +15,7 @@ const fetcher = async (url) => {
     return data
   }
 
-const ProjectDetails = ({imagePos,loading,setLoading}) => {
+const ProjectDetails = ({imagePos,loading,setLoading,project}) => {
     const router = useRouter();
     //remove flashing
     //gsap.from(document.querySelector('body'),{opacity:0}).to(document.querySelector('body'),{opacity:1});
@@ -27,7 +27,7 @@ const ProjectDetails = ({imagePos,loading,setLoading}) => {
   
     //  if (error) return <div>{error.message}</div>
     //  if (!data) return <div>Loading...</div>
-    let project = projects.filter((p) => p.id === query.project);
+    //let project = projects.filter((p) => p.id === query.project);
   
     if(project.length == 0){
       return <Error statusCode="404" />
@@ -51,15 +51,15 @@ const ProjectDetails = ({imagePos,loading,setLoading}) => {
     );
 }
 
-// ProjectDetails.getInitialProps = async (ctx) => {
-//     const { query } = ctx;
+ProjectDetails.getInitialProps = (ctx) => {
+    const { query } = ctx;
   
-//     const res = await fetch("http://localhost:3000/api/project?id="+query);
-//     const project = await res.json();
+    //const res = await fetch("http://localhost:3000/api/project?id="+query);
+    //const project = await res.json();
 
-//     return{
-//         project: project
-//     }
-// }
+    return{
+        project: projects.filter((p) => p.id === query.project)
+    }
+}
 
 export default ProjectDetails;

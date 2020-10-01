@@ -2584,6 +2584,7 @@ section#blog-wrapper{
     }
     .flex-box li{
         flex: 100%;
+        padding: 5px;
     }
     .blog-banner .thumb,
     .blog-content,

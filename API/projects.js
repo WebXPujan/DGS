@@ -25,7 +25,13 @@ export const projects = [
                 bottom_square:{
                     left: "/images/projects/hongshi/avenues.jpg",
                     right: "/images/projects/hongshi/funnel.jpg"
+                },
+                
+                full: {
+                    top: '/images/projects/hongshi/full.jpg',
+                    bottom: '/images/projects/hongshi/full-1.jpg'
                 }
+                
             },{
                 next: "xpertspool",
                 next_img: "/images/thumbnails/xpertspool.jpg"
@@ -120,6 +126,10 @@ export const projects = [
                 bottom_square:{
                     left: "",
                     right: ""
+                },
+                full: {
+                    top: '/images/projects/hongshi/full.jpg',
+                    bottom: '/images/projects/hongshi/full-1.jpg'
                 }
             },
             {
@@ -242,6 +252,10 @@ export const projects = [
                 bottom_square:{
                     left: "/images/projects/hardrock/avenues.jpg",
                     right: "/images/projects/hardrock/funnel.jpg"
+                },
+                full: {
+                    top: '/images/projects/hardrock/full.jpg',
+                    bottom: ''
                 }
             },
             {
@@ -311,6 +325,10 @@ export const projects = [
                 bottom_square:{
                     left: "/images/projects/folliderm/avenues.jpg",
                     right: "/images/projects/folliderm/funnel.jpg"
+                },
+                full: {
+                    top: '/images/projects/folliderm/full.jpg',
+                    bottom: '/images/projects/folliderm/full-1.jpg'
                 }
             },
             {
@@ -419,6 +437,10 @@ export const projects = [
                 bottom_square:{
                     left: "/images/projects/iims/avenues.jpg",
                     right: "/images/projects/iims/funnel.jpg"
+                },
+                full: {
+                    top: '/images/projects/iims/full.jpg',
+                    bottom: ''
                 }
             },
             {
@@ -506,6 +528,10 @@ export const projects = [
                 bottom_square:{
                     left: "/images/projects/vianet/avenues.jpg",
                     right: "/images/projects/vianet/funnel.jpg"
+                },
+                full: {
+                    top: '/images/projects/vianet/full.jpg',
+                    bottom: '/images/projects/vianet/full-1.jpg'
                 }
             },
             {
@@ -611,6 +637,10 @@ export const projects = [
                 bottom_square:{
                     left: "",
                     right: ""
+                },
+                full: {
+                    top: '/images/projects/hongshi/full.jpg',
+                    bottom: '/images/projects/hongshi/full-1.jpg'
                 }
             },
             {
@@ -742,6 +772,10 @@ export const clientele = [
     {
         client_name: "xpertspool",
         logo: "xpertspool.jpg"
+    },
+    {
+        client_name: "kathmandu kitchen",
+        logo: "kitchen.jpg"
     }
 ]
 

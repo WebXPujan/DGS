@@ -137,7 +137,7 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
             </div>
             <div className="project-gallery full w100">
                 <div className="thumb">
-                    <img src="/images/projects/xpertspool/full-1.jpg" alt=""/>
+                    <img src={details.meta[1].full.top} alt=""/>
                 </div>
             </div>
             {
@@ -219,9 +219,14 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                 null
             }
             <div className="project-gallery full w100">
-                <div className="thumb">
-                    <img src="/images/projects/xpertspool/full-2.jpg" alt=""/>
-                </div>
+                
+                {
+                    details.meta[1].full.bottom != "" 
+                    && 
+                    <div className="thumb">
+                        <img src={details.meta[1].full.bottom} alt=""/>
+                    </div>
+                }
             </div>
             <div className="project-strategy w100">
                 <div className="container">

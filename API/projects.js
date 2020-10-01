@@ -102,7 +102,7 @@ export const projects = [
     {
         id:"xpertspool",
         name: "XpertsPool",
-        tag: ["website, logo"],
+        tag: ["website, logo, branding"],
         type: "tech",
         featured: true,
         desc: "Xpertspool is a growing platform providing reliable and affordable tech Experts across the globe with more than 300+ Experts from Nepal, India, and Bangladesh.",

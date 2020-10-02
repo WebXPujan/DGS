@@ -22,11 +22,11 @@ const ProjectCard = ({details,type,handleProjectClick}) => {
             onMouseEnter={() => setCursor("hovered")}
             onMouseLeave={() => setCursor("")}
             >
+                {/* {JSON.stringify(type === "team" ? `/images/team/${details.image_url}` : details.img_url)} */}
                 <ProgressiveImage 
                 src={type === "team" ? `/images/team/${details.image_url}` : details.img_url} 
                 placeholder=""
                 rootMargin="0% 0% 0%"
-                threshold={[1]}
                 delay={100}>
                     {src => {
 

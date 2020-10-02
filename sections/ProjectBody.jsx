@@ -6,7 +6,7 @@ import Button from '../Component/Button'
 import {motion, useDragControls} from 'framer-motion'
 import IntroTextWrap from '../Component/IntroTextWrap';
 import Trustee from '../sections/Trustee';
-import {projects} from '../API/projects';
+import {projects,testimonials} from '../API/projects';
 import {GlobalContext} from "../context/GlobalContext";
 //import {CanvasJSChart} from 'canvasjs-react-charts';
 
@@ -21,41 +21,10 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
         return {
             name: project[0].meta[0].client_name,
             id: project[0].id,
-            img: project[0].meta[2].next_img
+            img: project[0].img_url
         }
     }
-    // var dataPoint;
-    // var total;
-    // const options = {
-    //     animationEnabled: true,
-    //     title:{
-    //         text: ""
-    //     },
-    //     data: [{
-    //         type: "funnel",
-    //         toolTipContent: "<b>{label}</b>: {y} <b>({percentage}%)</b>",
-    //         indexLabelPlacement: "inside",
-    //         indexLabel: "{label} ({percentage}%)",
-    //         dataPoints: [
-    //             { y: 1400, label: "Brand Awareness" },
-    //             { y: 1212, label: "Engagement Campaigns" },
-    //             { y: 1080, label: "Web Traffic Increment" },
-    //             { y: 665,  label: "Lead Generation Campaign for data collection" },
-    //             { y: 578, label: "Data Optimization and Retargeting" },
-    //             { y: 200,  label: "Conversion" }
-    //         ]
-    //     }]
-    // }
-    // //calculate percentage
-    // dataPoint = options.data[0].dataPoints;
-    // total = dataPoint[0].y;
-    // for(var i = 0; i < dataPoint.length; i++) {
-    //     if(i == 0) {
-    //         options.data[0].dataPoints[i].percentage = 100;
-    //     } else {
-    //         options.data[0].dataPoints[i].percentage = ((dataPoint[i].y / total) * 100).toFixed(2);
-    //     }
-    // }
+    
 
     
     
@@ -136,55 +105,68 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                 </div>
             </div>
             <div className="project-gallery full w100">
-                <div className="thumb">
-                    <img src={details.meta[1].full.top} alt=""/>
-                </div>
+                {
+                    details.type === "tech" ?
+                    (
+                        <img src={details.meta[1].full.top} alt="" className="image-solo" />
+                    ): 
+                    (
+                        <div className="thumb">
+                            <img src={details.meta[1].full.top} alt=""/>
+                        </div>
+                    )
+                }
             </div>
             {
                 details.hasOwnProperty('testimonial') && (
-                    <div className="project-desc w50" style={{padding:"60px 0"}}>
-                        <div className="container">
-                            <IntroTextWrap 
-                            intro1="Working with them"
-                            intro2="has been a "
-                            highlight="breeze"/>
-                            <div className="column col-md-12 col-sm-12">
-                                <div className="testimonial-inside-service">
-                                    <div className="thumb">
-                                        <h1 className="title title__big">
-                                            <span className="icons icons-quote">
-                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 95.333 95.332" style={{enableBackground: "new 0 0 95.333 95.332"}}>
-                                                <g>
-                                                    <g>
-                                                        <path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793
-                                                            c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045
-                                                            s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076
-                                                            c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002
-                                                            c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/>
-                                                        <path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019
-                                                            c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23
-                                                            c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16
-                                                            c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312
-                                                            c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/>
-                                                    </g>
-                                                </g>
-                                                </svg>
-                                            </span>
-                                        </h1>
-                                        
-                                    </div>
-                                    <div className="desc">
-                                        
-                                        <p className="para">lorem lorem</p>
-                                        {/* <a 
-                                                href="" className="dg-link"
-                                                onMouseEnter={() => setCursor("pointer")}
-                                                onMouseLeave={() => setCursor("")}>View case study</a> */}
+                    testimonials.map((t) => (
+                        t.id === details.testimonial && (
+                            <div className="project-desc w50" style={{padding:"60px 0",marginBottom:100}}>
+                                <div className="container">
+                                    <IntroTextWrap 
+                                    intro1={t.intro1}
+                                    intro2={t.intro2}
+                                    highlight={t.highlight}/>
+                                    <div className="column col-md-12 col-sm-12">
+                                        <div className="testimonial-inside-service">
+                                            <div className="thumb">
+                                                <h1 className="title title__big">
+                                                    <span className="icons icons-quote">
+                                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 95.333 95.332" style={{enableBackground: "new 0 0 95.333 95.332"}}>
+                                                        <g>
+                                                            <g>
+                                                                <path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793
+                                                                    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045
+                                                                    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076
+                                                                    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002
+                                                                    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/>
+                                                                <path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019
+                                                                    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23
+                                                                    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16
+                                                                    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312
+                                                                    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/>
+                                                            </g>
+                                                        </g>
+                                                        </svg>
+                                                    </span>
+                                                </h1>
+                                                
+                                            </div>
+                                            <div className="desc">
+                                                
+                                                <p className="para">{t.testimonial}</p>
+                                                <a className="dg-link"
+                                                        onMouseEnter={() => setCursor("pointer")}
+                                                        onMouseLeave={() => setCursor("")}> 
+                                                    <span>- {t.client}, {t.company}</span>
+                                                        </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        )
+                    ))
                 )
             }
             
@@ -221,18 +203,30 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
             <div className="project-gallery full w100">
                 
                 {
+                    details.type === "tech" ?
                     details.meta[1].full.bottom != "" 
-                    && 
-                    <div className="thumb">
-                        <img src={details.meta[1].full.bottom} alt=""/>
-                    </div>
+                            && (
+                     <img src={details.meta[1].full.bottom} alt="" className="image-solo" />
+                         
+                    )
+                    :
+                    details.meta[1].full.bottom != "" 
+                            && (
+                            <div className="thumb">
+                                <img src={details.meta[1].full.bottom} alt=""/>
+                            </div>
+                        
+                    )
                 }
             </div>
-            <div className="project-strategy w100">
+            <div 
+            className="project-strategy w100"
+            onMouseEnter={()=>setCursor("inverted")}
+            onMouseLeave={()=>setCursor("")}>
                 <div className="container">
                     <div className="columns">
                         <div className="column col-12">
-                            <h1 className="title title__big big title__border centered"><strong className="number">The Strategy</strong></h1>
+                            <h1 className="title title__big big title__border centered inverted"><strong className="number">The Strategy</strong></h1>
                         </div>
                     </div>
                     <div className="columns"> 
@@ -375,14 +369,14 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                         <div className="hero-content">
                             <h1 className="title title__big big">{`Want to create a web experience as `}<span className="green">{`${title}'s?`}</span></h1>
                             <p className="para">We have got an Idea</p>
-                            <Button type="normal" title="Lets Get Started" link="/" />
+                            <Button type="normal" title="Lets Get Started" link={`/contact`} hasSlug={false} />
                         </div>
                     </div>
                     <div className="column col-md-6 col-sm-12">
                         <ul>
                         <Link href="/project/[project]" as={`/project/${getProject(details.meta[2].next).id}`}>
                             <a className="dg-link">
-                            <ProjectCard details={{img_url:details.meta[2].next_img,name:getProject(details.meta[2].next).name,tag:["Next Case Study"]}} 
+                            <ProjectCard details={{img_url:getProject(details.meta[2].next).img,name:getProject(details.meta[2].next).name,tag:["Next Case Study"]}} 
                             type="projects" 
                             setLoading={setLoading} 
                             loading={loading} 

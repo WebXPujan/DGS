@@ -6,7 +6,7 @@ export const projects = [
         type: "marketing",
         featured: true,
         desc: "Hongshi Shivam cement, a joint venture of Shivam Group and China’s Hongshi Cement, is the largest producer of cement in Nepal producing 6000 metric tons daily with its first smoke and dust free factory in Nepal",
-        img_url: "/images/thumbnails/hongshi-cement.jpg",
+        img_url: "/images/thumbnails/hongshi-cement.webp",
         meta: [
             {
                 client_name: "Hongshi Shivam Cement",
@@ -19,24 +19,25 @@ export const projects = [
             },
             {
                 top_square: {
-                    left: "/images/projects/hongshi/square-left-1.jpg",
-                    right: "/images/projects/hongshi/square-right-1.jpg"
+                    left: "/images/projects/hongshi/square-left-1.webp",
+                    right: "/images/projects/hongshi/square-right-1.webp"
                 },
                 bottom_square:{
-                    left: "/images/projects/hongshi/avenues.jpg",
-                    right: "/images/projects/hongshi/funnel.jpg"
+                    left: "/images/projects/hongshi/avenues.webp",
+                    right: "/images/projects/hongshi/funnel.webp"
                 },
                 
                 full: {
-                    top: '/images/projects/hongshi/full.jpg',
-                    bottom: '/images/projects/hongshi/full-1.jpg'
+                    top: '/images/projects/hongshi/full.webp',
+                    bottom: '/images/projects/hongshi/full-1.webp'
                 }
                 
             },{
                 next: "xpertspool",
-                next_img: "/images/thumbnails/xpertspool.jpg"
+                next_img: "/images/thumbnails/xpertspool.webp"
             }
         ],
+        testimonial: 4,
         challenge: [
             "Activate the brand digitally",
             "Promote brand linking it with safety, quality and one of a kind",
@@ -102,11 +103,11 @@ export const projects = [
     {
         id:"xpertspool",
         name: "XpertsPool",
-        tag: ["website, logo, branding"],
+        tag: ["website, logo, branding, cms"],
         type: "tech",
         featured: true,
         desc: "Xpertspool is a growing platform providing reliable and affordable tech Experts across the globe with more than 300+ Experts from Nepal, India, and Bangladesh.",
-        img_url: "/images/thumbnails/xpertspool.jpg",
+        img_url: "/images/thumbnails/banner-min.webp",
         meta: [
             {
                 client_name: "XpertsPool LLC",
@@ -120,31 +121,24 @@ export const projects = [
             },
             {
                 top_square: {
-                    left: "/images/projects/xpertspool/square-left-1.jpg",
-                    right: "/images/projects/xpertspool/square-right-1.jpg"
+                    left: "/images/projects/xpertspool/xp-main-min.webp",
+                    right: "/images/projects/xpertspool/square-right-1.webp"
                 },
                 bottom_square:{
                     left: "",
                     right: ""
                 },
                 full: {
-                    top: '/images/projects/hongshi/full.jpg',
-                    bottom: '/images/projects/hongshi/full-1.jpg'
+                    top: '/images/projects/xpertspool/ban2.webp',
+                    bottom: ''
                 }
             },
             {
                 next: "hard-rock",
-                next_img: "/images/thumbnails/hard-rock.jpg"
+                next_img: "/images/thumbnails/hard-rock.webp"
             }
         ],
-        testimonial: {
-            intro1: "Working with them",
-            intro2: "has been a ",
-            highlight: "Breeze",
-            title: "Excellent Work",
-            desc: `"The Digital Gurkha team delivered on our high expectation in terms of development quality, tight deadline and budget. Working with them has been a breeze. I would recommend them to anyone looking for a dedicated team for application development."`,
-            link: "https://"
-        },
+        testimonial: 1,
         challenge: [
             "To create a web portal to connect experts with the clients",
             "Simple and clear UI",
@@ -233,7 +227,7 @@ export const projects = [
         type: "marketing",
         featured: true,
         desc: "With venues in 75 countries spanning 259 locations that include owned/licensed or managed HOtels, Casinos, Rock Shops and Cafes - Hard Rock International is one of the most globally recognized companies.",
-        img_url: "/images/thumbnails/hard-rock-1.jpg",
+        img_url: "/images/thumbnails/hard-rock-1.webp",
         meta: [
             {
                 client_name: "Hard Rock Cafe, Nepal",
@@ -246,23 +240,24 @@ export const projects = [
             },
             {
                 top_square: {
-                    left: "/images/projects/hardrock/square-left-1.jpg",
-                    right: "/images/projects/hardrock/square-right-1.jpg"
+                    left: "/images/projects/hardrock/square-left-1.webp",
+                    right: "/images/projects/hardrock/square-right-1.webp"
                 },
                 bottom_square:{
-                    left: "/images/projects/hardrock/avenues.jpg",
-                    right: "/images/projects/hardrock/funnel.jpg"
+                    left: "/images/projects/hardrock/avenues.webp",
+                    right: "/images/projects/hardrock/funnel.webp"
                 },
                 full: {
-                    top: '/images/projects/hardrock/full.jpg',
+                    top: '/images/projects/hardrock/full.webp',
                     bottom: ''
                 }
             },
             {
                 next: "folliderm",
-                next_img: "/images/thumbnails/folliderm.jpg"
+                next_img: "/images/thumbnails/folliderm.webp"
             }
         ],
+        testimonial: 3,
         challenge: [
             "To launch Digital campaign for Job Fair Event",
             "To fill positions for more than 50% of the job openings",
@@ -306,7 +301,7 @@ export const projects = [
         tag: ["sms marketing, social media"],
         type: "marketing",
         desc: "Folliderm is an international standard hair transplant and skin clinic in Nepal that provides the most advanced Direct Hair Transplant in Nepal along with other hair and skin care services facilitated by certified medical experts.",
-        img_url: "/images/thumbnails/folliderm.jpg",
+        img_url: "/images/thumbnails/folliderm.webp",
         meta: [
             {
                 client_name: "Folliderm",
@@ -319,23 +314,24 @@ export const projects = [
             },
             {
                 top_square: {
-                    left: "/images/projects/folliderm/square-left-1.jpg",
-                    right: "/images/projects/folliderm/square-right-1.jpg"
+                    left: "/images/projects/folliderm/square-left-1.webp",
+                    right: "/images/projects/folliderm/square-right-1.webp"
                 },
                 bottom_square:{
-                    left: "/images/projects/folliderm/avenues.jpg",
-                    right: "/images/projects/folliderm/funnel.jpg"
+                    left: "/images/projects/folliderm/avenues.webp",
+                    right: "/images/projects/folliderm/funnel.webp"
                 },
                 full: {
-                    top: '/images/projects/folliderm/full.jpg',
-                    bottom: '/images/projects/folliderm/full-1.jpg'
+                    top: '/images/projects/folliderm/full.webp',
+                    bottom: '/images/projects/folliderm/full-1.webp'
                 }
             },
             {
                 next: "iims-college",
-                next_img: "/images/thumbnails/iims.jpg"
+                next_img: "/images/thumbnails/iims.webp"
             }
         ],
+        testimonial: 5,
         challenge: [
             "Brand Activation",
             "To establish trust as a Hair Transplant Expert in Nepal",
@@ -418,7 +414,7 @@ export const projects = [
         tag: ["display advertisement"],
         type: "marketing",
         desc: "Established in 2010, by enthusiasts & educationists, the ‘IIMS Education Foundation Pvt. Ltd.’ has long established its roots in Nepalese educational sector by promoting a wide variety of quality educational services.",
-        img_url: "/images/thumbnails/iims.jpg",
+        img_url: "/images/thumbnails/iims.webp",
         meta: [
             {
                 client_name: "IIMS College",
@@ -431,21 +427,21 @@ export const projects = [
             },
             {
                 top_square: {
-                    left: "/images/projects/iims/square-left-1.jpg",
-                    right: "/images/projects/iims/square-right-1.jpg"
+                    left: "/images/projects/iims/square-left-1.webp",
+                    right: "/images/projects/iims/square-right-1.webp"
                 },
                 bottom_square:{
-                    left: "/images/projects/iims/avenues.jpg",
-                    right: "/images/projects/iims/funnel.jpg"
+                    left: "/images/projects/iims/avenues.webp",
+                    right: "/images/projects/iims/funnel.webp"
                 },
                 full: {
-                    top: '/images/projects/iims/full.jpg',
+                    top: '/images/projects/iims/full.webp',
                     bottom: ''
                 }
             },
             {
                 next: "vianet",
-                next_img: "/images/thumbnails/vianet.jpg"
+                next_img: "/images/thumbnails/vianet.webp"
             }
         ],
         challenge: [
@@ -509,7 +505,7 @@ export const projects = [
         tag: ["sms marketing"],
         type: "marketing",
         desc: "Vianet is a leading Internet Service Provider of Nepal bringing for the first time FibertotheHome, thus redefining the market scenario with increased bandwidth and facilities",
-        img_url: "/images/thumbnails/vianet.jpg",
+        img_url: "/images/thumbnails/vianet.webp",
         meta: [
             {
                 client_name: "Vianet",
@@ -522,21 +518,21 @@ export const projects = [
             },
             {
                 top_square: {
-                    left: "/images/projects/vianet/square-left-1.jpg",
-                    right: "/images/projects/vianet/square-right-1.jpg"
+                    left: "/images/projects/vianet/square-left-1.webp",
+                    right: "/images/projects/vianet/square-right-1.webp"
                 },
                 bottom_square:{
-                    left: "/images/projects/vianet/avenues.jpg",
-                    right: "/images/projects/vianet/funnel.jpg"
+                    left: "/images/projects/vianet/avenues.webp",
+                    right: "/images/projects/vianet/funnel.webp"
                 },
                 full: {
-                    top: '/images/projects/vianet/full.jpg',
-                    bottom: '/images/projects/vianet/full-1.jpg'
+                    top: '/images/projects/vianet/full.webp',
+                    bottom: '/images/projects/vianet/full-1.webp'
                 }
             },
             {
                 next: "kathmandu-kitchen",
-                next_img: "/images/thumbnails/hongshi-cement.jpg"
+                next_img: "/images/thumbnails/mykk.webp"
             }
         ],
         challenge: [
@@ -619,7 +615,7 @@ export const projects = [
         type: "tech",
         featured: false,
         desc: "Based in Maryland, USA,  My Kathmandu Kitchen is a restaurant specializing in South Asian cuisine and is a prominent market player in the food domain in the area.",
-        img_url: "/images/thumbnails/xpertspool.jpg",
+        img_url: "/images/thumbnails/mykk.webp",
         meta: [
             {
                 client_name: "My Kathmandu Kitchen",
@@ -631,23 +627,24 @@ export const projects = [
             },
             {
                 top_square: {
-                    left: "/images/projects/kitchen/square-left-1.jpg",
-                    right: "/images/projects/kitchen/square-right-1.jpg"
+                    left: "/images/projects/kitchen/square-left-1.webp",
+                    right: "/images/projects/kitchen/square-right-1.webp"
                 },
                 bottom_square:{
                     left: "",
                     right: ""
                 },
                 full: {
-                    top: '/images/projects/hongshi/full.jpg',
-                    bottom: '/images/projects/hongshi/full-1.jpg'
+                    top: '/images/projects/kitchen/kk-ban1.webp',
+                    bottom: '/images/projects/kitchen/kk-ban2.webp'
                 }
             },
             {
                 next: "hongshi-cement",
-                next_img: "/images/thumbnails/hongshi-cement.jpg"
+                next_img: "/images/thumbnails/hongshi-cement.webp"
             }
         ],
+        testimonial: 2,
         challenge: [
             "To develop a food ordering application with user-friendly characteristics to help customers order, track, and pay for their meals with ease.",
             "Accomplish the application development in one and a half months.",
@@ -705,31 +702,31 @@ export const team = [
         id: 1,
         name: "Ultha Niraula",
         title: "CEO",
-        image_url: "ultha.jpg"
+        image_url: "ultha.webp"
     },
     {
         id: 2,
         name: "Ullekh Niraula",
         title: "CEO",
-        image_url: "ullekh.jpg"
+        image_url: "ullekh.webp"
     },
     {
         id: 3,
         name: "Pujan Adhikary",
         title: "CEO",
-        image_url: "pujan.jpg"
+        image_url: "pujan.webp"
     },
     {
         id: 6,
         name: "Binod Aryal",
         title: "CEO",
-        image_url: "binod.jpg"
+        image_url: "binod.webp"
     },
     {
         id: 4,
         name: "Suman Jung",
         title: "CEO",
-        image_url: "suman.jpg"
+        image_url: "suman.webp"
     }
 ]
 export const clientele = [
@@ -785,14 +782,14 @@ export const contact = [
         name: "Nepal",
         title: "2nd Floor - Pashupati Vision Complex, Kathmandu, Nepal",
         phone: "",
-        img_url: "/images/nepal.jpg"
+        img_url: "/images/nepal.webp"
     },
     {
         id: 2,
         name: "USA",
         title: "655 Promenade parkway, Irving, Texas, 75039, USA",
         phone: "+1 4103366654",
-        img_url: "/images/usa.jpg"
+        img_url: "/images/usa.webp"
     }
 ]
 
@@ -803,38 +800,31 @@ export const services = [
         nickname: "website",
         desc: "Website is the core of any business that wants to leverage the Digital Space. We help you build websites with great User Experience, Inbuilt SEO, Content services, and integrate tools and technologies which will help you scale your marketing.",
         brief: "A well-built website for any business is not only a means to represent the brand online but a medium through which the brand can connect to the audience, interact, and generate sales. We specialize in building applications that are tailored to your needs and provide ease of use to your user base.",
-        banner: "/images/thumbnails/web-dev.jpg",
+        banner: "/images/thumbnails/web-dev.webp",
         images:[
             {
-                url:"/images/web/showcase1.jpg",
+                url:"/images/web/showcase1.webp",
                 alt: ""
             },
             {
-                url:"/images/web/showcase2.jpg",
+                url:"/images/web/showcase2.webp",
                 alt: ""
             },
             {
-                url:"/images/web/showcase3.jpg",
+                url:"/images/web/showcase3.webp",
                 alt: ""
             },
             {
-                url:"/images/web/showcase4.jpg",
+                url:"/images/web/showcase4.webp",
                 alt: ""
             },
             {
-                url:"/images/web/showcase5.jpg",
+                url:"/images/web/showcase5.webp",
                 alt: ""
             }
         ],
         icon: "website.svg",
-        testimonial: {
-            intro1: "Working with them",
-            intro2: "has been a ",
-            highlight: "Breeze",
-            title: "Excellent Work",
-            desc: `"The Digital Gurkha team delivered on our high expectation in terms of development quality, tight deadline and budget. Working with them has been a breeze. I would recommend them to anyone looking for a dedicated team for application development."`,
-            link: "https://"
-        },
+        testimonial: 1,
         process: [
             {
                 title: "Accessing goals & requirements",
@@ -864,42 +854,35 @@ export const services = [
     },
     {
         id: "app-development",
-        name: "App Development Services",
+        name: "App Development",
         nickname: "Mobile Application",
         desc: "We build Application using Hybrid App Development so that you save time and money while making sure that the journey of the customer is prioritized for Customer Engagement and Brand Loyalty while increasing revenue and sales.",
         brief: "Developing an application for your brand helps create an enhanced user experience, streamline operations, or even get a competitive edge over competitors. We use robust technology architecture and immaculate code that is engineered to deliver a seamless experience.",
-        banner: "/images/thumbnails/app-dev.jpg",
+        banner: "/images/thumbnails/app-dev.webp",
         images:[
             {
-                url:"/images/app/showcase4.jpg",
+                url:"/images/app/showcase4.webp",
                 alt: ""
             },
             {
-                url:"/images/app/showcase2.jpg",
+                url:"/images/app/showcase2.webp",
                 alt: ""
             },
             {
-                url:"/images/app/showcase5.jpg",
+                url:"/images/app/showcase5.webp",
                 alt: ""
             },
             {
-                url:"/images/app/showcase1.jpg",
+                url:"/images/app/showcase1.webp",
                 alt: ""
             },
             {
-                url:"/images/app/showcase3.jpg",
+                url:"/images/app/showcase3.webp",
                 alt: ""
             }
         ],
         icon: "creative.svg",
-        testimonial: {
-            intro1: "Working with them",
-            intro2: "has been a ",
-            highlight: "Breeze",
-            title: "Excellent Work",
-            desc: `"The Digital Gurkha team delivered on our high expectation in terms of development quality, tight deadline and budget. Working with them has been a breeze. I would recommend them to anyone looking for a dedicated team for application development."`,
-            link: "https://"
-        },
+        testimonial: 2,
         process: [
             {
                 title: "Accessing the technical requirements",
@@ -929,38 +912,31 @@ export const services = [
         nickname: "Creative Content",
         desc: "Do your customers read Blogs, or are they on social, or are on youtube? Wherever they are, we find them, build a strategy for Inbound Marketing so they will love what you do and never buy from your competitors.",
         brief: "A great content strategy not only helps bring qualified purchase but also helps drive conversion while providing a brand lift that continues generating value for years to come. We are committed to creating content that resonates with your target audience with well-crafted strategies and tracking the performance data to deliver content that works for your business.",
-        banner: "/images/thumbnails/content-strategy.jpg",
+        banner: "/images/thumbnails/content-strategy.webp",
         images:[
             {
-                url:"/images/content/showcase5.jpg",
+                url:"/images/content/showcase5.webp",
                 alt: ""
             },
             {
-                url:"/images/content/showcase4.jpg",
+                url:"/images/content/showcase4.webp",
                 alt: ""
             },
             {
-                url:"/images/content/showcase1.jpg",
+                url:"/images/content/showcase1.webp",
                 alt: ""
             },
             {
-                url:"/images/content/showcase2.jpg",
+                url:"/images/content/showcase2.webp",
                 alt: ""
             },
             {
-                url:"/images/content/showcase3.jpg",
+                url:"/images/content/showcase3.webp",
                 alt: ""
             }
         ],
         icon: "googleadwords.svg",
-        testimonial: {
-            intro1: "Working with them",
-            intro2: "has been a ",
-            highlight: "Breeze",
-            title: "Excellent Work",
-            desc: `"The Digital Gurkha team delivered on our high expectation in terms of development quality, tight deadline and budget. Working with them has been a breeze. I would recommend them to anyone looking for a dedicated team for application development."`,
-            link: "https://"
-        },
+        testimonial: 3,
         process: [
             {
                 title: "Audience and Market Research",
@@ -990,38 +966,31 @@ export const services = [
         nickname: "SAAS Product",
         desc: "One of the most lucrative and scalable industries, we help you develop your SAAS Product with your customer in Mind and help you scale with our Digital Marketing Services. Agile Development for the agile company that you are.",
         brief: "The Software-as-a-Service (SaaS) distribution model allows the users to access applications hosted online, thus freeing them from possible installation, maintenance, or integration issues. The user data is stored in the cloud, users have the freedom to use any device to access their account or data. With SaaS products, updates and maintenance are faster to be implemented.",
-        banner: "/images/thumbnails/saas.jpg",
+        banner: "/images/thumbnails/saas.webp",
         images:[
             {
-                url:"/images/saas/showcase2.jpg",
+                url:"/images/saas/showcase2.webp",
                 alt: ""
             },
             {
-                url:"/images/saas/showcase3.jpg",
+                url:"/images/saas/showcase3.webp",
                 alt: ""
             },
             {
-                url:"/images/saas/showcase4.jpg",
+                url:"/images/saas/showcase4.webp",
                 alt: ""
             },
             {
-                url:"/images/saas/showcase1.jpg",
+                url:"/images/saas/showcase1.webp",
                 alt: ""
             },
             {
-                url:"/images/saas/showcase5.jpg",
+                url:"/images/saas/showcase5.webp",
                 alt: ""
             }
         ],
         icon: "buildsaas.svg",
-        testimonial: {
-            intro1: "Working with them",
-            intro2: "has been a ",
-            highlight: "Breeze",
-            title: "Excellent Work",
-            desc: `"The Digital Gurkha team delivered on our high expectation in terms of development quality, tight deadline and budget. Working with them has been a breeze. I would recommend them to anyone looking for a dedicated team for application development."`,
-            link: "https://"
-        },
+        testimonial: 1,
         process: [
             {
                 title: "Concept definition and functionality",
@@ -1047,42 +1016,35 @@ export const services = [
     },
     {
         id: "search-engine-optimization",
-        name: "Search Engine Optimization",
+        name: "SEO",
         nickname: "SEO",
         desc: "If you are on the top of the search Engines, you are almost of the top of your Marketing game. Help us bring you on top with Technical SEO, On Page SEO with Content Marketing services, build backlinks that drive traffic to your website.",
         brief: "Search Engine Optimization brings together context, content, and code to drive brand discovery and customer acquisition. Although SEO requires time to show results, it has enormous benefits in the long term and is more intent-based compared to other techniques.",
-        banner: "/images/thumbnails/seo.jpg",
+        banner: "/images/thumbnails/seo.webp",
         images:[
             {
-                url:"/images/seo/showcase1.jpg",
+                url:"/images/seo/showcase1.webp",
                 alt: ""
             },
             {
-                url:"/images/seo/showcase5.jpg",
+                url:"/images/seo/showcase5.webp",
                 alt: ""
             },
             {
-                url:"/images/seo/showcase2.jpg",
+                url:"/images/seo/showcase2.webp",
                 alt: ""
             },
             {
-                url:"/images/seo/showcase3.jpg",
+                url:"/images/seo/showcase3.webp",
                 alt: ""
             },
             {
-                url:"/images/seo/showcase4.jpg",
+                url:"/images/seo/showcase4.webp",
                 alt: ""
             }
         ],
         icon: "seo.svg",
-        testimonial: {
-            intro1: "Working with them",
-            intro2: "has been a ",
-            highlight: "Breeze",
-            title: "Excellent Work",
-            desc: `"The Digital Gurkha team delivered on our high expectation in terms of development quality, tight deadline and budget. Working with them has been a breeze. I would recommend them to anyone looking for a dedicated team for application development."`,
-            link: "https://"
-        },
+        testimonial: 5,
         process: [
             {
                 title: "Technical Optimization/ SEO Audit",
@@ -1108,42 +1070,35 @@ export const services = [
     },
     {
         id: "social-media-advertisement",
-        name: "Social Media Advertisement",
+        name: "Social Adverts",
         nickname: "Social Media Ads",
         desc: "You might be in industry but one thing is for sure, your customers are in Social media. We help you reach the right prospects by helping you create offers, testing Target Audiences, A/B testing Adverts, and building content that converts.",
         brief: "Social Media can become an engine for incredible growth when branding, content, and strategic distribution across the right channels work together. With our talented team of strategists, copywriters, designers, and paid media specialists, we specialize in creating engaging and click-worthy social experiences for your brand.",
-        banner: "/images/thumbnails/social-media.jpg",
+        banner: "/images/thumbnails/social-media.webp",
         images:[    
             {
-                url:"/images/sms/hongshi.jpg",
+                url:"/images/sms/hongshi.webp",
                 alt: ""
             },
             {
-                url:"/images/sms/folliderm.png",
+                url:"/images/sms/folliderm.webp",
                 alt: ""
             },
             {
-                url:"/images/sms/iims.jpg",
+                url:"/images/sms/iims.webp",
                 alt: ""
             },
             {
-                url:"/images/sms/hardrock.jpg",
+                url:"/images/sms/hardrock.webp",
                 alt: ""
             },
             {
-                url:"/images/sms/vianet.jpg",
+                url:"/images/sms/vianet.webp",
                 alt: ""
             }
         ],
         icon: "socialmedia.svg",
-        testimonial: {
-            intro1: "Working with them",
-            intro2: "has been a ",
-            highlight: "Breeze",
-            title: "Excellent Work",
-            desc: `"The Digital Gurkha team delivered on our high expectation in terms of development quality, tight deadline and budget. Working with them has been a breeze. I would recommend them to anyone looking for a dedicated team for application development."`,
-            link: "https://"
-        },
+        testimonial: 4,
         process: [
             {
                 title: "Audience Research",
@@ -1172,4 +1127,77 @@ export const services = [
         ]
     }
 
+]
+
+export const testimonials = [
+    
+    {
+        id: 3,
+        intro1: "It’s been",
+        intro2: "An Absolute ",
+        highlight: "Pleasure",
+        testimonial: `“We can’t thank DIGITAL GURKHA enough for their services.
+        Their knowledge, commitment and communication is impeccable.
+        They have become our invaluable partner and advisor on effectuating our digital marketing strategy.
+        our special thanks to Ullekh and Sapana for their immense support.
+        it’s been an absolute pleasure.”`,
+        client: "Abhishek",
+        company: "Hard Rock Cafe",
+        client_post: "General Manager",
+        title: "It's been an absolute pleasure",
+        case_study: "",
+        client_img: "/images/projects/hardrock/square-right-1.webp"
+    },
+    {
+        id: 4,
+        intro1: "Digital Gurkha",
+        intro2: "Did a great ",
+        highlight: "Job",
+        testimonial: `“Digital Gurkha did a great job launching our Digital Campaign with creative and result oriented work.”`,
+        client: "Sampada Dwedi",
+        company: "Hongshi Shivam Cement",
+        client_post: "Marketing Manager",
+        title: "Digital Gurkha did a great job",
+        case_study: "",
+        client_img: "/images/projects/hongshi/square-right-1.webp"
+    },
+    {
+        id: 5,
+        intro1: "They did a great",
+        intro2: "Job in ",
+        highlight: "SEO and PPC",
+        testimonial: `“Digital Gurkha helped us launch our Digital Campaign, and helped generate leads through Social Media ads and retargeting. They did a great job in SEO and PPC advertisement. It has been a pleasure working with them for 2 years”`,
+        client: "Dr. Pramod Agrawal",
+        company: "Folliderm Clinic",
+        client_post: "",
+        title: " It has been a pleasure working with them",
+        case_study: "",
+        client_img: "/images/projects/folliderm/square-right-1.webp"
+    },
+    {
+        id: 1,
+        intro1: "Helping us build",
+        intro2: "an outstanding ",
+        highlight: "System",
+        testimonial: `"I would like to thank Digital Gurkha for helping us build an outstanding system with great user Interface and a robust system. It has been a pleasure to work with these passionate guys."`,
+        client: "Mark Brown",
+        company: "Xpertspool",
+        client_post: "CEO",
+        title: "Excellent & Exceptional Result",
+        case_study: "",
+        client_img: "/images/projects/xpertspool/square-right-1.webp"
+    },
+    {
+        id: 2,
+        intro1: "Working with them",
+        intro2: "has been a ",
+        highlight: "Breeze",
+        testimonial: `“The Digital Gurkha team delivered on our high expectations in terms of development quality, tight deadline, and budget. Working with them has been a breeze. I would recommend them to anyone looking for a dedicated team for application development.”`,
+        client: "Akash",
+        company: "My Kathmandu Kitchen",
+        client_post: "Lead Developer",
+        title: "Working with them has been a breeze",
+        case_study: "",
+        client_img: "/images/projects/kitchen/square-right-1.webp"
+    }
 ]

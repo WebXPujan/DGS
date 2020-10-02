@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 import ProgressiveImage from 'react-progressive-graceful-image'
 import Link from 'next/link'
 import ProjectDetailsHorizontal from '../Component/ProjectDetailsHorizontal';
-import ProjectBody from './ProjectBody';
+import { useSwipeable } from 'react-swipeable';
 const Banner = (props) => {
 
    const router = useRouter();
@@ -176,6 +176,42 @@ const Banner = (props) => {
         projectClose(false);
        
    }
+  // const mobSlider = useRef(null);
+   const [mult,setMult] = useState(1);
+   const mobileSlideLeft = amnt => {
+        if(Math.abs(amnt) > document.querySelector('#mob-slider li').clientWidth*3){
+            //setMult(1);
+            return null;
+        }
+        document.querySelector('#mob-slider').style.marginLeft = amnt+"px";
+        setMult(prev => prev + 1);
+        console.log(amnt);
+    }
+    const mobileSlideRight = amnt => {
+        console.log("right: "+document.querySelector('#mob-slider').style.marginLeft);
+        if(document.querySelector('#mob-slider').style.marginLeft == "-"+document.querySelector('#mob-slider li').clientWidth*3+"px"){
+            document.querySelector('#mob-slider').style.marginLeft = "-"+document.querySelector('#mob-slider li').clientWidth*2+"px";
+            setMult(3);
+        }
+        if(document.querySelector('#mob-slider').style.marginLeft == "-"+document.querySelector('#mob-slider li').clientWidth*2+"px"){
+            document.querySelector('#mob-slider').style.marginLeft = "-"+document.querySelector('#mob-slider li').clientWidth*1+"px";
+            setMult(2);
+        }
+        if(document.querySelector('#mob-slider').style.marginLeft == "-"+document.querySelector('#mob-slider li').clientWidth*1+"px"){
+            document.querySelector('#mob-slider').style.marginLeft = "0px";
+            setMult(1);
+        }
+        // document.querySelector('#mob-slider').style.marginLeft = amnt+"px";
+        // setMult(prev => prev - 1);
+    }
+
+   const handlers = useSwipeable({
+    onSwipedLeft: () =>  mobileSlideLeft(-mult*document.querySelector('#mob-slider li').clientWidth),
+    onSwipedRight: () => mobileSlideRight((mult-1)*document.querySelector('#mob-slider li').clientWidth),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  })
+
     return(
         
         <>
@@ -393,14 +429,7 @@ const Banner = (props) => {
             {
                mobile <= 1024 && (
                     <section className="sections mob-featured-projects" >
-                            <motion.ul
-                            drag={"x"}
-                            dragConstraints={{
-                                left: -mobile,
-                                right: 0,
-                            }}
-                            dragElastic={0.005}
-                            >
+                            <ul id="mob-slider" {...handlers}>
                                 {
                                      props.projects.map( (project,i) => project.featured && (
                                         <li key={project.name+i}>
@@ -466,7 +495,7 @@ const Banner = (props) => {
                                     
                             </li>
                                 
-                            </motion.ul>
+                            </ul>
                     </section>
                 )
             }

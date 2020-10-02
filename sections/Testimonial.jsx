@@ -1,15 +1,16 @@
 import Button from '../Component/Button';
 import {CursorContext} from '../context/CursorContext';
-import {HomeContext} from '../context/HomeContext';
 import { useContext, useRef, useEffect, useState } from 'react';
 import MouseMove from '../Hooks/MouseMove';
 import {TransitionAnimation} from '../Hooks/TransitionAnimation';
+import {testimonials} from "../API/projects";
+import { useSwipeable } from 'react-swipeable';
 
 
 const Testimonial = () => {
 
     const [mousePos,setMousePos] = useContext(CursorContext);
-    const data = useContext(HomeContext);
+   
 
     
     const [activeIndex, setActiveIndex] = useState(0);
@@ -20,26 +21,28 @@ const Testimonial = () => {
     const rect = useRef(null);
 
     //importing hooks
-    const mousemove = MouseMove();
+   // const mousemove = MouseMove();
     const anim = TransitionAnimation();
 
-    useEffect(() => {
-        mousemove.setElem([img.current,rect.current])
-       // console.log(anim.staggerFadeIn());
-    }, []);
+    // useEffect(() => {
+    //     mousemove.setElem([img.current,rect.current])
+    //    // console.log(anim.staggerFadeIn());
+    // }, []);
     
-    const handleMove = () => {
-        mousemove.move(mousePos,{
-            vertical:false,
-            rect: rect.current
-        });
-    }
+    // const handleMove = () => {
+    //     mousemove.move(mousePos,{
+    //         vertical:false,
+    //         rect: rect.current
+    //     });
+    // }
 
     const handleOut = () => {
         mousemove.revertPosition([img.current,rect.current])
     }
 
     const handleClick = (index) => {
+        
+        if(index < testimonials.length && index >= 0){
         if(!isClicked){
             setActiveIndex(index);
             setClick(true);
@@ -47,8 +50,15 @@ const Testimonial = () => {
                 setClick(false);
             },1000);
         }
+    }
        
     }
+    const handlers = useSwipeable({
+        onSwipedLeft: () =>  handleClick(activeIndex+1),
+        onSwipedRight: () => handleClick(activeIndex-1),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+      });
 
     return(
         <section className="sections has-offset" id="testimonials">
@@ -56,28 +66,26 @@ const Testimonial = () => {
             <div className="columns">
                 <div className="column col-7 col-md-12">
                     <h1 className="black title title__big title__border big">What our clients say?</h1>
-                    <ul className="testi-slider">
+                    
+                    <ul className="testi-slider" {...handlers}>
                         
-                            
-                            
-                       
                             <li className={isClicked ? "list-items active slideUpFadeIn" : `active`}>
                                 <div className="wrap">
-                                    <h1 className="title title__big big" >{data[2].testimonials[activeIndex].title}</h1>
-                                    <p className="para">{data[2].testimonials[activeIndex].testimonial}</p>
+                                    <h1 className="title title__big big" >{testimonials[activeIndex].title}</h1>
+                                    <p className="para">{testimonials[activeIndex].testimonial}</p>
                                 </div>
                                 <div className="info">
                                     <div className="client-details">
-                                        <h1 className="green title title__big text-capitalize">{data[2].testimonials[activeIndex].client_name}</h1>
-                                        <p className="black subtitle subtitle__small big text-capitalize sec-font"><i className="fas fa-info-circle"></i>{data[2].testimonials[activeIndex].client_post}, {data[2].testimonials[activeIndex].client_company}</p>
+                                        <h1 className="green title title__big text-capitalize">{testimonials[activeIndex].client}</h1>
+                                        <p className="black subtitle subtitle__small big text-capitalize sec-font"><i className="fas fa-info-circle"></i>{testimonials[activeIndex].client_post}, {testimonials[activeIndex].company}</p>
                                     </div>
                                     <div className="cta">
                                         {
-                                            data[2].testimonials[activeIndex].case_study != "" && <Button 
+                                            testimonials[activeIndex].case_study != "" && <Button 
                                             type="normal" 
                                             title="View Case Study" 
                                             link={`/project/[id]`} 
-                                            viewas={data[2].testimonials[activeIndex].case_study}
+                                            viewas={testimonials[activeIndex].case_study}
                                             hasSlug={true}
     
                                             />
@@ -95,8 +103,8 @@ const Testimonial = () => {
                     </ul>
                     <ul className="indicator">
                         {
-                            data[2].testimonials.map((test,i) => (
-                                <li className={i === activeIndex ? "active": null} onClick={() => handleClick(i)} key={test.client_company+i} style={{width:`calc(${100/data[2].testimonials.length}% - 5px)`}}></li>
+                            testimonials.map((test,i) => (
+                                <li className={i === activeIndex ? "active": null} onClick={() => handleClick(i)} key={test.company+i} style={{width:`calc(${100/testimonials.length}% - 5px)`}}></li>
                             ))
                         }
                     </ul>
@@ -115,7 +123,7 @@ const Testimonial = () => {
                             <span 
                             className={isClicked ? "rect active slideLeftFadeIn" : "rect"} 
                             ref={rect}
-                            style={{background: `url(${data[2].testimonials[activeIndex].client_img}) no-repeat center center`}}></span>
+                            style={{background: `url(${testimonials[activeIndex].client_img}) no-repeat center center`}}></span>
                         </div>
                    
                 </li>

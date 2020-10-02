@@ -104,7 +104,7 @@ const Blog = ({setLoading,loading,from}) => {
                 </div> */}
                 <div className="col-12 cta">
                     {
-                        from === "home" ? <Button type="normal" link="/blog" as="/blog" title="Explore More"/> : null
+                        from === "home" ? <Button type="normal" link="/blog" hasSlug={false} title="Explore More"/> : null
                     }
                     
                 </div>

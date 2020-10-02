@@ -10,6 +10,9 @@ const OffNav = ({toggleMenu,setToggleMenu,nav,button}) => {
         setToggleMenu(!toggleMenu)
         setCursor("hovered");
     }
+    const handleClick = e => {
+        setToggleMenu(false);
+    }
  
 
     return(
@@ -35,7 +38,13 @@ const OffNav = ({toggleMenu,setToggleMenu,nav,button}) => {
                             </div>
                             <Navlink setToggleMenu={setToggleMenu} toggleMenu={toggleMenu} />
                             <p>
-                            <Button type="inverted border-green" title="Start Project" button={button} link="/contact" hasSlug={false} />
+                            <Button 
+                            type="inverted border-green" 
+                            title="Start Project" 
+                            button={button} 
+                            link="/contact" 
+                            hasSlug={false}
+                            onClick={handleClick} />
                             </p>
                         </div>
                     </div>

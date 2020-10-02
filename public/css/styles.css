@@ -1149,6 +1149,7 @@ section#banner .hero-content h1{
 .sections.mob-featured-projects ul{
     width: 200vw;
     display: flex;
+    transition: var(--transition);
 }
 .sections.mob-featured-projects ul li{
     width: 50vw;
@@ -1412,7 +1413,7 @@ section#trustee .trustee.output .list-items strong{
 /*who we are*/
 section#who-we-are{
     background: rgb(39,224,39);
-    background: linear-gradient(71deg, rgba(39,224,39,1) 0%, rgba(152,210,77,1) 100%);
+    background: linear-gradient(71deg, rgba(12,179,12,1) 0%, rgba(39,224,39,1) 100%);
     position: relative;
 }
 section#who-we-are .md-title{
@@ -1564,10 +1565,11 @@ section#testimonials section.offset ul li .client-image span.rect{
     left: calc(50% - 25%);
     width: 40%;
     padding: 150px;
-    border: #00a8ff 10px solid;
+    /* border: #00a8ff 10px solid; */
     z-index: -1;
     transform: translateX(0%);
     opacity: 1;
+    background-size: contain !important;
 }
 section#testimonials section.offset ul li .client-image img{
     /* display: block;
@@ -1861,10 +1863,13 @@ section.project-body .project-gallery .hero-content{
 section.project-body.hor .project-gallery .hero-content{
     width: 80vw;
 }
+section.project-body .project-gallery.full{
+    margin-bottom: 20px;
+}
 section.project-body .project-strategy{
     padding: 60px 0;
     background: rgb(39,224,39);
-    background: linear-gradient(71deg, rgba(39,224,39,1) 0%, rgba(152,210,77,1) 100%);
+    background: linear-gradient(71deg, rgba(12,179,12,1) 0%, rgba(39,224,39,1) 100%);
     margin-bottom: 100px;
 }
 section.project-body .project-strategy.project__outcome{
@@ -1933,6 +1938,9 @@ section.project-body.hor .project-gallery.full{
 section.project-body.hor .project-gallery.full .thumb{
     height: 100%;
 }
+section.project-body.hor .project-gallery.full{
+    margin-bottom: 0px;
+}
 .flex-box{
     display: flex;
     flex-wrap: wrap;
@@ -1991,6 +1999,10 @@ section.project-body.hor .project-gallery.full .thumb{
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+.image-solo{
+    width: 100%;
+    display: block;
 }
 /*project Details*/
 /*pageloader*/

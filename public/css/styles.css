@@ -361,6 +361,10 @@ section.has-offset.visible{
     margin-bottom: 30vh;
     transition: all .6s cubic-bezier(.3,0,.2,1);
     border-bottom: none;
+    height: auto;
+}
+section.has-offset.visible .showcase{
+    height: auto;
 }
 section.has-offset.hidden{
     overflow: hidden;

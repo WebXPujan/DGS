@@ -118,10 +118,34 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                 }
             </div>
             {
+                details.hasOwnProperty('tools') && details.type == "marketing" && (
+                    <section className="" style={{paddingTop:60}}>
+                        <div className="container">
+                            <div className="column col-12">
+                                <h1 className="title title__big big text-center title__border centered">
+                                    Tools Used
+                                </h1>
+                                <div className="clientele">
+                                    <ul>
+                                        {
+                                            details.tools.map((to) => (
+                                                <li key={to.name}>
+                                                    <img src={`/images/tools/${to.img}`} alt={to.name} />
+                                                </li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                )
+            }
+            {
                 details.hasOwnProperty('testimonial') && (
                     testimonials.map((t) => (
                         t.id === details.testimonial && (
-                            <div className="project-desc w50" style={{padding:"60px 0",marginBottom:100}}>
+                            <div className="project-desc w50" style={{padding:"60px 0",marginBottom:100}} key={t.id}>
                                 <div className="container">
                                     <IntroTextWrap 
                                     intro1={t.intro1}

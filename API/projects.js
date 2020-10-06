@@ -12,9 +12,11 @@ export const projects = [
                 client_name: "Hongshi Shivam Cement",
                 project_year: "2019",
                 services: [
-                    "SMS marketing",
+                    "Influencer Marketing",
                     "Social Media Marketing",
-                    "Display Advertsiment"
+                    "Display Advertsiment",
+                    "Video Marketing",
+                    "SMS Marketing"
                 ]
             },
             {
@@ -307,9 +309,12 @@ export const projects = [
                 client_name: "Folliderm",
                 project_year: "2019",
                 services: [
-                    "SMS marketing",
-                    "Social Media Marketing",
-                    "Display Advertsiment"
+                    "Website Optimization",
+                    "SEO",
+                    "Google My Business",
+                    "Content Marketing",
+                    "Display Advertisement",
+                    "Social Media Marketing"
                 ]
             },
             {
@@ -420,9 +425,8 @@ export const projects = [
                 client_name: "IIMS College",
                 project_year: "2019",
                 services: [
-                    "SMS marketing",
-                    "Social Media Marketing",
-                    "Display Advertisement"
+                    "Search Engine Optimization",
+                    "Social Media Marketing"
                 ]
             },
             {
@@ -442,6 +446,44 @@ export const projects = [
             {
                 next: "vianet",
                 next_img: "/images/thumbnails/vianet.webp"
+            }
+        ],
+        tools: [
+            {
+                name: "SEMRush",
+                img: "semrush.jpg"
+            },
+            {
+                name: "Google Search Console",
+                img: "google-search-console.jpg"
+            },
+            {
+                name: "MOZ",
+                img: "moz.jpg"
+            },
+            {
+                name: "Google Analytics",
+                img: "google-analytics.jpg"
+            },
+            {
+                name: "Google Adwords",
+                img: "google-adwords.jpg"
+            },
+            {
+                name: "Reddit Keyword Research",
+                img: "reddit.jpg"
+            },
+            {
+                name: "Ahrefs",
+                img: "ahrefs.jpg"
+            },
+            {
+                name: "Facebook Business Suite",
+                img: "fb-business-suite.jpg"
+            },
+            {
+                name: "Buffer",
+                img: "buffer.jpg"
             }
         ],
         challenge: [
@@ -511,7 +553,7 @@ export const projects = [
                 client_name: "Vianet",
                 project_year: "2019",
                 services: [
-                    "SMS marketing",
+                    "Youtube Advertisement",
                     "Social Media Marketing",
                     "Display Advertsiment"
                 ]
@@ -533,6 +575,40 @@ export const projects = [
             {
                 next: "kathmandu-kitchen",
                 next_img: "/images/thumbnails/mykk.webp"
+            }
+        ],
+        tools: [
+            {
+                name: "Vidiq",
+                img: "vidiq.jpg"
+            },
+            {
+                name: "Tube Buddy",
+                img: "tubebuddy.jpg"
+            },
+            {
+                name: "MOZ",
+                img: "moz.jpg"
+            },
+            {
+                name: "Google Analytics",
+                img: "google-analytics.jpg"
+            },
+            {
+                name: "Google Adwords",
+                img: "google-adwords.jpg"
+            },
+            {
+                name: "Ahrefs",
+                img: "ahrefs.jpg"
+            },
+            {
+                name: "Facebook Business Suite",
+                img: "fb-business-suite.jpg"
+            },
+            {
+                name: "Buffer",
+                img: "buffer.jpg"
             }
         ],
         challenge: [
@@ -622,7 +698,8 @@ export const projects = [
                 project_year: "2018",
                 services: [
                     "App Development",
-                    "UI/UX Design"
+                    "UI/UX Design",
+                    "IMS Design"
                 ]
             },
             {
@@ -701,7 +778,7 @@ export const team = [
     {
         id: 1,
         name: "Ultha Niraula",
-        title: "CEO",
+        title: "COO",
         image_url: "ultha.webp"
     },
     {
@@ -713,19 +790,19 @@ export const team = [
     {
         id: 3,
         name: "Pujan Adhikary",
-        title: "CEO",
+        title: "CTO",
         image_url: "pujan.webp"
     },
     {
         id: 6,
         name: "Binod Aryal",
-        title: "CEO",
+        title: "CRO",
         image_url: "binod.webp"
     },
     {
         id: 4,
         name: "Suman Jung",
-        title: "CEO",
+        title: "Executive Director",
         image_url: "suman.webp"
     }
 ]

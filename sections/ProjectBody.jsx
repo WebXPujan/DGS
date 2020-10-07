@@ -10,7 +10,7 @@ import {projects,testimonials} from '../API/projects';
 import {GlobalContext} from "../context/GlobalContext";
 //import {CanvasJSChart} from 'canvasjs-react-charts';
 
-const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body,details}) => {
+const ProjectBody = ({loading,setLoading,title,direction,body,details}) => {
     const dragControls = useDragControls();
     const [cursor,setCursor] = useContext(GlobalContext);
     function startDrag(event) {
@@ -224,27 +224,29 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                 ):
                 null
             }
-            <div className="project-gallery full w100">
+            
                 
                 {
                     details.type === "tech" ?
                     details.meta[1].full.bottom != "" 
                             && (
+                    <div className="project-gallery full w100">
                      <img src={details.meta[1].full.bottom} alt="" className="image-solo" />
-                         
+                    </div>     
                     )
                     :
                     details.meta[1].full.bottom != "" 
                             && (
+                        <div className="project-gallery full w100">
                             <div className="thumb">
                                 <img src={details.meta[1].full.bottom} alt=""/>
                             </div>
-                        
+                        </div>
                     )
                 }
-            </div>
+            
             <div 
-            className="project-strategy w100"
+            className="project-strategy"
             onMouseEnter={()=>setCursor("inverted")}
             onMouseLeave={()=>setCursor("")}>
                 <div className="container">
@@ -313,23 +315,29 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                     </div>
                 </div>
             </div>
-            <div className="project-gallery w100">
-                <div className="container">
-                    {
-                        details.type === "marketing" ? (
-                            <h1 className="black title title__big big title__border centered">Avenues Used</h1>
-                        ) : null
-                    }
-                    <div className="columns dual">
-                    <div className="column col-md-6 col-sm-12">
-                        <img src={details.meta[1].bottom_square.left} alt=""/>
+            {
+                details.meta[1].bottom_square.left != "" && details.meta[1].bottom_square.right != ""
+                && (
+                    <div className="project-gallery w100">
+                        <div className="container">
+                            {
+                                details.type === "marketing" ? (
+                                    <h1 className="black title title__big big title__border centered">Avenues Used</h1>
+                                ) : null
+                            }
+                            <div className="columns dual">
+                            <div className="column col-md-6 col-sm-12">
+                                <img src={details.meta[1].bottom_square.left} alt=""/>
+                            </div>
+                            <div className="column col-md-6 col-sm-12">
+                                <img src={details.meta[1].bottom_square.right} alt=""/>
+                            </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="column col-md-6 col-sm-12">
-                        <img src={details.meta[1].bottom_square.right} alt=""/>
-                    </div>
-                    </div>
-                </div>
-            </div>
+                )
+            }
+            
             {
                 details.outcome.length != 0 && <Trustee 
                 title1="The Outcome"
@@ -403,8 +411,7 @@ const ProjectBody = ({loading,setLoading,title,direction,handleProjectClick,body
                             <ProjectCard details={{img_url:getProject(details.meta[2].next).img,name:getProject(details.meta[2].next).name,tag:["Next Case Study"]}} 
                             type="projects" 
                             setLoading={setLoading} 
-                            loading={loading} 
-                            handleProjectClick={handleProjectClick}/>
+                            loading={loading}/>
                             </a>
                          </Link>
                        

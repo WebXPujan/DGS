@@ -57,11 +57,7 @@ const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details,bo
         },1000,elem);
         //console.log(details);
     }
-    const handleProjectClick = elem => {
-        //console.log(elem.currentTarget);
-        //setProjectOpen(!projectOpen);
-       
-    }
+    
     
     return (
         <section 
@@ -76,7 +72,7 @@ const ProjectDetailsHorizontal = ({viewPort,sticky,loading,setLoading,details,bo
             </div>
             <div className="body" style={{marginLeft:(window.innerWidth - sticky.current.clientWidth) - window.innerWidth/6}} ref={body}>
                
-                <ProjectBody loading={loading} setLoading={setLoading} title={details.name} direction="hor" handleProjectClick={handleProjectClick} body={bodyDetail} details={project[0]} drag={dragConstraints}/>
+                <ProjectBody loading={loading} setLoading={setLoading} title={details.name} direction="hor" body={bodyDetail} details={project[0]} drag={dragConstraints}/>
                 
             </div>
             </div>

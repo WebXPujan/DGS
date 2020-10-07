@@ -962,7 +962,7 @@ section#banner .offset.fixed{
 section#banner .offset.fixed.viewport{
  height: calc(100vh - 64px);
  top: 0px;
- width: 800vw;
+ width: 1120vw;
 }
 section#banner .offset.fixed.viewport .wrap{
     height: 100%;
@@ -1876,6 +1876,7 @@ section.project-body .project-strategy{
     background: linear-gradient(71deg, rgba(12,179,12,1) 0%, rgba(39,224,39,1) 100%);
     margin-bottom: 100px;
 }
+
 section.project-body .project-strategy.project__outcome{
     background: #fff;
 }
@@ -1918,7 +1919,7 @@ section.project-body .strategy-wrap .tech-strategy .minor-list li::before{
 }
 
 section.project-body.hor .w50{
-    width: 50vw;
+    width: 60vw;
 }
 section.project-body.hor .w100{
     width: 100vw;
@@ -1926,8 +1927,16 @@ section.project-body.hor .w100{
 section.project-body.hor .column{
     width: 100%;
 }
+section.project-body.hor .container{
+    width: 90%;
+}
+section.project-body.hor .project-strategy{
+    max-width: 220vw;
+    height: 100%;
+}
 section.project-body.hor section#trustee{
     border-bottom: 0;
+    width: 80vw;
 }
 section.project-body.hor section#trustee .info{
     max-width: 100%;
@@ -1944,6 +1953,15 @@ section.project-body.hor .project-gallery.full .thumb{
 }
 section.project-body.hor .project-gallery.full{
     margin-bottom: 0px;
+}
+section.project-body.hor .project-strategy{
+    margin-bottom: 0;
+}
+section.project-body.hor .project-strategy .container{
+    max-width: 100%;
+}
+section.project-body.hor .project-strategy .tech-strategy{
+    flex: 25%;
 }
 .flex-box{
     display: flex;

@@ -71,11 +71,11 @@ const Trustee = ({title1,title2,from,output}) => {
                             {
                                 from == "home" ?
                             <p className="para" ref={para}>
-                            We have worked with Startups, small businesses and Multimillion dollar businesses, and proud to say they all love us. 
+                            We have worked with startups, small businesses, as well as Multimillion dollar companies and they all love us. 
                             </p>
                             :
                             <p className="para" ref={para}>
-                                Let us show you what we have achieved. And, let us assure you that we will help you Build and Scale to the maximum of your potential.
+                                Let us show you what we have achieved. And, let us assure you that we will help you build and scale to the maximum of your potential.
                             </p>
                             
                             }

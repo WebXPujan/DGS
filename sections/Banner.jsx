@@ -281,7 +281,7 @@ const Banner = (props) => {
                         initial={{opacity:0,y:30}}
                         animate={{opacity:1,y:0,transition:{delay:1,...transition}}}
                         >
-                           We build tech with Customer Experience, and help you scale using the latest technology.
+                           We use the latest technologies to build and grow businesses online.
                         </motion.p>
                         <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0,transition:{delay:1.4,...transition}}}>
                             <Button type="normal" title="Start Project" link={`/contact`} hasSlug={false} />

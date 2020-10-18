@@ -2,7 +2,7 @@ export const projects = [
     {
         id:"hongshi-cement",
         name: "Hongshi",
-        tag: ["social media, sms marketing"],
+        tag: ["Digital Awareness and Engagement"],
         type: "marketing",
         featured: true,
         desc: "Hongshi Shivam cement, a joint venture of Shivam Group and China’s Hongshi Cement, is the largest producer of cement in Nepal producing 6000 metric tons daily with its first smoke and dust free factory in Nepal",
@@ -105,7 +105,7 @@ export const projects = [
     {
         id:"xpertspool",
         name: "XpertsPool",
-        tag: ["website, logo, branding, cms"],
+        tag: ["Website, Logo, Branding, CMS"],
         type: "tech",
         featured: true,
         desc: "Xpertspool is a growing platform providing reliable and affordable tech Experts across the globe with more than 300+ Experts from Nepal, India, and Bangladesh.",
@@ -225,7 +225,7 @@ export const projects = [
     {
         id:"hard-rock",
         name: "Hard Rock",
-        tag: ["sms marketing, social media"],
+        tag: ["Event-based Campaign Building"],
         type: "marketing",
         featured: true,
         desc: "With venues in 75 countries spanning 259 locations that include owned/licensed or managed HOtels, Casinos, Rock Shops and Cafes - Hard Rock International is one of the most globally recognized companies.",
@@ -300,7 +300,7 @@ export const projects = [
     {
         id:"folliderm",
         name: "Folliderm",
-        tag: ["sms marketing, social media"],
+        tag: ["Digital Brand Activation"],
         type: "marketing",
         desc: "Folliderm is an international standard hair transplant and skin clinic in Nepal that provides the most advanced Direct Hair Transplant in Nepal along with other hair and skin care services facilitated by certified medical experts.",
         img_url: "/images/thumbnails/folliderm.webp",
@@ -416,7 +416,7 @@ export const projects = [
     {
         id:"iims-college",
         name: "IIMS College",
-        tag: ["display advertisement"],
+        tag: ["Lead Generation"],
         type: "marketing",
         desc: "Established in 2010, by enthusiasts & educationists, the ‘IIMS Education Foundation Pvt. Ltd.’ has long established its roots in Nepalese educational sector by promoting a wide variety of quality educational services.",
         img_url: "/images/thumbnails/iims.webp",
@@ -544,7 +544,7 @@ export const projects = [
     {
         id:"vianet",
         name: "Vianet",
-        tag: ["sms marketing"],
+        tag: ["Brand Awareness and Lead Generation"],
         type: "marketing",
         desc: "Vianet is a leading Internet Service Provider of Nepal bringing for the first time FibertotheHome, thus redefining the market scenario with increased bandwidth and facilities",
         img_url: "/images/thumbnails/vianet.webp",
@@ -687,7 +687,7 @@ export const projects = [
     {
         id:"kathmandu-kitchen",
         name: "Kathmandu Kitchen",
-        tag: ["app"],
+        tag: ["App, UI redesign"],
         type: "tech",
         featured: false,
         desc: "Based in Maryland, USA,  My Kathmandu Kitchen is a restaurant specializing in South Asian cuisine and is a prominent market player in the food domain in the area.",
@@ -875,7 +875,7 @@ export const services = [
         id: "website-development",
         name: "Website Development",
         nickname: "website",
-        desc: "Website is the core of any business that wants to leverage the Digital Space. We help you build websites with great User Experience, Inbuilt SEO, Content services, and integrate tools and technologies which will help you scale your marketing.",
+        desc: "Website is the core of any business that wants to leverage the digital space. We help you build websites with great user experience, inbuilt SEO, content services, and integrate tools and technologies which will help you scale your business online.",
         brief: "A well-built website for any business is not only a means to represent the brand online but a medium through which the brand can connect to the audience, interact, and generate sales. We specialize in building applications that are tailored to your needs and provide ease of use to your user base.",
         banner: "/images/thumbnails/web-dev.webp",
         images:[
@@ -933,7 +933,7 @@ export const services = [
         id: "app-development",
         name: "App Development",
         nickname: "Mobile Application",
-        desc: "We build Application using Hybrid App Development so that you save time and money while making sure that the journey of the customer is prioritized for Customer Engagement and Brand Loyalty while increasing revenue and sales.",
+        desc: "We build applications using hybrid app development. This method saves time and money while making sure that the journey of the customer is prioritized for Customer Engagement and Brand Loyalty which in turn increases revenue and sales.",
         brief: "Developing an application for your brand helps create an enhanced user experience, streamline operations, or even get a competitive edge over competitors. We use robust technology architecture and immaculate code that is engineered to deliver a seamless experience.",
         banner: "/images/thumbnails/app-dev.webp",
         images:[
@@ -987,7 +987,7 @@ export const services = [
         id: "content-strategy",
         name: "Content Strategy",
         nickname: "Creative Content",
-        desc: "Do your customers read Blogs, or are they on social, or are on youtube? Wherever they are, we find them, build a strategy for Inbound Marketing so they will love what you do and never buy from your competitors.",
+        desc: "Are your customers on social media or on YouTube? Do your customers read blogs? A content strategy will help you reach those customers and enable inbound marketing while also improving your marketing results and ROI.",
         brief: "A great content strategy not only helps bring qualified purchase but also helps drive conversion while providing a brand lift that continues generating value for years to come. We are committed to creating content that resonates with your target audience with well-crafted strategies and tracking the performance data to deliver content that works for your business.",
         banner: "/images/thumbnails/content-strategy.webp",
         images:[
@@ -1041,7 +1041,7 @@ export const services = [
         id: "build-saas",
         name: "SAAS Products",
         nickname: "SAAS Product",
-        desc: "One of the most lucrative and scalable industries, we help you develop your SAAS Product with your customer in Mind and help you scale with our Digital Marketing Services. Agile Development for the agile company that you are.",
+        desc: "We help you develop your SAAS Product with your customer in mind and help you scale with our Digital Marketing Services. Agile Development for the agile company that you are.",
         brief: "The Software-as-a-Service (SaaS) distribution model allows the users to access applications hosted online, thus freeing them from possible installation, maintenance, or integration issues. The user data is stored in the cloud, users have the freedom to use any device to access their account or data. With SaaS products, updates and maintenance are faster to be implemented.",
         banner: "/images/thumbnails/saas.webp",
         images:[
@@ -1095,7 +1095,7 @@ export const services = [
         id: "search-engine-optimization",
         name: "SEO",
         nickname: "SEO",
-        desc: "If you are on the top of the search Engines, you are almost of the top of your Marketing game. Help us bring you on top with Technical SEO, On Page SEO with Content Marketing services, build backlinks that drive traffic to your website.",
+        desc: "If you are on the top of the search engines, you are almost at the top of your marketing game. We help your business get on top using technical SEO, on-page SEO with content marketing services, and off- page SEO that will help traffic to your website.",
         brief: "Search Engine Optimization brings together context, content, and code to drive brand discovery and customer acquisition. Although SEO requires time to show results, it has enormous benefits in the long term and is more intent-based compared to other techniques.",
         banner: "/images/thumbnails/seo.webp",
         images:[
@@ -1149,7 +1149,7 @@ export const services = [
         id: "social-media-advertisement",
         name: "Social Adverts",
         nickname: "Social Media Ads",
-        desc: "You might be in industry but one thing is for sure, your customers are in Social media. We help you reach the right prospects by helping you create offers, testing Target Audiences, A/B testing Adverts, and building content that converts.",
+        desc: "Your customers are on social media and that’s where you should be. We help your business reach the right prospects by scoping your potential audience, building content, using A/B testing techniques to build campaigns that convert.",
         brief: "Social Media can become an engine for incredible growth when branding, content, and strategic distribution across the right channels work together. With our talented team of strategists, copywriters, designers, and paid media specialists, we specialize in creating engaging and click-worthy social experiences for your brand.",
         banner: "/images/thumbnails/social-media.webp",
         images:[    

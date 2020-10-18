@@ -15,9 +15,10 @@ const Footer = () => {
                         
                         <div className="column col-12 col-md-12 col-xs-12">
                             <p className="para">
-                                Starting from the Himalayan country of Nepal, 
-                                    We are proud to serve a Global Audience win as
-                                In the digital space as Gurkha’s did on the Battlefield.
+                            From the Himalayan country of Nepal, 
+                            we are proud to serve a global audience 
+                            and win in the digital space just 
+                            like the Gurkhas do on the battlefield.
                             </p>                           
                         </div>
                         <div className="column col-12">

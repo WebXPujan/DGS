@@ -18,11 +18,12 @@ const IntroTextWrap = ({intro1,intro2,highlight,para,contact}) => {
                     
                     
                     <motion.p initial="initial" animate="animate" variants={anim.fadeInUp(1)} className="para" style={{textAlign:"center",width:"100%"}}>
-                    Tell us what you want to achieve, and we will tell you how to do so.
+                    Let’s talk! Tell us what you want to achieve, and we will tell you how to do so.
                     </motion.p>
                     
                     <div className="text-center">
-                    <a className="dg-link dg-cta" href="mailto:contact@digitalgurkha.com" 
+                    <a className="dg-link dg-cta" href="mailto://contact@digitalgurkha.com?body=Hello%20DG%2C%0D%0AI%20am%20very%20interested%20to%20work%20with%20you%0D%0Amy%20project%20is%3A%0D%0Amy%20estimated%20budget%20is%3A%0D%0Aturnaround%20time%20will%20be%3A"
+                        target="_top"
                         onMouseEnter={() => setCursor("hovered")}
                         onMouseLeave={() => setCursor("")}>
                             Send us a brief
@@ -50,7 +51,9 @@ const IntroTextWrap = ({intro1,intro2,highlight,para,contact}) => {
                     <div className="text-center" style={{marginTop:60}}>
                         <a 
                         className="dg-link" 
-                        href="mailto:career@digitalgurkha.com"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=career@digitalgurkha.com&subject=hello"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         onMouseEnter={() => setCursor("pointer")}
                         onMouseLeave={() => setCursor("")}>Work at DG</a>
                     </div>

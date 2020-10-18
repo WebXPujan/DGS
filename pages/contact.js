@@ -16,9 +16,9 @@ const Contact = ({loading,setLoading,setImagePos}) => {
     return (
      <motion.div exit={{opacity:0}}> 
       <IntroTextWrap 
-        intro1="Let's Do"
-        intro2="Great Things "
-        highlight="Together."
+        intro1="Let's build"
+        intro2="Your business "
+        highlight="together."
         contact={true}
       /> 
        

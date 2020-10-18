@@ -61,7 +61,7 @@ const Services = ({services}) => {
             <div className="columns">
               <div className="column col-md-12">
                 <div className="hero-content">
-                    <h1 className="black title title__big title__border big">So, how do we build and Scale ?</h1>
+                    <h1 className="black title title__big title__border big">How do we Build and Scale?</h1>
                    
                     <div className="services-item">
                         {

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "canvasjs-react-charts": "^1.0.5",
+    "emailjs-com": "^2.6.3",
     "framer-motion": "^1.11.1",
     "gsap": "^3.4.0",
     "next": "9.4.4",

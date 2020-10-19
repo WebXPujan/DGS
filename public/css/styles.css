@@ -1762,6 +1762,93 @@ footer .screen{
     z-index: -1;
 }
 /*footer*/
+/*contact form*/
+.contact-form{
+    margin-top: 60px;
+}
+.contact-form .number{
+    color: #000;
+    font-size: 85px;
+    line-height: 80px;
+    display: block;
+    text-align: center;
+}
+.contact-form .email{
+    margin-left: 20px;
+}
+.contact-form .testimonial-inside-service .thumb{
+    margin-top: 0;
+}
+.contact-form .testimonial-inside-service .desc{
+    max-width: 80%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    box-shadow: none;
+    border-color: #27e027;
+}
+.contact-form textarea{
+    height: 300px;
+}
+.contact-form button{
+    background: #e1e1e1 !important;
+    border: none !important;
+    padding: 0px 45px !important;
+    margin: 20px 0;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    color: #303030 !important;
+}
+
+.contact-form button:hover{
+    border: 2px solid #27e027;
+}
+.contact-form button:active{
+    border: none;
+}
+.contact-form .service-inside-form input[type="checkbox"]{
+    display: none;
+}
+.contact-form .service-inside-form{
+    margin: 30px 0;
+}
+.contact-form .service-inside-form .wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-form .service-inside-form .wrap label{
+    width: 150px;
+    height: 150px;
+    display: block;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    margin-bottom: 20px;
+}
+
+.contact-form .service-inside-form input[type="checkbox"]:checked + label{
+    border: 2px solid #27e027;
+}
+.success{
+    padding: 6px 0;
+    background: #e1e1e1;
+    margin: 60px 0;
+}
+.success .iconz{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+.success .iconz svg{
+    width: 100%;
+    margin-top: -100px;
+}
+/*contact form*/
 /*Project details*/
 section.project-body{
     position: relative;
@@ -2632,7 +2719,18 @@ section#blog-wrapper{
     section#story p.para.intro-text{
         max-width: 90%;
     }
+    .contact-form .testimonial-inside-service .desc{
+        max-width: 90%;
+    }
+    .contact-form .service-inside-form .wrap label{
+        margin-bottom: 10px;
+    }
     
+}
+@media(max-width: 600px){
+    .contact-form .email{
+        margin-left: 0px;
+    }
 }
 @media(max-width: 560px){
     section#services .services-item ul li a h1{

@@ -1,9 +1,11 @@
 import React,{useContext} from 'react';
-import {motion} from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
 import {TransitionAnimation} from '../Hooks/TransitionAnimation';
 import {GlobalContext} from "../context/GlobalContext";
+import Flow from './Flow';
+import Success from './Success';
 
-const IntroTextWrap = ({intro1,intro2,highlight,para,contact}) => {
+const IntroTextWrap = ({intro1,intro2,highlight,para,contact,sendEmail,brief,isFormOpen,loader,isSuccess}) => {
     const anim = TransitionAnimation();
     const [cursor,setCursor] = useContext(GlobalContext);
     return (
@@ -21,11 +23,13 @@ const IntroTextWrap = ({intro1,intro2,highlight,para,contact}) => {
                     Let’s talk! Tell us what you want to achieve, and we will tell you how to do so.
                     </motion.p>
                     
+                    
                     <div className="text-center">
-                    <a className="dg-link dg-cta" href="mailto://contact@digitalgurkha.com?body=Hello%20DG%2C%0D%0AI%20am%20very%20interested%20to%20work%20with%20you%0D%0Amy%20project%20is%3A%0D%0Amy%20estimated%20budget%20is%3A%0D%0Aturnaround%20time%20will%20be%3A"
+                    <a className="dg-link dg-cta" href="#"
                         target="_top"
                         onMouseEnter={() => setCursor("hovered")}
-                        onMouseLeave={() => setCursor("")}>
+                        onMouseLeave={() => setCursor("")}
+                        ref={brief}>
                             Send us a brief
                             <span className="cta-icon">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -48,6 +52,16 @@ const IntroTextWrap = ({intro1,intro2,highlight,para,contact}) => {
                             </span>
                     </a>
                     </div>
+                    {
+                        isSuccess  &&  <Success />
+                    }
+                    {
+                    isFormOpen && (
+                    <AnimatePresence exitBeforeEnter>
+                        <Flow sendEmail={sendEmail} loader={loader}/>
+                    </AnimatePresence>
+                    )
+                    }
                     <div className="text-center" style={{marginTop:60}}>
                         <a 
                         className="dg-link" 
@@ -57,6 +71,7 @@ const IntroTextWrap = ({intro1,intro2,highlight,para,contact}) => {
                         onMouseEnter={() => setCursor("pointer")}
                         onMouseLeave={() => setCursor("")}>Work at DG</a>
                     </div>
+
                 </div>
             ): (
                 <div className="intro-wrap">

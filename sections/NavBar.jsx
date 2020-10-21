@@ -21,7 +21,7 @@ const NavBar = ({toggleMenu,setToggleMenu}) => {
                     onMouseLeave={() => setCursor("")}>
                         <Link href="/">
                             <a className="dg-link">
-                                <img src="/images/logo.png" alt="Digital Gurkha Solutions"/>
+                                <img src="/images/logo-full-nav.png" alt="Digital Gurkha Solutions"/>
                             </a>
                         </Link>
                     </div>

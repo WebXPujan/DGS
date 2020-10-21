@@ -13,8 +13,8 @@ const CTA = () => {
             </div> */}
             <BannerInner 
             page="projects"
-            title="Don't be shy, we don't bite!"
-            para="Lets talk, tell us what you want to achieve, and we will tell you how to do so."
+            title="Let’s build your business together."
+            para="Let’s talk! Tell us what you want to achieve, and we will tell you how to do so."
             
             /> 
         </div>

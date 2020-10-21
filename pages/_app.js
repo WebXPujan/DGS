@@ -148,6 +148,20 @@ export default function MyApp(props) {
       <nav>    
         <NavBar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
       </nav>
+      {/* <a 
+      title="CSS Awards Showcase - nominee" 
+      target="_blank" 
+      href="https://www.cssawardss.com" 
+      style={{
+        background: "url('https://s3-ap-southeast-1.amazonaws.com/assets.cssawardss.com/badges/cssawardss.com.nominee.light.svg') no-repeat",
+        textIndent: "-9999px",
+        zIndex: 99999,
+        display: "block",
+        position: "fixed",
+        top: 50,
+        left: 0,
+        width: 80,
+        height: 160}}>CSSAwardss.com</a> */}
         
       <div className="App" ref={app}>
         <div className="scroll" ref={scrollContainer} id="scroll-container">

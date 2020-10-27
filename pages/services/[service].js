@@ -170,7 +170,7 @@ const ServicePage = ({service}) => {
                     <BannerInner 
                     page="projects"
                     title={`Want to create a ${s.nickname}?`}
-                    para="Lets talk, tell us what you want to achieve, and we will tell you how to do so."
+                    para="Let's talk, tell us what you want to achieve, and we will tell you how to do so."
                     key={s.id}
                     /> 
                ))

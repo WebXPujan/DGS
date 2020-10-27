@@ -29,14 +29,14 @@ const BlogDetails = ({data}) => {
         // let resp = await fImage.json();
         // if(resp) setImage(resp);
         // return () => setImage("")
-        console.log(data);
+        //console.log(data);
         if(data[0].featured_media != 0) {
         fetch('https://agency.digitalgurkha.academy/wp-json/wp/v2/media/'+data[0].featured_media)
         .then(res => res.json())
         .then(json => {
-            console.log(json);
+            //console.log(json);
                 setImage(json.media_details.sizes.thumbnail.source_url)
-                setBannerImage(json.media_details.sizes.large.source_url)
+                setBannerImage(json.source_url)
             
             
         });

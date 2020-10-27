@@ -2226,16 +2226,21 @@ section#blog-wrapper{
 }
 .blog-content p strong,
 .blog-content h2,
-.blog-content h1{
+.blog-content h1,
+.blog-content h4 strong{
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     margin: 50px 0;
     display: block;
 }
 .blog-content figure,
-.blog-content img{
+.blog-content img,
+.blog-content p iframe{
     width: 100%;
     margin: 5% 0;
+}
+.blog-content p iframe{
+    height: 50vh;
 }
 .blog-content figure img{
     height: 100%;

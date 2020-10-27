@@ -917,15 +917,15 @@ export const services = [
             },
             {
                 title: "Front-End & Back-End Coding",
-                desc: "To serve our clients with the best website development solution, our teams are fluent in the whole range of modern website development languages, including  PHP, .Net, Java, HTML5, CSS and Javascript.\nWe practice both waterfall and agile methodology as per the convenience and preference of the clients. Every project is assigned with a dedicated technical Project Manager who ensures the project is delivered within scope, budget and time."
+                desc: "To serve our clients with the best website development solution, Our teams is fluent in a wide range of website development languages, including  PHP, .Net, Java, HTML5, CSS and Javascript.\n We practice both waterfall and agile methodology as per the convenience and preference of the clients. Every project is assigned with a dedicated technical Project Manager who ensures the project is delivered within scope, budget and time."
             },
             {
                 title: "QA",
-                desc: "Our team is ruthless in evaluating the site over 100 checkpoints to ensure the elimination of any bug or error before going live. We also get our clients involved before the site goes live to help us eradicate any anomaly on the website."
+                desc: "Our team is ruthless in evaluating the with site over 100 checkpoints to ensure the elimination of any bug or error before going live. We also get our clients involved before the site goes live to help us eradicate any anomaly on the website that we may have missed."
             },
             {
                 title: "CMS Training + Launch",
-                desc: "After the website is live, we prepare your team for handover. We walk you through the CMS and make sure everybody on the team is well informed and comfortable on how to and how not to use the site."
+                desc: "After the website is live, we prepare your team for the handover process. We walk you through the CMS and make sure everybody on the team is well informed and comfortable on how to and how not to use the site."
             },
         ]
     },
@@ -971,7 +971,7 @@ export const services = [
             },
             {
                 title: "Building a digital product",
-                desc: "We prefer to work in Agile sprints (Scrum methodology)  for two reasons. First, applications are required to be regularly updated and improved. Second, if you build every feature and permutation at once, chances are you’ll be late to market. This will enable us to develop a Minimum Viable Product (MVP) that includes core features your audience will use and love."
+                desc: "We prefer to work in Agile sprints (Scrum methodology)  for two reasons. First, applications are required to be regularly updated and improved. Second, If you build all the features at the same time, chances are you’ll be late to market. This will enable us to develop a Minimum Viable Product (MVP) that includes core features your audience will use and love."
             },
             {
                 title: "QA + Launch",
@@ -979,7 +979,7 @@ export const services = [
             },
             {
                 title: "Maintenance, Iteration",
-                desc: "To enhance user experience in the app, the app should be in constant testing, iteration, and improvement, drawing upon user feedback. Hence ,testing, optimizing and updating as per the need of the customers should be an ongoing process."
+                desc: "To enhance user experience in the app, the app should be in constant testing, iteration, and improvement, drawing upon user feedback. Hence, it is an ongoing process and must always be prioritized to retain the existing customers as well as attract new customers."
             },
         ]
     },
@@ -1029,7 +1029,7 @@ export const services = [
             },
             {
                 title: "Launch & Promotion",
-                desc: "In a very competitive digital space of today, launching the content does not simply reach the audience. Hence, we create strategies for online content promotion. The paid promotion has the benefit of not only expanding your reach but also gives tremendous insight into the target audience."
+                desc: "In a very competitive digital space of today, launching the content does not simply reach the audience. Hence, we create strategies for online content promotion. Paid promotion has the benefit of not only expanding your reach but also gives tremendous insight into the target audience."
             },
             {
                 title: "Measurement + Iteration",
@@ -1071,7 +1071,7 @@ export const services = [
         process: [
             {
                 title: "Concept definition and functionality",
-                desc: "In order to accelerate your idea into reality, we begin with consulting to define the requirement and needs of the product. We analyze the needs of your target audience to help you shape an innovative product vision which is then translated into features, and roadmap features to releases, focusing on the priority and ROI."
+                desc: "In order to accelerate your idea into reality, we begin with consulting to define the requirement and needs of the product. We analyze the needs of your target audience to help you shape an innovative product vision that fulfills their needs and in the meantime also focuses on ROI."
             },
             {
                 title: "Conversion - driven UI/UX",
@@ -1079,7 +1079,7 @@ export const services = [
             },
             {
                 title: "Architecture design and programming",
-                desc: "While Developing SaaS architecture, we prioritize high and easy scalability. We make sure that the SaaS solution withstands peak loads of customers and seamlessly adapts to the growth and expansion of your business. Our large pool of developers is on stand by to adapt to your project’s evolving needs."
+                desc: "While developing SaaS architecture, we prioritize high and easy scalability. We make sure that the SaaS solution withstands peak loads of customers and seamlessly adapts to the growth and expansion of your business. Our large pool of developers are on standby to adapt to your project’s evolving needs."
             },
             {
                 title: "Testing and QA",
@@ -1133,7 +1133,7 @@ export const services = [
             },
             {
                 title: "Analytics Set-up",
-                desc: "We ensure the website analytics are properly set up. It is extremely important to track only relevant data and metrics. We typically use a range of tools to collect and visualize data. We use Google Search Console, SEMRush for search performance. We also integrate data from other platforms such as Facebook Ads Manager or Google Ads for a more holistic data collection approach."
+                desc: "We ensure the website analytics are properly set up. It is extremely important to track only relevant data and metrics. We typically use a range of tools to collect and visualize data.  We use google search console and SEMRush for search performance. We also integrate data from other platforms such as Facebook Ads Manager or Google Ads for a more holistic data collection approach."
             },
             {
                 title: "SEO Strategy",
@@ -1141,7 +1141,7 @@ export const services = [
             },
             {
                 title: "Reporting & Optimization",
-                desc: "Since Search Engine algorithms update regularly, it is important for our techniques to keep abreast with the changes as well. As per the analyzed data, we are always optimizing our techniques to help achieve the desired goal.SEO takes time, but progressive results that show brand lift or measurable impact can be tracked every month."
+                desc: "Since Search Engine algorithms update regularly, it is important for our techniques to keep abreast with the changes. As per the analyzed data, we are always optimizing our techniques to help achieve the desired goal.SEO takes time, but progressive results that show brand lift or measurable impact can be tracked every month."
             },
         ]
     },
@@ -1182,12 +1182,12 @@ export const services = [
                 desc: "Before planning or strategizing, it is very important to know your target audience on a personal level. We understand not just potential customer’s demographics but also their attitude, lifestyle, and interests. We also identify platforms your competitors are using to interact with the audience and drive data from their interaction with their followers regarding what their followers like, and share."
             },
             {
-                title: "Platform recognition and Optimization",
+                title: "Platform Recognition and Optimization",
                 desc: "Every social platform offers different advantages and different types of demographics. We ensure that your business is on the right platforms, and creating the right content for each channel. Our team will help you optimize your brand identity cohesively across your company pages on different platforms."
             },
             {
                 title: "Content Creation",
-                desc: "Creative content meets analytics. Our talented and creative copywriters and design experts will ensure that we deliver the best form and version of the content, from story-driven posts to compelling advertising. We combine creative content with insights to recommend the type of content your target audience will respond to and customize it as per the needs of every platform."
+                desc: "Creative content meets analytics. Our talented and creative copywriters and design experts will ensure that we deliver the best form and version of the content.From story-driven posts to compelling advertising, we combine creative content with insights to recommend the type of content your target audience will respond to and customize it as per the needs of every platform."
             },
             {
                 title: "Organic Social",
@@ -1199,7 +1199,7 @@ export const services = [
             },
             {
                 title: "Measurement + Reporting",
-                desc: "We monitor all the campaigns and identify the campaign’s KPIs to measure the, against a campaign’s goals. Ongoing monitoring of social ads gives us a big-picture view regarding the target audience and their view towards the brand. Reporting is usually monthly and only the metrics that are relevant to the campaign’s goal are included. It helps us understand ways to improve targeting, generate more advocates, and increase brand visibility across platforms."
+                desc: "We monitor all the campaigns and identify the campaign’s KPIs to measure the obtained results against the campaign’s goals. Ongoing monitoring of social ads gives us a big-picture view regarding the target audience and their view towards the brand. Reporting is usually monthly and only the metrics that are relevant to the campaign’s goal are included. It helps us understand ways to improve targeting, generate more advocates, and increase brand visibility across platforms."
             }
         ]
     }

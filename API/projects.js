@@ -864,7 +864,7 @@ export const contact = [
     {
         id: 2,
         name: "USA",
-        title: "655 Promenade parkway, Irving, Texas, 75039, USA",
+        title: "5435 Saturn Dr, Unit 6 Dallas, Texas, 75237, USA",
         phone: "+1 4103366654",
         img_url: "/images/usa.webp"
     }
@@ -1231,7 +1231,7 @@ export const testimonials = [
         intro2: "Did a great ",
         highlight: "Job",
         testimonial: `“Digital Gurkha did a great job launching our Digital Campaign with creative and result oriented work.”`,
-        client: "Sampada Dwedi",
+        client: "Sampada Dwivedi",
         company: "Hongshi Shivam Cement",
         client_post: "Marketing Manager",
         title: "Digital Gurkha did a great job",

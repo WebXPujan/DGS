@@ -15,10 +15,7 @@ const Footer = () => {
                         
                         <div className="column col-12 col-md-12 col-xs-12">
                             <p className="para">
-                            From the Himalayan country of Nepal, 
-                            we are proud to serve a global audience 
-                            and win in the digital space just 
-                            like the Gurkhas do on the battlefield.
+                            With our head office in the United States, we are proud to serve a Global Audience with Field Offices in the Himalayan country of Nepal helping us give you the best of two countries, Strategy form the States, and Creativity from Nepal helping us provide High Quality work in an affordable price.
                             </p>                           
                         </div>
                         <div className="column col-12">
@@ -90,7 +87,7 @@ const Footer = () => {
                 <div className="columns">
                     <div className="column col-6 col-xs-12">
                     <h1 className="black title title__small big text-capitalized">U.S.A</h1>  
-                    <h3 className="subtitle subtitle__small">655 Promenade parkway, <br/> Irving, Texas, 75039, USA</h3>
+                    <h3 className="subtitle subtitle__small">5435 Saturn Dr, <br/> Unit 6 Dallas, Texas, 75237, USA</h3>
                     <br/>
                     <p>
                         <span className="icons">

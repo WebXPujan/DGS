@@ -273,18 +273,18 @@ const Banner = (props) => {
                             transition: {delay:1.2,duration:1,ease:transition.ease}
                         }} 
                         className="title title__big" ref={titleBig}>
-                            Build and Scale with <br/>
-                            <span className="green big">Customer Driven Service</span>
+                            Build and Scale at <br/>
+                            <span className="green big">An Affordable Cost</span>
                         </motion.h1>
                         <motion.p className="para"
                         className="para"
                         initial={{opacity:0,y:30}}
                         animate={{opacity:1,y:0,transition:{delay:1,...transition}}}
                         >
-                           We use the latest technologies to build and grow businesses online.
+                           We help you Build and then Scale with the highest of Qualities at the most affordable cost.
                         </motion.p>
                         <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0,transition:{delay:1.4,...transition}}}>
-                            <Button type="normal" title="Start Project" link={`/contact`} hasSlug={false} />
+                            <Button type="normal" title="Ask Us How?" link={`/contact`} hasSlug={false} />
                         </motion.p>
                     </motion.div>
                 </div>

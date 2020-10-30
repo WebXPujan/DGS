@@ -34,7 +34,7 @@ const Index = ({setImagePos,banner,setLoading,loading,setProjectOpen,service }) 
             <Services services={service} />
             <Trustee 
             title1="Trusted by Small Business"
-            title2="and Corporated Alike"
+            title2="and Corporates"
             from="home"/>
             <WeAre />
             <Testimonial />

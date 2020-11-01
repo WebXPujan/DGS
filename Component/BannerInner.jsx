@@ -6,7 +6,7 @@ import {TransitionAnimation} from '../Hooks/TransitionAnimation';
 import IntroTextWrap from './IntroTextWrap';
 import Button from './Button';
 
-const BannerInner = ({title,intro1,intro2,highlight,para,page,url}) => {
+const BannerInner = ({title,intro1,intro2,highlight,para,page,url,para2}) => {
     const anim = TransitionAnimation();
     const thumb = useRef(null);
     const handleImgload = (elem) => {
@@ -62,7 +62,8 @@ const BannerInner = ({title,intro1,intro2,highlight,para,page,url}) => {
                                 <IntroTextWrap 
                                 intro1={intro1}
                                 intro2={intro2}
-                                highlight={highlight}/> 
+                                highlight={highlight}
+                                para={para2}/> 
                             ) : 
                             null
                         }

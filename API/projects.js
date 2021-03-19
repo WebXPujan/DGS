@@ -1220,7 +1220,7 @@ export const testimonials = [
         it’s been an absolute pleasure.”`,
         client: "Abhishek",
         company: "Hard Rock Cafe",
-        client_post: "General Manager",
+        client_post: "Executive Director",
         title: "It's been an absolute pleasure",
         case_study: "",
         client_img: "/images/projects/hardrock/square-right-1.webp"

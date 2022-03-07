@@ -861,13 +861,13 @@ export const contact = [
         phone: "",
         img_url: "/images/nepal.webp"
     },
-//     {
-//         id: 2,
-//         name: "USA",
-//         title: "5435 Saturn Dr, Unit 6 Dallas, Texas, 75237, USA",
-//         phone: "+1 4103366654",
-//         img_url: "/images/usa.webp"
-//     }
+    {
+        id: 2,
+        name: "USA",
+        title: "5435 Saturn Dr, Unit 6 Dallas, Texas, 75237, USA",
+        phone: "+1 4103366654",
+        img_url: "/images/usa.webp"
+    }
 ]
 
 export const services = [
